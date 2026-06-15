@@ -35,11 +35,16 @@
 
   // ---- Fill contact details (shared, not per-language) ----
   function applyContact() {
-    var phone = byId("contact-phone");
-    if (phone) { phone.textContent = CONTACT.phoneDisplay; phone.href = "tel:" + CONTACT.phoneHref; }
+    // Each contact person gets a phone link + a WhatsApp button. Names are
+    // translated via data-i18n in the markup; the numbers come from CONTACT.
+    (CONTACT.people || []).forEach(function (person, i) {
+      var n = i + 1;
+      var phone = byId("contact-phone-" + n);
+      if (phone) { phone.textContent = person.phoneDisplay; phone.href = "tel:" + person.phoneHref; }
 
-    var whatsapp = byId("contact-whatsapp");
-    if (whatsapp) { whatsapp.href = "https://wa.me/" + CONTACT.phoneHref.replace(/\D/g, ""); }
+      var whatsapp = byId("contact-whatsapp-" + n);
+      if (whatsapp) { whatsapp.href = "https://wa.me/" + person.phoneHref.replace(/\D/g, ""); }
+    });
 
     var email = byId("contact-email");
     if (email) { email.textContent = CONTACT.email; email.href = "mailto:" + CONTACT.email; }
@@ -51,8 +56,6 @@
 
     var igInline = byId("ig-inline");
     if (igInline) { igInline.textContent = CONTACT.instagramHandle; igInline.href = CONTACT.instagram; }
-
-    setText("footer-name", CONTACT.name);
   }
 
   // ---- Render project cards ----

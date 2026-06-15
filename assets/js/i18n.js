@@ -3,9 +3,16 @@
  * then run:  node tools/build-i18n.mjs */
 
 const CONTACT = {
-  "name": "Tomas Janulionis",
-  "phoneDisplay": "053-382-2875",
-  "phoneHref": "+972533822875",
+  "people": [
+    {
+      "phoneDisplay": "053-382-2875",
+      "phoneHref": "+972533822875"
+    },
+    {
+      "phoneDisplay": "052-369-9346",
+      "phoneHref": "+972523699346"
+    }
+  ],
   "email": "hello@tlnagarut.com",
   "city": "Haifa, Israel",
   "instagram": "https://www.instagram.com/tlnagarut/",
@@ -64,6 +71,10 @@ const I18N = {
     "contact.title": "Let's make something.",
     "contact.body": "Tell me a little about your project — a room, a piece, a rough budget or a deadline — and I'll come back to you with thoughts and next steps.",
     "contact.phoneLabel": "Phone / WhatsApp",
+    "contact.person1Name": "Tomas",
+    "contact.person1Langs": "(English/Russian)",
+    "contact.person2Name": "Lina",
+    "contact.person2Langs": "(Hebrew)",
     "contact.emailLabel": "Email",
     "contact.locationLabel": "Location",
     "contact.instagramLabel": "Instagram",
@@ -125,6 +136,10 @@ const I18N = {
     "contact.title": "בואו ניצור משהו.",
     "contact.body": "ספרו לי קצת על הפרויקט — חדר, פריט, תקציב משוער או תאריך יעד — ואחזור אליכם עם מחשבות והצעדים הבאים.",
     "contact.phoneLabel": "טלפון / וואטסאפ",
+    "contact.person1Name": "תומאס",
+    "contact.person1Langs": "(אנגלית/רוסית)",
+    "contact.person2Name": "לינה",
+    "contact.person2Langs": "(עברית)",
     "contact.emailLabel": "אימייל",
     "contact.locationLabel": "מיקום",
     "contact.instagramLabel": "אינסטגרם",

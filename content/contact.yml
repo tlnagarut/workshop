@@ -3,11 +3,15 @@
 # After editing, run:  node tools/build-i18n.mjs
 # ============================================================================
 
-name: Tomas Janulionis
-
-# Phone shown on the page, and the dialable version (with country code).
-phoneDisplay: "053-382-2875"
-phoneHref: "+972533822875"
+# Two contact people — both are shown, each with its own WhatsApp button.
+# phoneDisplay = what's shown on the page.  phoneHref = dialable, with country
+# code (e.g. +972...). The people's NAMES live in en.yml / he.yml under
+# "contact" (person1Name / person2Name) so they can be translated.
+people:
+  - phoneDisplay: "053-382-2875"
+    phoneHref: "+972533822875"
+  - phoneDisplay: "052-369-9346"
+    phoneHref: "+972523699346"
 
 email: "hello@tlnagarut.com"
 city: Haifa, Israel

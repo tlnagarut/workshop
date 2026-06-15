@@ -303,13 +303,24 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 }
 .contact-list a, .contact-list span:not(.contact-label) { font-size: 1.15rem; color: var(--text); }
 .contact-list a:hover { color: var(--accent); }
+.svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.contact-people { display: grid; gap: 18px; margin-top: 6px; }
+.contact-person { display: grid; gap: 4px; }
+.contact-person-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.contact-person-name { font-weight: 600; color: var(--text); }
+.contact-person-langs { font-size: 0.8rem; color: var(--muted); font-style: italic; }
 .contact-phone-row { display: flex; align-items: center; gap: 12px; }
-.contact-list a.whatsapp-link { display: inline-flex; align-items: center; color: #25d366; line-height: 0; }
+.contact-list a.whatsapp-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #25d366; line-height: 0;
+  padding: 10px; margin: -10px; /* larger tap target, no layout shift */
+  border-radius: 999px;
+}
 .contact-list a.whatsapp-link:hover { color: #1da851; }
 .whatsapp-icon { display: block; }
 
 /* ----------------------- Footer ----------------------- */
-.site-footer { background: #2b2723; color: #d8cdbf; padding-block: 28px; }
+.site-footer { background: #2b2723; color: #d8cdbf; padding-block: 18px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 0.9rem; }
 
 /* ----------------------- Gallery lightbox ----------------------- */
