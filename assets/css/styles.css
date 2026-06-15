@@ -308,8 +308,14 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 .contact-person { display: grid; gap: 4px; }
 .contact-person-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .contact-person-name { font-weight: 600; color: var(--text); }
-.contact-person-langs { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+.contact-list span.contact-person-langs { font-size: 0.85rem; color: var(--muted); font-style: italic; }
 .contact-phone-row { display: flex; align-items: center; gap: 12px; }
+.contact-phone-row a:not(.whatsapp-link) {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+  font-size: 1rem; /* one step down from the contact-list default (1.15rem) */
+}
 .contact-list a.whatsapp-link {
   display: inline-flex; align-items: center; justify-content: center;
   color: #25d366; line-height: 0;
@@ -318,6 +324,18 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 }
 .contact-list a.whatsapp-link:hover { color: #1da851; }
 .whatsapp-icon { display: block; }
+
+/* Desktop: name (+ hint) and number share a line; numbers align in a column.
+   The name column sizes to the widest name, so all numbers start at the same x. */
+@media (min-width: 450px) {
+  .contact-people {
+    grid-template-columns: max-content auto;
+    column-gap: 28px;
+    row-gap: 12px;
+    align-items: baseline;
+  }
+  .contact-person { display: contents; }
+}
 
 /* ----------------------- Footer ----------------------- */
 .site-footer { background: #2b2723; color: #d8cdbf; padding-block: 18px; }
