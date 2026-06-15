@@ -49,6 +49,8 @@ const I18N = {
       "I'm a woodworker based in Haifa. I make furniture and fitted joinery the slow way — solid timber, honest joinery and finishes that age well rather than wear out.",
     "about.p2":
       "Every piece starts with a conversation and a sketch. Whether it's a single dining table for your home or a full fit-out for your business, you deal with me directly from first idea to final installation.",
+    "about.p3":
+      "I built serious experience over years working in the UK, on demanding residential and commercial projects — and I bring that standard of craftsmanship to every piece I make in Haifa.",
     "about.stat1Value": "12+",
     "about.stat1Label": "years at the bench",
     "about.stat2Value": "100%",
@@ -127,6 +129,8 @@ const I18N = {
       "אני נגר מחיפה. אני מייצר רהיטים ונגרות בנויה בדרך האיטית — עץ מלא, חיבורים כנים וגימורים שמתיישנים יפה במקום להישחק.",
     "about.p2":
       "כל פריט מתחיל בשיחה ובסקיצה. בין אם זה שולחן אוכל אחד לבית ובין אם עיצוב פנים מלא לעסק — אתם עובדים מולי ישירות, מהרעיון הראשון ועד ההתקנה הסופית.",
+    "about.p3":
+      "צברתי ניסיון רב לאורך שנות עבודה בבריטניה, בפרויקטים מגורים ומסחר תובעניים — ואני מביא את אותה רמת אומנות לכל פריט שאני מייצר בחיפה.",
     "about.stat1Value": "12+",
     "about.stat1Label": "שנים בנגרייה",
     "about.stat2Value": "100%",
