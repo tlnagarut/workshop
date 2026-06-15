@@ -79,8 +79,8 @@ const I18N = {
     "contact.locationLabel": "Location",
     "contact.instagramLabel": "Instagram",
     "contact.whatsappAria": "Message on WhatsApp",
-    "footer.rights": "All rights reserved.",
-    "footer.builtIn": "Handmade in Haifa.",
+    "footer.rights": "All rights reserved",
+    "footer.builtIn": "Handmade in Haifa",
     "gallery.close": "Close",
     "gallery.prev": "Previous photo",
     "gallery.next": "Next photo"
@@ -144,8 +144,8 @@ const I18N = {
     "contact.locationLabel": "מיקום",
     "contact.instagramLabel": "אינסטגרם",
     "contact.whatsappAria": "שליחת הודעה בוואטסאפ",
-    "footer.rights": "כל הזכויות שמורות.",
-    "footer.builtIn": "עבודת יד בחיפה.",
+    "footer.rights": "כל הזכויות שמורות",
+    "footer.builtIn": "עבודת יד בחיפה",
     "gallery.close": "סגירה",
     "gallery.prev": "התמונה הקודמת",
     "gallery.next": "התמונה הבאה"
