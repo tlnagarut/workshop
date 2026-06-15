@@ -9,8 +9,8 @@
 const CONTACT = {
   name: "Tomas Janulionis",
   // --- INVENTED placeholder details — replace with the real ones later ---
-  phoneDisplay: "+972 54-123-4567",
-  phoneHref: "+972541234567",
+  phoneDisplay: "053-382-2875",
+  phoneHref: "+972533822875",
   email: "hello@tlnagarut.com",
   city: "Haifa, Israel",
   instagram: "https://www.instagram.com/tlnagarut/",
@@ -86,7 +86,7 @@ const I18N = {
     "contact.emailLabel": "Email",
     "contact.locationLabel": "Location",
     "contact.instagramLabel": "Instagram",
-    "contact.emailButton": "Email me",
+    "contact.whatsappAria": "Message on WhatsApp",
 
     "footer.rights": "All rights reserved.",
     "footer.builtIn": "Handmade in Haifa.",
@@ -163,7 +163,7 @@ const I18N = {
     "contact.emailLabel": "אימייל",
     "contact.locationLabel": "מיקום",
     "contact.instagramLabel": "אינסטגרם",
-    "contact.emailButton": "שליחת אימייל",
+    "contact.whatsappAria": "שליחת הודעה בוואטסאפ",
 
     "footer.rights": "כל הזכויות שמורות.",
     "footer.builtIn": "עבודת יד בחיפה.",

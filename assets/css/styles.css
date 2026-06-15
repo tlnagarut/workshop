@@ -303,6 +303,10 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 }
 .contact-list a, .contact-list span:not(.contact-label) { font-size: 1.15rem; color: var(--text); }
 .contact-list a:hover { color: var(--accent); }
+.contact-phone-row { display: flex; align-items: center; gap: 12px; }
+.contact-list a.whatsapp-link { display: inline-flex; align-items: center; color: #25d366; line-height: 0; }
+.contact-list a.whatsapp-link:hover { color: #1da851; }
+.whatsapp-icon { display: block; }
 
 /* ----------------------- Footer ----------------------- */
 .site-footer { background: #2b2723; color: #d8cdbf; padding-block: 28px; }
