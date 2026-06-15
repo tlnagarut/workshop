@@ -79,18 +79,58 @@
       btn.querySelector(".project-thumb").alt = loc.title;
       btn.querySelector(".project-title").textContent = loc.title;
       btn.querySelector(".project-desc").textContent = loc.description;
-      btn.addEventListener("click", function () { openGallery(index, 0); });
+      var photos = (p.images && p.images.length) ? p.images : [p.cover];
+      btn.addEventListener("click", function () { openGallery(photos, loc.title, 0); });
       grid.appendChild(btn);
     });
   }
 
-  // ---- Gallery / lightbox ----
-  var galleryEl, imgEl, captionEl;
-  var galProject = 0, galPhoto = 0;
+  // ---- Workshop section (content from workshop.js) ----
+  function renderWorkshop() {
+    if (typeof WORKSHOP === "undefined") return;
+    var w = WORKSHOP[current] || WORKSHOP.en;
+    document.getElementById("ws-eyebrow").textContent = w.eyebrow || "";
+    document.getElementById("ws-title").textContent = w.title || "";
+    document.getElementById("ws-intro").textContent = w.intro || "";
 
-  function openGallery(projectIndex, photoIndex) {
-    galProject = projectIndex;
-    galPhoto = photoIndex;
+    var feats = document.getElementById("ws-features");
+    feats.innerHTML = "";
+    (w.features || []).forEach(function (f) {
+      var card = document.createElement("article");
+      card.className = "card";
+      var h = document.createElement("h3");
+      h.textContent = f.title;
+      var p = document.createElement("p");
+      p.textContent = f.description;
+      card.appendChild(h);
+      card.appendChild(p);
+      feats.appendChild(card);
+    });
+
+    var photosEl = document.getElementById("ws-photos");
+    photosEl.innerHTML = "";
+    var photos = WORKSHOP.photos || [];
+    photos.forEach(function (src, i) {
+      var btn = document.createElement("button");
+      btn.className = "workshop-photo";
+      btn.type = "button";
+      btn.setAttribute("aria-label", w.title);
+      btn.innerHTML = '<img loading="lazy" alt="" src="' + src + '">';
+      btn.querySelector("img").alt = w.title + " — " + (i + 1);
+      btn.addEventListener("click", function () { openGallery(photos, w.title, i); });
+      photosEl.appendChild(btn);
+    });
+  }
+
+  // ---- Gallery / lightbox (works with any list of images) ----
+  var galleryEl, imgEl, captionEl;
+  var galPhotos = [], galTitle = "", galPhoto = 0;
+
+  function openGallery(photos, title, photoIndex) {
+    galPhotos = photos && photos.length ? photos : [];
+    galTitle = title || "";
+    galPhoto = photoIndex || 0;
+    if (!galPhotos.length) return;
     showPhoto();
     galleryEl.hidden = false;
     document.body.style.overflow = "hidden";
@@ -103,15 +143,12 @@
   }
 
   function showPhoto() {
-    var p = PROJECTS[galProject];
-    var photos = p.images && p.images.length ? p.images : [p.cover];
-    if (galPhoto < 0) galPhoto = photos.length - 1;
-    if (galPhoto >= photos.length) galPhoto = 0;
-    var loc = (p[current] && p[current].title) ? p[current] : p.en;
-    imgEl.src = photos[galPhoto];
-    imgEl.alt = loc.title + " — " + (galPhoto + 1);
+    if (galPhoto < 0) galPhoto = galPhotos.length - 1;
+    if (galPhoto >= galPhotos.length) galPhoto = 0;
+    imgEl.src = galPhotos[galPhoto];
+    imgEl.alt = galTitle + " — " + (galPhoto + 1);
     captionEl.textContent =
-      loc.title + "  ·  " + (galPhoto + 1) + " / " + photos.length;
+      galTitle + "  ·  " + (galPhoto + 1) + " / " + galPhotos.length;
   }
 
   function step(delta) { galPhoto += delta; showPhoto(); }
@@ -142,6 +179,7 @@
     document.documentElement.dir = meta.dir;
     try { localStorage.setItem(STORAGE_KEY, current); } catch (e) {}
     applyStaticText();
+    renderWorkshop(); // re-render so workshop text follows the language
     renderProjects(); // re-render so card text + tags follow the language
   }
 

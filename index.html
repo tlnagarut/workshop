@@ -33,6 +33,7 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#workshop" data-i18n="nav.workshop">Workshop</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
@@ -108,8 +109,20 @@
         </div>
       </section>
 
+      <!-- ===================== Workshop ===================== -->
+      <!-- Content for this section is in assets/workshop/workshop.js -->
+      <section class="section" id="workshop">
+        <div class="container">
+          <p class="eyebrow" id="ws-eyebrow"></p>
+          <h2 id="ws-title"></h2>
+          <p class="lede" id="ws-intro"></p>
+          <div class="cards" id="ws-features"><!-- rendered by JS --></div>
+          <div class="workshop-photos" id="ws-photos"><!-- rendered by JS --></div>
+        </div>
+      </section>
+
       <!-- ===================== Projects ===================== -->
-      <section class="section" id="projects">
+      <section class="section section-alt" id="projects">
         <div class="container">
           <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
           <h2 data-i18n="projects.title">Recent projects</h2>
@@ -122,7 +135,7 @@
       </section>
 
       <!-- ===================== Contact ===================== -->
-      <section class="section section-alt" id="contact">
+      <section class="section" id="contact">
         <div class="container contact-grid">
           <div>
             <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
@@ -173,6 +186,7 @@
 
     <script src="assets/js/i18n.js"></script>
     <script src="assets/js/projects-data.js"></script>
+    <script src="assets/workshop/workshop.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

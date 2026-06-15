@@ -199,6 +199,31 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 .card h3 { color: var(--accent-dark); }
 .card p { margin-bottom: 0; }
 
+/* ----------------------- Workshop photo strip ----------------------- */
+.workshop-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.workshop-photo {
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.workshop-photo img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+.workshop-photo:hover img { transform: scale(1.05); }
+
 /* ----------------------- Projects ----------------------- */
 .projects-grid {
   display: grid;
@@ -301,6 +326,7 @@ html[dir="rtl"] .gallery-next { transform: translateY(-50%) scaleX(-1); }
 @media (max-width: 860px) {
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .cards, .projects-grid { grid-template-columns: 1fr 1fr; }
+  .workshop-photos { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 620px) {
   body { font-size: 17px; }

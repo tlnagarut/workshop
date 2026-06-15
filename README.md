@@ -6,7 +6,7 @@ Plain HTML/CSS/JavaScript — **no build step**, hosts directly on GitHub Pages.
 - Bilingual: **English** (default) with an **English ⇄ Hebrew** toggle (Hebrew is a
   first-draft AI translation; RTL layout is handled automatically).
 - Light theme, warm woodworking palette.
-- Sections: Hero · About · Services · Projects (with photo gallery) · Contact.
+- Sections: Hero · About · Services · Workshop · Projects (with photo gallery) · Contact.
 
 > ⚠️ **Placeholders to replace later:** contact details and "about" text are
 > invented, and the project photos are free **stock images from Pexels**
@@ -84,6 +84,15 @@ no code to edit.
 
 ---
 
+## Customize the Workshop section
+
+Everything for the Workshop section lives in the **`assets/workshop/`** folder:
+
+- **`workshop.js`** — heading and intro text (English + Hebrew), and the
+  capability cards (add, remove or reorder entries in the `features` lists).
+- **The photos** (`01.jpg`–`04.jpg`) — replace them in this same folder (keep the
+  names) or edit the `photos` list in `workshop.js`. Clicking a photo opens the gallery.
+
 ## Edit text / contact details / Hebrew translations
 
 - **Text + translations:** `assets/js/i18n.js` (English under `en`, Hebrew under `he`).
@@ -109,6 +118,7 @@ assets/css/styles.css            all styling (light theme + RTL)
 assets/js/i18n.js                text, translations, contact details
 assets/js/main.js                language switch, rendering, gallery
 assets/js/projects-data.js       AUTO-GENERATED — do not edit by hand
+assets/workshop/                 ← Workshop section: workshop.js + photos
 assets/projects/<slug>/          ← one folder per project (photos + project.md)
 assets/img/                      hero + social-share placeholder images
 tools/build-projects.mjs         scans assets/projects/ → projects-data.js
