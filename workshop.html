@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="projects.metaTitle">Projects — TL Nagarut</title>
+    <title data-i18n="workshop.metaTitle">Workshop — TL Nagarut</title>
     <meta name="description" data-i18n="meta.description" data-i18n-attr="content"
       content="Handcrafted furniture and custom woodwork in Haifa, Israel." />
 
@@ -27,8 +27,8 @@
           <a href="index.html#about" data-i18n="nav.about">About</a>
           <a href="index.html#services" data-i18n="nav.services">Services</a>
           <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
-          <a href="workshop.html" data-i18n="nav.workshop">Workshop</a>
-          <a href="projects.html" data-i18n="nav.projects" aria-current="page">Projects</a>
+          <a href="workshop.html" data-i18n="nav.workshop" aria-current="page">Workshop</a>
+          <a href="projects.html" data-i18n="nav.projects">Projects</a>
         </nav>
 
         <button id="lang-toggle" class="lang-toggle" type="button"
@@ -38,16 +38,15 @@
     </header>
 
     <main>
-      <!-- ===================== Projects ===================== -->
-      <section class="section" id="projects">
+      <!-- ===================== Workshop ===================== -->
+      <!-- Content for this section is in assets/workshop/workshop.js -->
+      <section class="section" id="workshop">
         <div class="container">
-          <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
-          <h2 data-i18n="projects.title">Recent projects</h2>
-          <p class="lede">
-            <span data-i18n="projects.intro">A few recent pieces. More on Instagram —</span>
-            <a id="ig-inline" href="#" target="_blank" rel="noopener">@tlnagarut</a>
-          </p>
-          <div class="projects-grid" id="projects-grid"><!-- rendered by JS --></div>
+          <p class="eyebrow" id="ws-eyebrow"></p>
+          <h2 id="ws-title"></h2>
+          <p class="lede" id="ws-intro"></p>
+          <div class="cards" id="ws-features"><!-- rendered by JS --></div>
+          <div class="workshop-photos" id="ws-photos"><!-- rendered by JS --></div>
         </div>
       </section>
     </main>
@@ -72,7 +71,7 @@
     </div>
 
     <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/projects-data.js"></script>
+    <script src="assets/workshop/workshop.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

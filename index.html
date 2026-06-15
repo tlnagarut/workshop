@@ -33,9 +33,9 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#services" data-i18n="nav.services">Services</a>
-          <a href="#workshop" data-i18n="nav.workshop">Workshop</a>
-          <a href="projects.html" data-i18n="nav.projects">Projects</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="workshop.html" data-i18n="nav.workshop">Workshop</a>
+          <a href="projects.html" data-i18n="nav.projects">Projects</a>
         </nav>
 
         <button id="lang-toggle" class="lang-toggle" type="button"
@@ -109,22 +109,11 @@
         </div>
       </section>
 
-      <!-- ===================== Workshop ===================== -->
-      <!-- Content for this section is in assets/workshop/workshop.js -->
-      <section class="section" id="workshop">
-        <div class="container">
-          <p class="eyebrow" id="ws-eyebrow"></p>
-          <h2 id="ws-title"></h2>
-          <p class="lede" id="ws-intro"></p>
-          <div class="cards" id="ws-features"><!-- rendered by JS --></div>
-          <div class="workshop-photos" id="ws-photos"><!-- rendered by JS --></div>
-        </div>
-      </section>
-
-      <!-- Projects live on their own page (projects.html) -->
+      <!-- Workshop and Projects live on their own pages -->
+      <!-- (workshop.html and projects.html) -->
 
       <!-- ===================== Contact ===================== -->
-      <section class="section section-alt" id="contact">
+      <section class="section" id="contact">
         <div class="container contact-grid">
           <div>
             <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
@@ -162,20 +151,8 @@
       </div>
     </footer>
 
-    <!-- ===================== Gallery lightbox ===================== -->
-    <div class="gallery" id="gallery" hidden aria-modal="true" role="dialog">
-      <button class="gallery-close" id="gallery-close" type="button" data-i18n-aria="gallery.close" aria-label="Close">×</button>
-      <button class="gallery-nav gallery-prev" id="gallery-prev" type="button" data-i18n-aria="gallery.prev" aria-label="Previous photo">‹</button>
-      <figure class="gallery-figure">
-        <img id="gallery-img" alt="" />
-        <figcaption id="gallery-caption"></figcaption>
-      </figure>
-      <button class="gallery-nav gallery-next" id="gallery-next" type="button" data-i18n-aria="gallery.next" aria-label="Next photo">›</button>
-    </div>
-
+    <!-- Projects and Workshop (with their galleries) are on their own pages. -->
     <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/projects-data.js"></script>
-    <script src="assets/workshop/workshop.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

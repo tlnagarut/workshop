@@ -33,6 +33,7 @@ const I18N = {
     "nav.contact": "Contact",
     "nav.langToggle": "עברית",
     "nav.langToggleAria": "Switch to Hebrew",
+    "workshop.metaTitle": "Workshop — TL Nagarut",
 
     "hero.tagline": "Bespoke woodwork · Haifa, Israel",
     "hero.title": "Furniture made by hand, built to last.",
@@ -109,6 +110,7 @@ const I18N = {
     "nav.contact": "צור קשר",
     "nav.langToggle": "English",
     "nav.langToggleAria": "מעבר לאנגלית",
+    "workshop.metaTitle": "הנגרייה — TL נגרות",
 
     "hero.tagline": "נגרות בהזמנה אישית · חיפה",
     "hero.title": "רהיטים בעבודת יד, שנבנו כדי להחזיק.",

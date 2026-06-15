@@ -6,8 +6,9 @@ Plain HTML/CSS/JavaScript — **no build step**, hosts directly on GitHub Pages.
 - Bilingual: **English** (default) with an **English ⇄ Hebrew** toggle (Hebrew is a
   first-draft AI translation; RTL layout is handled automatically).
 - Light theme, warm woodworking palette.
-- Main page (`index.html`): Hero · About · Services · Workshop · Contact.
-- Projects are on their **own page** (`projects.html`), linked from the nav and hero.
+- Main page (`index.html`): Hero · About · Services · Contact.
+- Workshop and Projects each have their **own page** (`workshop.html`, `projects.html`),
+  linked from the nav (and the hero links to Projects).
 
 > ⚠️ **Placeholders to replace later:** contact details and "about" text are
 > invented, and the project photos are free **stock images from Pexels**
@@ -114,7 +115,8 @@ project folder that already contains real photos.
 ## File map
 
 ```
-index.html                       main page (about, services, workshop, contact)
+index.html                       main page (about, services, contact)
+workshop.html                    workshop page (facilities + photo gallery)
 projects.html                    projects page (grid + photo gallery)
 assets/css/styles.css            all styling (light theme + RTL)
 assets/js/i18n.js                text, translations, contact details
