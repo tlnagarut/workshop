@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98a55"/>
+      <stop offset="1" stop-color="#6f4423"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g)"/>
+  <path d="M -20 135 Q 960 105 1940 135" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.06"/>
+  <path d="M -20 270 Q 960 246 1940 270" fill="none" stroke="#3a2615" stroke-width="3" stroke-opacity="0.09"/>
+  <path d="M -20 405 Q 960 387 1940 405" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.12"/>
+  <path d="M -20 540 Q 960 498 1940 540" fill="none" stroke="#3a2615" stroke-width="3" stroke-opacity="0.06"/>
+  <path d="M -20 675 Q 960 639 1940 675" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.09"/>
+  <path d="M -20 810 Q 960 780 1940 810" fill="none" stroke="#3a2615" stroke-width="3" stroke-opacity="0.12"/>
+  <path d="M -20 945 Q 960 921 1940 945" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.06"/>
+  <rect width="1920" height="1080" fill="none" stroke="#3a2615" stroke-opacity="0.08" stroke-width="2"/>
+  
+</svg>

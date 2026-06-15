@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98a55"/>
+      <stop offset="1" stop-color="#6f4423"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <path d="M -20 78.75 Q 600 48.75 1220 78.75" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.06"/>
+  <path d="M -20 157.5 Q 600 133.5 1220 157.5" fill="none" stroke="#3a2615" stroke-width="3" stroke-opacity="0.09"/>
+  <path d="M -20 236.25 Q 600 218.25 1220 236.25" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.12"/>
+  <path d="M -20 315 Q 600 273 1220 315" fill="none" stroke="#3a2615" stroke-width="3" stroke-opacity="0.06"/>
+  <path d="M -20 393.75 Q 600 357.75 1220 393.75" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.09"/>
+  <path d="M -20 472.5 Q 600 442.5 1220 472.5" fill="none" stroke="#3a2615" stroke-width="3" stroke-opacity="0.12"/>
+  <path d="M -20 551.25 Q 600 527.25 1220 551.25" fill="none" stroke="#3a2615" stroke-width="2" stroke-opacity="0.06"/>
+  <rect width="1200" height="630" fill="none" stroke="#3a2615" stroke-opacity="0.08" stroke-width="2"/>
+  <text x="600" y="604" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="55" fill="#fbf6ee" fill-opacity="0.92" letter-spacing="1.5">TL NAGARUT</text>
+</svg>

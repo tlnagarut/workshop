@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">TL Nagarut — Bespoke Woodwork in Haifa</title>
+    <meta name="description" data-i18n="meta.description" data-i18n-attr="content"
+      content="Handcrafted furniture and custom woodwork in Haifa, Israel." />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:title" content="TL Nagarut — Bespoke Woodwork in Haifa" />
+    <meta property="og:description" content="Handcrafted furniture and custom woodwork in Haifa, Israel." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/og-image.svg" />
+
+    <link rel="icon" href="assets/img/og-image.svg" />
+
+    <!-- Fonts: serif headings (Latin) + Hebrew-capable family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- ===================== Header / nav ===================== -->
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#top" data-i18n="nav.brand">TL Nagarut</a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <button id="lang-toggle" class="lang-toggle" type="button"
+          data-i18n="nav.langToggle" data-i18n-aria="nav.langToggleAria"
+          aria-label="Switch to Hebrew">עברית</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===================== Hero ===================== -->
+      <section class="hero" style="background-image: url('assets/img/hero.svg')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow light" data-i18n="hero.tagline">Bespoke woodwork · Haifa, Israel</p>
+          <h1 data-i18n="hero.title">Furniture made by hand, built to last.</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Custom tables, kitchens, built-ins and commercial joinery.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects" data-i18n="hero.ctaProjects">See projects</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact">Start a project</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== About ===================== -->
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+            <h2 data-i18n="about.title">Hello, I'm Tomas.</h2>
+            <p class="lede" data-i18n="about.p1"></p>
+            <p data-i18n="about.p2"></p>
+          </div>
+          <ul class="stats" aria-hidden="false">
+            <li>
+              <span class="stat-value" data-i18n="about.stat1Value">12+</span>
+              <span class="stat-label" data-i18n="about.stat1Label">years at the bench</span>
+            </li>
+            <li>
+              <span class="stat-value" data-i18n="about.stat2Value">100%</span>
+              <span class="stat-label" data-i18n="about.stat2Label">made to order</span>
+            </li>
+            <li>
+              <span class="stat-value" data-i18n="about.stat3Value">Haifa</span>
+              <span class="stat-label" data-i18n="about.stat3Label">workshop & delivery</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===================== Services ===================== -->
+      <section class="section section-alt" id="services">
+        <div class="container">
+          <p class="eyebrow" data-i18n="services.eyebrow">What I make</p>
+          <h2 data-i18n="services.title">For homes and for businesses.</h2>
+          <div class="cards">
+            <article class="card">
+              <h3 data-i18n="services.privateTitle">For private clients</h3>
+              <p data-i18n="services.privateBody"></p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="services.businessTitle">For business clients</h3>
+              <p data-i18n="services.businessBody"></p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="services.restoreTitle">Repair & restoration</h3>
+              <p data-i18n="services.restoreBody"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Projects ===================== -->
+      <section class="section" id="projects">
+        <div class="container">
+          <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
+          <h2 data-i18n="projects.title">Recent projects</h2>
+          <p class="lede">
+            <span data-i18n="projects.intro">A few recent pieces. More on Instagram —</span>
+            <a id="ig-inline" href="#" target="_blank" rel="noopener">@tlnagarut</a>
+          </p>
+          <div class="projects-grid" id="projects-grid"><!-- rendered by JS --></div>
+        </div>
+      </section>
+
+      <!-- ===================== Contact ===================== -->
+      <section class="section section-alt" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
+            <h2 data-i18n="contact.title">Let's make something.</h2>
+            <p class="lede" data-i18n="contact.body"></p>
+            <a class="btn btn-primary" id="contact-email-btn" href="#" data-i18n="contact.emailButton">Email me</a>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label" data-i18n="contact.phoneLabel">Phone / WhatsApp</span>
+              <a id="contact-phone" href="#"></a>
+            </li>
+            <li>
+              <span class="contact-label" data-i18n="contact.emailLabel">Email</span>
+              <a id="contact-email" href="#"></a>
+            </li>
+            <li>
+              <span class="contact-label" data-i18n="contact.locationLabel">Location</span>
+              <span id="contact-location"></span>
+            </li>
+            <li>
+              <span class="contact-label" data-i18n="contact.instagramLabel">Instagram</span>
+              <a id="contact-instagram" href="#" target="_blank" rel="noopener"></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span><span id="footer-name">Tomas Janulionis</span> · <span data-i18n="footer.builtIn">Handmade in Haifa.</span></span>
+        <span>© <span id="year"></span> · <span data-i18n="footer.rights">All rights reserved.</span></span>
+      </div>
+    </footer>
+
+    <!-- ===================== Gallery lightbox ===================== -->
+    <div class="gallery" id="gallery" hidden aria-modal="true" role="dialog">
+      <button class="gallery-close" id="gallery-close" type="button" data-i18n-aria="gallery.close" aria-label="Close">×</button>
+      <button class="gallery-nav gallery-prev" id="gallery-prev" type="button" data-i18n-aria="gallery.prev" aria-label="Previous photo">‹</button>
+      <figure class="gallery-figure">
+        <img id="gallery-img" alt="" />
+        <figcaption id="gallery-caption"></figcaption>
+      </figure>
+      <button class="gallery-nav gallery-next" id="gallery-next" type="button" data-i18n-aria="gallery.next" aria-label="Next photo">›</button>
+    </div>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/projects-data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
