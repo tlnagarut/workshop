@@ -33,6 +33,9 @@ jobs:
       # Regenerate assets/js/projects-data.js from the project folders.
       - run: node tools/build-projects.mjs
 
+      # Regenerate assets/js/i18n.js from content/*.yml.
+      - run: node tools/build-i18n.mjs
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

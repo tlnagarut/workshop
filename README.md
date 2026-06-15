@@ -97,9 +97,19 @@ Everything for the Workshop section lives in the **`assets/workshop/`** folder:
 
 ## Edit text / contact details / Hebrew translations
 
-- **Text + translations:** `assets/js/i18n.js` (English under `en`, Hebrew under `he`).
-- **Contact details (name, phone, email, Instagram, city):** the `CONTACT` block at
-  the top of `assets/js/i18n.js` — change it once, it updates everywhere.
+Text lives in plain, friendly **YAML** files under `content/` — no code, no quotes or
+commas to get wrong:
+
+- **English:** `content/en.yml`
+- **Hebrew:** `content/he.yml` (same keys as English)
+- **Contact details (name, phone, email, Instagram, city):** `content/contact.yml` —
+  shared by both languages, change it once and it updates everywhere.
+
+After editing, run **`node tools/build-i18n.mjs`** to regenerate `assets/js/i18n.js`
+(or just push — the deploy workflow runs it for you). The build warns if a key exists
+in one language but is missing from the other.
+
+> Don't edit `assets/js/i18n.js` directly — it's auto-generated and will be overwritten.
 
 ## Replace the placeholder images
 
@@ -119,12 +129,16 @@ index.html                       main page (about, services, contact)
 workshop.html                    workshop page (facilities + photo gallery)
 projects.html                    projects page (grid + photo gallery)
 assets/css/styles.css            all styling (light theme + RTL)
-assets/js/i18n.js                text, translations, contact details
+content/en.yml                   ← English text (edit here)
+content/he.yml                   ← Hebrew text (edit here)
+content/contact.yml              ← shared contact details (edit here)
+assets/js/i18n.js                AUTO-GENERATED from content/ — do not edit by hand
 assets/js/main.js                language switch, rendering, gallery
 assets/js/projects-data.js       AUTO-GENERATED — do not edit by hand
 assets/workshop/                 ← Workshop section: workshop.js + photos
 assets/projects/<slug>/          ← one folder per project (photos + project.md)
 assets/img/                      hero + social-share placeholder images
+tools/build-i18n.mjs             compiles content/*.yml → i18n.js
 tools/build-projects.mjs         scans assets/projects/ → projects-data.js
 tools/generate-placeholders.mjs  regenerates placeholder images
 .github/workflows/deploy.yml     auto-build + deploy on push

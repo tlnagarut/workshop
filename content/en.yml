@@ -1,0 +1,112 @@
+# ============================================================================
+# English site text. Each group below maps to a section of the site.
+# Keep the same keys in he.yml (Hebrew). After editing, run:
+#   node tools/build-i18n.mjs
+#
+# Tips:
+#   - Short labels go on one line:        about: About
+#   - Paragraphs use ">" and can wrap over several lines (breaks become spaces).
+#   - Lines starting with # are notes to yourself and are ignored.
+# ============================================================================
+
+dir: ltr
+langName: English
+
+meta:
+  title: TL Nagarut — Bespoke Woodwork in Haifa
+  description: >
+    Handcrafted furniture and custom woodwork in Haifa, Israel. Tables,
+    kitchens, built-ins and commercial fit-outs for private and business
+    clients.
+
+nav:
+  brand: TL Nagarut
+  about: About
+  services: Services
+  workshop: Workshop
+  projects: Projects
+  contact: Contact
+  langToggle: עברית
+  langToggleAria: Switch to Hebrew
+  menuAria: Menu
+
+workshop:
+  metaTitle: Workshop — TL Nagarut
+
+hero:
+  tagline: Bespoke woodwork · Haifa, Israel
+  title: Furniture made by hand, built to last.
+  subtitle: >
+    Custom tables, kitchens, built-ins and commercial joinery — designed
+    around how you live and work, and crafted from solid timber in Haifa.
+  ctaProjects: See projects
+  ctaContact: Start a project
+
+about:
+  eyebrow: About
+  title: Hello, I'm Tomas.
+  p1: >
+    I'm a woodworker based in Haifa. I make furniture and fitted joinery the
+    slow way — solid timber, honest joinery and finishes that age well rather
+    than wear out.
+  p2: >
+    Every piece starts with a conversation and a sketch. Whether it's a single
+    dining table for your home or a full fit-out for your business, you deal
+    with me directly from first idea to final installation.
+  p3: >
+    I built serious experience over years working in the UK, on demanding
+    residential and commercial projects — and I bring that standard of
+    craftsmanship to every piece I make in Haifa.
+  stat1Value: 12+
+  stat1Label: years at the bench
+  stat2Value: 100%
+  stat2Label: made to order
+  stat3Value: Haifa
+  stat3Label: workshop & delivery
+
+services:
+  eyebrow: What I make
+  title: For homes and for businesses.
+  privateTitle: For private clients
+  privateBody: >
+    Dining and coffee tables, beds, wardrobes, built-in storage, kitchens and
+    one-off pieces designed for your space.
+  businessTitle: For business clients
+  businessBody: >
+    Café and restaurant fit-outs, reception desks, boardroom tables, retail
+    displays and bespoke furniture runs, delivered to schedule.
+  restoreTitle: Repair & restoration
+  restoreBody: >
+    Bringing tired or inherited furniture back to life — repairs, refinishing
+    and sympathetic alterations.
+
+projects:
+  metaTitle: Projects — TL Nagarut
+  eyebrow: Selected work
+  title: Recent projects
+  intro: A few recent pieces. More on Instagram —
+  tagPrivate: Private
+  tagBusiness: Business
+  tagBoth: Private & business
+  viewGallery: View photos
+
+contact:
+  eyebrow: Get in touch
+  title: Let's make something.
+  body: >
+    Tell me a little about your project — a room, a piece, a rough budget or a
+    deadline — and I'll come back to you with thoughts and next steps.
+  phoneLabel: Phone / WhatsApp
+  emailLabel: Email
+  locationLabel: Location
+  instagramLabel: Instagram
+  whatsappAria: Message on WhatsApp
+
+footer:
+  rights: All rights reserved.
+  builtIn: Handmade in Haifa.
+
+gallery:
+  close: Close
+  prev: Previous photo
+  next: Next photo

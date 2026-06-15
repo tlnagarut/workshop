@@ -1,0 +1,153 @@
+/* ============================================================================
+ * Compiles the friendly content files into assets/js/i18n.js (which the site
+ * reads). Run:  node tools/build-i18n.mjs
+ *
+ * Edit text here — NOT in assets/js/i18n.js:
+ *   content/en.yml        English text, grouped by section
+ *   content/he.yml        Hebrew text, same keys as en.yml
+ *   content/contact.yml   Phone / email / etc. (shared, not per-language)
+ *
+ * YAML you can use (a small, friendly subset — no quotes or commas needed):
+ *
+ *   nav:                       ← a group (indent its children by 2 spaces)
+ *     about: About             ← a key and its text
+ *     contact: Contact
+ *
+ *   about:
+ *     p1: >                    ← ">" = a paragraph that can span several lines;
+ *       This whole block is      line breaks become spaces, blank lines start
+ *       joined into one          a new paragraph.
+ *       paragraph.
+ *     p2: |                    ← "|" = keep line breaks exactly as written.
+ *       Line one.
+ *       Line two.
+ *
+ * Lines starting with # are comments. That's all you need to know.
+ * ========================================================================== */
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const contentDir = join(root, "content");
+const outFile = join(root, "assets", "js", "i18n.js");
+
+/* --- A tiny YAML reader: nested groups, plain scalars, and | / > blocks. --- */
+function indentOf(line) {
+  return line.length - line.replace(/^ +/, "").length;
+}
+
+function stripQuotes(v) {
+  if (v.length >= 2 && /^(".*"|'.*')$/.test(v)) return v.slice(1, -1);
+  return v;
+}
+
+function parseYaml(text) {
+  const lines = text.replace(/^﻿/, "").replace(/\r\n/g, "\n").split("\n");
+  const root = {};
+  const stack = [{ indent: -1, node: root }];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    if (trimmed === "" || trimmed.startsWith("#")) { i++; continue; }
+
+    const indent = indentOf(line);
+    while (stack.length > 1 && stack[stack.length - 1].indent >= indent) stack.pop();
+    const parent = stack[stack.length - 1].node;
+
+    const colon = trimmed.indexOf(":");
+    if (colon === -1) { i++; continue; }
+    const key = trimmed.slice(0, colon).trim();
+    let value = trimmed.slice(colon + 1).trim();
+
+    // Block scalar: "|" (keep line breaks) or ">" (fold into spaces).
+    const block = value.match(/^([|>])([+-]?)$/);
+    if (block) {
+      const fold = block[1] === ">";
+      const body = [];
+      i++;
+      while (i < lines.length) {
+        const bl = lines[i];
+        if (bl.trim() !== "" && indentOf(bl) <= indent) break;
+        body.push(bl);
+        i++;
+      }
+      // Re-base indentation to the least-indented non-empty line.
+      const base = Math.min(
+        ...body.filter((l) => l.trim() !== "").map(indentOf).concat(Infinity)
+      );
+      const cleaned = body.map((l) => (l.trim() === "" ? "" : l.slice(base)));
+      while (cleaned.length && cleaned[cleaned.length - 1] === "") cleaned.pop();
+
+      let out;
+      if (fold) {
+        // Fold: join consecutive text lines with a space; blank = paragraph break.
+        out = "";
+        for (let j = 0; j < cleaned.length; j++) {
+          const cur = cleaned[j];
+          if (cur === "") out += "\n";
+          else out += (out && !out.endsWith("\n") ? " " : "") + cur;
+        }
+      } else {
+        out = cleaned.join("\n");
+      }
+      parent[key] = out;
+      continue;
+    }
+
+    if (value === "") {
+      const obj = {};
+      parent[key] = obj;
+      stack.push({ indent, node: obj });
+    } else {
+      parent[key] = stripQuotes(value);
+    }
+    i++;
+  }
+  return root;
+}
+
+/* --- Flatten nested groups into the dotted keys main.js expects. --- */
+function flatten(obj, prefix, out) {
+  for (const [k, v] of Object.entries(obj)) {
+    const key = prefix ? prefix + "." + k : k;
+    if (v && typeof v === "object" && !Array.isArray(v)) flatten(v, key, out);
+    else out[key] = v;
+  }
+  return out;
+}
+
+function load(name) {
+  return parseYaml(readFileSync(join(contentDir, name), "utf8"));
+}
+
+function main() {
+  const contact = flatten(load("contact.yml"), "", {});
+  const en = flatten(load("en.yml"), "", {});
+  const he = flatten(load("he.yml"), "", {});
+
+  // Warn about keys present in one language but missing in the other.
+  const enKeys = Object.keys(en), heKeys = Object.keys(he);
+  enKeys.filter((k) => !(k in he) && k !== "dir" && k !== "langName")
+    .forEach((k) => console.warn(`! "${k}" is in en.yml but missing from he.yml`));
+  heKeys.filter((k) => !(k in en) && k !== "dir" && k !== "langName")
+    .forEach((k) => console.warn(`! "${k}" is in he.yml but missing from en.yml`));
+
+  const banner =
+    "/* AUTO-GENERATED by tools/build-i18n.mjs — do not edit by hand.\n" +
+    " * Edit the text in content/en.yml, content/he.yml, content/contact.yml,\n" +
+    " * then run:  node tools/build-i18n.mjs */\n";
+
+  const body =
+    "const CONTACT = " + JSON.stringify(contact, null, 2) + ";\n\n" +
+    "const I18N = " + JSON.stringify({ en, he }, null, 2) + ";\n";
+
+  writeFileSync(outFile, banner + "\n" + body);
+  console.log(
+    `Wrote ${enKeys.length} en / ${heKeys.length} he keys to assets/js/i18n.js`
+  );
+}
+
+main();
