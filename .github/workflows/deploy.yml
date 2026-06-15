@@ -36,6 +36,9 @@ jobs:
       # Regenerate assets/js/i18n.js from content/*.yml.
       - run: node tools/build-i18n.mjs
 
+      # Regenerate assets/workshop/workshop.js from content/workshop*.yml.
+      - run: node tools/build-workshop.mjs
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

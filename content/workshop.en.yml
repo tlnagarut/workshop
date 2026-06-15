@@ -1,0 +1,42 @@
+# ============================================================================
+# Workshop section — English text. Same keys in workshop.he.yml.
+# After editing, run:  node tools/build-workshop.mjs
+#
+# "features" is a list of capability cards — add, remove or reorder freely.
+# Each card has a "title" and a "description". Keep the "- " in front of each
+# card's title.
+# ============================================================================
+
+eyebrow: The workshop
+title: A fully-equipped Haifa workshop.
+intro: >
+  Everything is made in my own workshop in Haifa — from one-off pieces to
+  larger runs for business clients. Machine milling for accuracy, hand tools
+  for the details, and the space and finishing setup to take a project from
+  rough timber to a delivered, installed result.
+
+features:
+  - title: Machine room
+    description: >
+      Panel saw, thicknesser, planer, bandsaw and router table for accurate,
+      repeatable milling of solid timber and sheet goods.
+  - title: Joinery bench
+    description: >
+      Traditional hand-cut joinery — mortise and tenon, dovetails and fitted
+      detail work that machines can't match.
+  - title: Finishing area
+    description: >
+      A dedicated, dust-controlled space for oiling, lacquering and spray
+      finishing, so every surface is clean and durable.
+  - title: Timber & materials
+    description: >
+      Carefully sourced hardwoods and sheet materials, stored and conditioned
+      ready for work.
+  - title: Capacity for business
+    description: >
+      Set up to handle commercial runs and fit-outs — multiple matching
+      pieces, delivered to schedule.
+  - title: Delivery & installation
+    description: >
+      Pieces are finished, wrapped and installed on site across Haifa and the
+      north.

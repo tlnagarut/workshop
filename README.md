@@ -88,12 +88,17 @@ no code to edit.
 
 ## Customize the Workshop section
 
-Everything for the Workshop section lives in the **`assets/workshop/`** folder:
+Workshop text lives in plain YAML under `content/`, same as the rest of the site:
 
-- **`workshop.js`** — heading and intro text (English + Hebrew), and the
-  capability cards (add, remove or reorder entries in the `features` lists).
-- **The photos** (`01.jpg`–`04.jpg`) — replace them in this same folder (keep the
-  names) or edit the `photos` list in `workshop.js`. Clicking a photo opens the gallery.
+- **English:** `content/workshop.en.yml` — heading, intro, and the capability
+  cards (add, remove or reorder entries under `features`).
+- **Hebrew:** `content/workshop.he.yml` (same keys).
+- **Photos:** listed in `content/workshop.yml`. Replace the files in
+  `assets/workshop/` (keep the names `01.jpg`–`04.jpg`) or edit the `photos` list.
+  Clicking a photo opens the gallery.
+
+After editing, run **`node tools/build-workshop.mjs`** (or just push). Don't edit
+`assets/workshop/workshop.js` directly — it's auto-generated.
 
 ## Edit text / contact details / Hebrew translations
 
@@ -132,13 +137,19 @@ assets/css/styles.css            all styling (light theme + RTL)
 content/en.yml                   ← English text (edit here)
 content/he.yml                   ← Hebrew text (edit here)
 content/contact.yml              ← shared contact details (edit here)
+content/workshop.en.yml          ← Workshop text, English (edit here)
+content/workshop.he.yml          ← Workshop text, Hebrew (edit here)
+content/workshop.yml             ← Workshop photos list (edit here)
 assets/js/i18n.js                AUTO-GENERATED from content/ — do not edit by hand
 assets/js/main.js                language switch, rendering, gallery
 assets/js/projects-data.js       AUTO-GENERATED — do not edit by hand
-assets/workshop/                 ← Workshop section: workshop.js + photos
+assets/workshop/workshop.js      AUTO-GENERATED from content/ — do not edit by hand
+assets/workshop/*.jpg            ← Workshop photos
 assets/projects/<slug>/          ← one folder per project (photos + project.md)
 assets/img/                      hero + social-share placeholder images
 tools/build-i18n.mjs             compiles content/*.yml → i18n.js
+tools/build-workshop.mjs         compiles content/workshop*.yml → workshop.js
+tools/yaml.mjs                   tiny shared YAML reader used by the builds
 tools/build-projects.mjs         scans assets/projects/ → projects-data.js
 tools/generate-placeholders.mjs  regenerates placeholder images
 .github/workflows/deploy.yml     auto-build + deploy on push

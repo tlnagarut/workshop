@@ -27,97 +27,11 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseYaml, flatten } from "./yaml.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const contentDir = join(root, "content");
 const outFile = join(root, "assets", "js", "i18n.js");
-
-/* --- A tiny YAML reader: nested groups, plain scalars, and | / > blocks. --- */
-function indentOf(line) {
-  return line.length - line.replace(/^ +/, "").length;
-}
-
-function stripQuotes(v) {
-  if (v.length >= 2 && /^(".*"|'.*')$/.test(v)) return v.slice(1, -1);
-  return v;
-}
-
-function parseYaml(text) {
-  const lines = text.replace(/^﻿/, "").replace(/\r\n/g, "\n").split("\n");
-  const root = {};
-  const stack = [{ indent: -1, node: root }];
-  let i = 0;
-
-  while (i < lines.length) {
-    const line = lines[i];
-    const trimmed = line.trim();
-    if (trimmed === "" || trimmed.startsWith("#")) { i++; continue; }
-
-    const indent = indentOf(line);
-    while (stack.length > 1 && stack[stack.length - 1].indent >= indent) stack.pop();
-    const parent = stack[stack.length - 1].node;
-
-    const colon = trimmed.indexOf(":");
-    if (colon === -1) { i++; continue; }
-    const key = trimmed.slice(0, colon).trim();
-    let value = trimmed.slice(colon + 1).trim();
-
-    // Block scalar: "|" (keep line breaks) or ">" (fold into spaces).
-    const block = value.match(/^([|>])([+-]?)$/);
-    if (block) {
-      const fold = block[1] === ">";
-      const body = [];
-      i++;
-      while (i < lines.length) {
-        const bl = lines[i];
-        if (bl.trim() !== "" && indentOf(bl) <= indent) break;
-        body.push(bl);
-        i++;
-      }
-      // Re-base indentation to the least-indented non-empty line.
-      const base = Math.min(
-        ...body.filter((l) => l.trim() !== "").map(indentOf).concat(Infinity)
-      );
-      const cleaned = body.map((l) => (l.trim() === "" ? "" : l.slice(base)));
-      while (cleaned.length && cleaned[cleaned.length - 1] === "") cleaned.pop();
-
-      let out;
-      if (fold) {
-        // Fold: join consecutive text lines with a space; blank = paragraph break.
-        out = "";
-        for (let j = 0; j < cleaned.length; j++) {
-          const cur = cleaned[j];
-          if (cur === "") out += "\n";
-          else out += (out && !out.endsWith("\n") ? " " : "") + cur;
-        }
-      } else {
-        out = cleaned.join("\n");
-      }
-      parent[key] = out;
-      continue;
-    }
-
-    if (value === "") {
-      const obj = {};
-      parent[key] = obj;
-      stack.push({ indent, node: obj });
-    } else {
-      parent[key] = stripQuotes(value);
-    }
-    i++;
-  }
-  return root;
-}
-
-/* --- Flatten nested groups into the dotted keys main.js expects. --- */
-function flatten(obj, prefix, out) {
-  for (const [k, v] of Object.entries(obj)) {
-    const key = prefix ? prefix + "." + k : k;
-    if (v && typeof v === "object" && !Array.isArray(v)) flatten(v, key, out);
-    else out[key] = v;
-  }
-  return out;
-}
 
 function load(name) {
   return parseYaml(readFileSync(join(contentDir, name), "utf8"));
