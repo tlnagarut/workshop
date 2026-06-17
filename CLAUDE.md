@@ -20,6 +20,19 @@ Keep this in mind:
 - Before anything irreversible (deleting files, removing a project, force-pushing),
   pause and explain in plain terms what will happen, and ask first.
 
+## Start of session — sync with git first
+
+The owner won't think to do this, so **do it for them**. At the start of a
+session, before making changes, run `git pull` (after a `git fetch`) to make
+sure you're working on the latest version of the site. The site may have been
+updated from another computer or by the deploy process, and editing a stale
+copy causes conflicts later.
+
+- If the working copy has uncommitted changes or the pull would conflict, **stop
+  and explain in plain terms** before doing anything — don't force it.
+- Mention briefly that you synced (e.g. "I pulled the latest version first"),
+  so they know it happened.
+
 ## Layout
 
 - `index.html`, `workshop.html`, `projects.html` — the three pages (static HTML).
