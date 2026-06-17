@@ -1,6 +1,6 @@
 /* ============================================================================
  * A tiny, dependency-free YAML reader — just enough for this site's content.
- * Shared by tools/build-i18n.mjs and tools/build-workshop.mjs.
+ * Shared by tools/build-content.mjs and tools/build-workshop.mjs.
  *
  * Supports the friendly subset we actually author:
  *   - nested maps (indent children by 2 spaces)

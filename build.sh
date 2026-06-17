@@ -10,8 +10,8 @@ echo ""
 echo "▶ generate-placeholders.mjs"
 node tools/generate-placeholders.mjs
 
-echo "▶ build-i18n.mjs"
-node tools/build-i18n.mjs
+echo "▶ build-content.mjs"
+node tools/build-content.mjs
 
 echo "▶ build-workshop.mjs"
 node tools/build-workshop.mjs

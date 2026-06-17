@@ -14,7 +14,7 @@ business in Haifa. Plain HTML/CSS/JS, **no build framework**, hosts on GitHub Pa
 
 ## Generated files — run the build after editing source
 
-Several JS data files (`assets/js/i18n.js`, `assets/js/projects.js`,
+Several JS data files (`assets/js/content.js`, `assets/js/projects.js`,
 `assets/js/workshop.js`) are **auto-generated** from the YAML content
 and project folders. They are not edited by hand.
 

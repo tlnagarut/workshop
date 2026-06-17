@@ -23,7 +23,7 @@ Source content lives in YAML and per-project folders. Several JS data files are
 
 | Edit this (source)                           | Generates                     |
 |----------------------------------------------|-------------------------------|
-| `content/about.en.yml`, `content/about.he.yml` | `assets/js/i18n.js`         |
+| `content/about.en.yml`, `content/about.he.yml` | `assets/js/content.js`         |
 | `content/contact.yml`                        | (shared by both languages)    |
 | `content/workshop.{en,he}.yml`               | `assets/js/workshop.js`       |
 | `assets/projects/<slug>/project.md` + photos | `assets/js/projects.js`       |
@@ -81,11 +81,11 @@ One-time: repo **Settings → Pages → Source → GitHub Actions**. Site goes l
 index.html / workshop.html / projects.html   the three pages
 assets/css/styles.css                         all styling (light theme + RTL)
 assets/js/main.js                             language switch, rendering, gallery
-assets/js/i18n.js · projects.js · workshop.js   AUTO-GENERATED — do not edit
+assets/js/content.js · projects.js · workshop.js   AUTO-GENERATED — do not edit
 content/*.yml                                  source text (edit here)
 assets/projects/<slug>/                        one folder per project
 assets/img/                                    hero + social-share images
-tools/build-i18n.mjs                           content/*.yml → i18n.js
+tools/build-content.mjs                           content/*.yml → content.js
 tools/build-workshop.mjs                        content/workshop*.yml → assets/js/workshop.js
 tools/build-projects.mjs                        assets/projects/ → projects.js
 tools/generate-placeholders.mjs                regenerates placeholder images

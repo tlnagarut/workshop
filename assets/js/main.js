@@ -1,6 +1,6 @@
 /* ============================================================================
  * Site behaviour: language switching, project rendering, photo gallery.
- * Depends on globals from i18n.js (I18N, CONTACT) and projects.js (PROJECTS).
+ * Depends on globals from content.js (I18N, CONTACT) and projects.js (PROJECTS).
  * ========================================================================== */
 (function () {
   "use strict";
