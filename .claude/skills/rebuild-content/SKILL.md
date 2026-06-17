@@ -13,12 +13,12 @@ Run `./build.sh` after editing **any** of these:
 
 | Edited source | Regenerates |
 | --- | --- |
-| `content/en.yml`, `content/he.yml`, `content/contact.yml` | `assets/js/i18n.js` |
-| `content/workshop.yml`, `content/workshop.en.yml`, `content/workshop.he.yml` | `assets/workshop/workshop.js` |
-| `assets/projects/<slug>/project.md` (any add/edit/remove) | `assets/js/projects-data.js` |
-| Added/removed photo files in `assets/projects/<slug>/` | `assets/js/projects-data.js` |
-| Added/removed photo files in `assets/workshop/` | `assets/workshop/workshop.js` |
-| Created a brand-new empty project folder | placeholder SVGs + `assets/js/projects-data.js` |
+| `content/about.en.yml`, `content/about.he.yml`, `content/contact.yml` | `assets/js/i18n.js` |
+| `content/workshop.en.yml`, `content/workshop.he.yml` | `assets/js/workshop.js` |
+| `assets/projects/<slug>/project.md` (any add/edit/remove) | `assets/js/projects.js` |
+| Added/removed photo files in `assets/projects/<slug>/` | `assets/js/projects.js` |
+| Added/removed photo files in `assets/workshop/` | `assets/js/workshop.js` |
+| Created a brand-new empty project folder | placeholder SVGs + `assets/js/projects.js` |
 
 ## When NOT to run
 
@@ -39,11 +39,11 @@ The script runs these steps in order and stops on the first failure:
 
 1. `node tools/generate-placeholders.mjs` — SVG placeholders for empty project folders (safe; skips folders with real photos)
 2. `node tools/build-i18n.mjs` — compiles `content/*.yml` → `assets/js/i18n.js`
-3. `node tools/build-workshop.mjs` — compiles `content/workshop*.yml` → `assets/workshop/workshop.js`
-4. `node tools/build-projects.mjs` — scans `assets/projects/` → `assets/js/projects-data.js`
+3. `node tools/build-workshop.mjs` — compiles `content/workshop*.yml` → `assets/js/workshop.js`
+4. `node tools/build-projects.mjs` — scans `assets/projects/` → `assets/js/projects.js`
 
 ## Important
 
-- **Never edit** `assets/js/i18n.js`, `assets/js/projects-data.js`, or `assets/workshop/workshop.js` directly. They are auto-generated and will be overwritten.
+- **Never edit** `assets/js/i18n.js`, `assets/js/projects.js`, or `assets/js/workshop.js` directly. They are auto-generated and will be overwritten.
 - The GitHub Action (`.github/workflows/deploy.yml`) runs these same builds on push, so committing un-rebuilt source is recoverable — but local previews will be stale until you rebuild.
 - If `./build.sh` fails, read the error: most failures are YAML syntax issues (mismatched indentation, unquoted special chars) or a `project.md` missing required frontmatter.

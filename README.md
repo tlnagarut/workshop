@@ -23,10 +23,10 @@ Source content lives in YAML and per-project folders. Several JS data files are
 
 | Edit this (source)                           | Generates                     |
 |----------------------------------------------|-------------------------------|
-| `content/en.yml`, `content/he.yml`           | `assets/js/i18n.js`           |
+| `content/about.en.yml`, `content/about.he.yml` | `assets/js/i18n.js`         |
 | `content/contact.yml`                        | (shared by both languages)    |
-| `content/workshop.{en,he,}.yml`              | `assets/workshop/workshop.js` |
-| `assets/projects/<slug>/project.md` + photos | `assets/js/projects-data.js`  |
+| `content/workshop.{en,he}.yml`               | `assets/js/workshop.js`       |
+| `assets/projects/<slug>/project.md` + photos | `assets/js/projects.js`       |
 
 After editing any source file, **run `./build.sh`** (or the `rebuild-content`
 skill) to regenerate. Skip the build for edits to HTML, CSS, or `assets/js/main.js`.
@@ -61,10 +61,10 @@ Then `./build.sh` and commit.
 
 ## Edit text & contact details
 
-- **English / Hebrew strings:** `content/en.yml`, `content/he.yml` (same keys).
+- **English / Hebrew strings:** `content/about.en.yml`, `content/about.he.yml` (same keys).
 - **Contact (name, phone, email, Instagram, city):** `content/contact.yml`.
-- **Workshop:** `content/workshop.{en,he}.yml` for text, `content/workshop.yml`
-  for the photo list (files in `assets/workshop/`).
+- **Workshop:** `content/workshop.{en,he}.yml` for text. Photos are picked up
+  automatically from `assets/workshop/` (any image files, in filename order).
 
 Run `./build.sh` after editing. The build warns if a key exists in one language
 but is missing from the other.
@@ -81,14 +81,13 @@ One-time: repo **Settings → Pages → Source → GitHub Actions**. Site goes l
 index.html / workshop.html / projects.html   the three pages
 assets/css/styles.css                         all styling (light theme + RTL)
 assets/js/main.js                             language switch, rendering, gallery
-assets/js/i18n.js · projects-data.js          AUTO-GENERATED — do not edit
-assets/workshop/workshop.js                   AUTO-GENERATED — do not edit
+assets/js/i18n.js · projects.js · workshop.js   AUTO-GENERATED — do not edit
 content/*.yml                                  source text (edit here)
 assets/projects/<slug>/                        one folder per project
 assets/img/                                    hero + social-share images
 tools/build-i18n.mjs                           content/*.yml → i18n.js
-tools/build-workshop.mjs                        content/workshop*.yml → workshop.js
-tools/build-projects.mjs                        assets/projects/ → projects-data.js
+tools/build-workshop.mjs                        content/workshop*.yml → assets/js/workshop.js
+tools/build-projects.mjs                        assets/projects/ → projects.js
 tools/generate-placeholders.mjs                regenerates placeholder images
 tools/yaml.mjs                                  shared YAML reader
 build.sh                                        runs all generators
