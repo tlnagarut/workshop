@@ -1,6 +1,6 @@
 # ============================================================================
 # Contact details — shared across BOTH languages. Edit here once.
-# After editing, run:  node tools/build-i18n.mjs
+# After editing, run:  ./build.sh
 # ============================================================================
 
 # Two contact people — both are shown, each with its own WhatsApp button.

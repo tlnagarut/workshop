@@ -1,6 +1,6 @@
 # ============================================================================
 # Workshop section — English text. Same keys in workshop.he.yml.
-# After editing, run:  node tools/build-workshop.mjs
+# After editing, run:  ./build.sh
 #
 # "features" is a list of capability cards — add, remove or reorder freely.
 # Each card has a "title" and a "description". Keep the "- " in front of each

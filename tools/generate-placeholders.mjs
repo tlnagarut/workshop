@@ -64,15 +64,14 @@ function write(rel, contents) {
   console.log("wrote", rel);
 }
 
-// Project ids must match assets/js/projects.js
-const projects = [
-  "oak-dining-table",
-  "walnut-kitchen",
-  "live-edge-conference-table",
-  "built-in-library",
-  "cafe-counter",
-  "solid-oak-bed",
-];
+// Discover project folders dynamically (matches build-projects.mjs), so a
+// newly added project with no photos still gets placeholder images.
+const projects = readdirSync(join(root, "assets", "projects"), {
+  withFileTypes: true,
+})
+  .filter((e) => e.isDirectory())
+  .map((e) => e.name)
+  .sort();
 
 projects.forEach((id, idx) => {
   if (hasRealPhotos(id)) {

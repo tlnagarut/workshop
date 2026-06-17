@@ -1,6 +1,6 @@
 # ============================================================================
 # Workshop section — Hebrew text. Same keys as workshop.en.yml.
-# After editing, run:  node tools/build-workshop.mjs
+# After editing, run:  ./build.sh
 # ============================================================================
 
 eyebrow: הנגרייה

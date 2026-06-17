@@ -1,7 +1,7 @@
 # ============================================================================
 # English site text. Each group below maps to a section of the site.
 # Keep the same keys in he.yml (Hebrew). After editing, run:
-#   node tools/build-i18n.mjs
+#   ./build.sh
 #
 # Tips:
 #   - Short labels go on one line:        about: About
