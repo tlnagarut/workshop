@@ -25,19 +25,12 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
-        with:
-          node-version: 20
 
-      # Regenerate assets/js/projects-data.js from the project folders.
-      - run: node tools/build-projects.mjs
-
-      # Regenerate assets/js/i18n.js from content/*.yml.
-      - run: node tools/build-i18n.mjs
-
-      # Regenerate assets/workshop/workshop.js from content/workshop*.yml.
+      # Regenerate static assets
+      - run: node tools/build-content.mjs
       - run: node tools/build-workshop.mjs
+      - run: node tools/build-projects.mjs
 
       - uses: actions/configure-pages@v5
 
