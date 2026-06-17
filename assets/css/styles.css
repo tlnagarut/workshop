@@ -351,7 +351,7 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 }
 
 /* ----------------------- Footer ----------------------- */
-.site-footer { background: #2b2723; color: #d8cdbf; padding-block: 18px; }
+.site-footer { background: #494037; color: #d8cdbf; padding-block: 10px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 0.9rem; }
 .footer-build { opacity: 0.5; }
 

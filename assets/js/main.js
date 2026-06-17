@@ -192,6 +192,23 @@
     });
   }
 
+  // ---- Footer (shared across all pages) ----
+  // The footer is identical everywhere, so the markup lives here and is injected
+  // into the empty <footer id="site-footer"> placeholder on each page. The
+  // data-i18n spans are filled by applyStaticText(); the stamp by renderBuildStamp().
+  function renderFooter() {
+    var el = byId("site-footer");
+    if (!el) return;
+    el.innerHTML =
+      '<div class="container footer-inner">' +
+        '<span><span data-i18n="nav.brand">TL Nagarut</span> · ' +
+          '<span data-i18n="footer.builtIn">Handmade in Haifa.</span></span>' +
+        '<span class="footer-build" id="build-stamp" hidden></span>' +
+        '<span>© <span id="year"></span> · ' +
+          '<span data-i18n="footer.rights">All rights reserved.</span></span>' +
+      '</div>';
+  }
+
   // ---- Footer "last updated" stamp ----
   // BUILD_TIME ("YYYY.MM.DD HH:MM") comes from the generated assets/js/build.js.
   // If that file hasn't been built yet the stamp simply stays hidden.
@@ -246,6 +263,7 @@
 
   // ---- Boot ----
   document.addEventListener("DOMContentLoaded", function () {
+    renderFooter(); // inject shared footer before the steps that fill it
     setText("year", String(new Date().getFullYear()));
     applyContact();
     setupGallery();
