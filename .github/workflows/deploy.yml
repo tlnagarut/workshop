@@ -32,6 +32,10 @@ jobs:
       - run: node tools/build-workshop.mjs
       - run: node tools/build-projects.mjs
 
+      # Stamp cache-busting ?v=<hash> so the deployed HTML matches the freshly
+      # built assets, even if the committed HTML wasn't re-stamped locally.
+      - run: node tools/stamp-versions.mjs
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
