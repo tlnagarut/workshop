@@ -81,4 +81,3 @@ echo "   1. Open the project:   cd \"$PROJECT_DIR\"  (and: code .  to edit in VS
 echo "   2. After editing, run  ./build.sh    to rebuild the site"
 echo "   3. Run  ./preview.sh   to see it in your browser"
 echo ""
-echo "   (Python is not needed, and there's nothing else to install.)"
