@@ -82,6 +82,7 @@ const I18N = {
     "contact.whatsappAria": "Message on WhatsApp",
     "footer.rights": "All rights reserved",
     "footer.builtIn": "Handmade in Haifa",
+    "footer.updated": "Last updated",
     "gallery.close": "Close",
     "gallery.prev": "Previous photo",
     "gallery.next": "Next photo"
@@ -148,6 +149,7 @@ const I18N = {
     "contact.whatsappAria": "שליחת הודעה בוואטסאפ",
     "footer.rights": "כל הזכויות שמורות",
     "footer.builtIn": "עבודת יד בחיפה",
+    "footer.updated": "עודכן לאחרונה",
     "gallery.close": "סגירה",
     "gallery.prev": "התמונה הקודמת",
     "gallery.next": "התמונה הבאה"

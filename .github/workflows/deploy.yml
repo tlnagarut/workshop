@@ -32,6 +32,12 @@ jobs:
       - run: node tools/build-workshop.mjs
       - run: node tools/build-projects.mjs
 
+      # Record the deploy time for the footer "last updated" stamp. Pinned to
+      # Israel time so the published stamp matches local ./build.sh runs.
+      - run: node tools/build-stamp.mjs
+        env:
+          TZ: Asia/Jerusalem
+
       # Stamp cache-busting ?v=<hash> so the deployed HTML matches the freshly
       # built assets, even if the committed HTML wasn't re-stamped locally.
       - run: node tools/stamp-versions.mjs

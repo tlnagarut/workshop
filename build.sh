@@ -19,6 +19,9 @@ node tools/build-workshop.mjs
 echo "▶ build-projects.mjs"
 node tools/build-projects.mjs
 
+echo "▶ build-stamp.mjs"
+node tools/build-stamp.mjs
+
 echo "▶ stamp-versions.mjs"
 node tools/stamp-versions.mjs
 

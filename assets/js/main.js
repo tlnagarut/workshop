@@ -192,6 +192,16 @@
     });
   }
 
+  // ---- Footer "last updated" stamp ----
+  // BUILD_TIME ("YYYY.MM.DD HH:MM") comes from the generated assets/js/build.js.
+  // If that file hasn't been built yet the stamp simply stays hidden.
+  function renderBuildStamp() {
+    var el = byId("build-stamp");
+    if (!el || typeof BUILD_TIME === "undefined" || !BUILD_TIME) return;
+    el.textContent = t("footer.updated") + " " + BUILD_TIME;
+    el.hidden = false;
+  }
+
   // ---- Language ----
   function setLanguage(lang) {
     current = I18N[lang] ? lang : "en";
@@ -200,6 +210,7 @@
     document.documentElement.dir = meta.dir;
     try { localStorage.setItem(STORAGE_KEY, current); } catch (e) {}
     applyStaticText();
+    renderBuildStamp(); // refresh the stamp so its label follows the language
     renderWorkshop(); // re-render so workshop text follows the language
     renderProjects(); // re-render so card text + tags follow the language
   }
