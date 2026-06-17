@@ -10,6 +10,22 @@ Plain HTML/CSS/JS, no framework, hosts on GitHub Pages.
 > ⚠️ Contact details, "about" text, and project photos are placeholders
 > (Pexels stock — free for commercial use). Replace before promoting the site.
 
+## First-time setup (new Mac)
+
+On a brand-new Mac you don't have this project (or any tools) yet.\
+Open **Terminal** (press ⌘+Space, type "Terminal", hit Enter) and paste this one line:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/tlnagarut/workshop/main/setup.sh | bash
+```
+
+That installs everything you need (git, Node.js, VS Code — via Homebrew) and
+downloads the project to `~/dev/tl-nagarut-site`. If you already have the project
+folder, just run `./setup.sh` from inside it instead.
+
+It's safe to re-run — anything already installed is skipped. Python is not
+needed, and there are no project dependencies to install.
+
 ## Preview
 
 ```bash
@@ -90,6 +106,7 @@ tools/build-workshop.mjs                        content/workshop*.yml → assets
 tools/build-projects.mjs                        assets/projects/ → projects.js
 tools/generate-placeholders.mjs                regenerates placeholder images
 tools/yaml.mjs                                  shared YAML reader
+setup.sh                                        one-time install of git/node/VS Code (new Mac)
 build.sh                                        runs all generators
 preview.sh                                      opens the site in a browser
 ```
