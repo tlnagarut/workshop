@@ -131,7 +131,7 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
   border-radius: 999px;
   padding: 0.4em 1em;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   font-family: var(--sans);
 }
