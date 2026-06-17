@@ -64,14 +64,17 @@ function write(rel, contents) {
   console.log("wrote", rel);
 }
 
-// Discover project folders dynamically (matches build-projects.mjs), so a
-// newly added project with no photos still gets placeholder images.
-const projects = readdirSync(join(root, "assets", "projects"), {
-  withFileTypes: true,
-})
-  .filter((e) => e.isDirectory())
-  .map((e) => e.name)
-  .sort();
+// Scaffolding placeholders for the original demo projects only. A new project
+// added without photos is NOT given placeholders — the site renders a clean
+// "photos coming soon" card instead (see renderProjects in assets/js/main.js).
+const projects = [
+  "oak-dining-table",
+  "walnut-kitchen",
+  "live-edge-conference-table",
+  "built-in-library",
+  "cafe-counter",
+  "solid-oak-bed",
+];
 
 projects.forEach((id, idx) => {
   if (hasRealPhotos(id)) {

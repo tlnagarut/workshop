@@ -272,6 +272,19 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 }
 .project:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(58, 38, 21, 0.16); }
 .project-thumb { aspect-ratio: 4 / 3; width: 100%; object-fit: cover; }
+.project-thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-alt);
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+/* A project with no photos isn't clickable — keep it flat and non-interactive. */
+.project--no-photos { cursor: default; }
+.project--no-photos:hover { transform: none; box-shadow: var(--shadow); }
 .project-body { padding: 18px 20px 22px; }
 .project-tag {
   display: inline-block;

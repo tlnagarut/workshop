@@ -105,5 +105,19 @@ window.PROJECTS = [
       "title": "מסגרת מיטה מעץ אלון מלא",
       "description": "מסגרת מיטה נמוכה ונקייה מעץ אלון מלא, עם משענת ראש בקימור עדין וחיבורים שניתן לפרק ולהעביר מבלי לאבד מהחוזק."
     }
+  },
+  {
+    "id": "blank-project",
+    "audience": "private",
+    "cover": "",
+    "images": [],
+    "en": {
+      "title": "Blank Project",
+      "description": "A placeholder project with no photos yet."
+    },
+    "he": {
+      "title": "",
+      "description": ""
+    }
   }
 ];

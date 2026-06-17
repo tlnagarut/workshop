@@ -71,23 +71,35 @@
     grid.innerHTML = "";
     PROJECTS.forEach(function (p, index) {
       var loc = (p[current] && p[current].title) ? p[current] : p.en;
+      var photos = (p.images || []).filter(Boolean);
+      var hasPhotos = photos.length > 0;
       var btn = document.createElement("button");
-      btn.className = "project";
+      btn.className = hasPhotos ? "project" : "project project--no-photos";
       btn.type = "button";
       btn.setAttribute("aria-label", loc.title);
+      var thumb = p.cover
+        ? '<img class="project-thumb" loading="lazy" alt="" src="' + p.cover + '">'
+        : '<div class="project-thumb project-thumb--empty"><span>' +
+          t("projects.noPhotos") + "</span></div>";
       btn.innerHTML =
-        '<img class="project-thumb" loading="lazy" alt="" src="' + p.cover + '">' +
+        thumb +
         '<div class="project-body">' +
         '<span class="project-tag">' + tagText(p.audience) + "</span>" +
         '<h3 class="project-title"></h3>' +
         '<p class="project-desc"></p>' +
-        '<span class="project-cta">' + t("projects.viewGallery") + " →</span>" +
+        (hasPhotos
+          ? '<span class="project-cta">' + t("projects.viewGallery") + " →</span>"
+          : "") +
         "</div>";
-      btn.querySelector(".project-thumb").alt = loc.title;
+      var thumbImg = btn.querySelector("img.project-thumb");
+      if (thumbImg) thumbImg.alt = loc.title;
       btn.querySelector(".project-title").textContent = loc.title;
       btn.querySelector(".project-desc").textContent = loc.description;
-      var photos = (p.images && p.images.length) ? p.images : [p.cover];
-      btn.addEventListener("click", function () { openGallery(photos, loc.title, 0); });
+      if (hasPhotos) {
+        btn.addEventListener("click", function () { openGallery(photos, loc.title, 0); });
+      } else {
+        btn.disabled = true;
+      }
       grid.appendChild(btn);
     });
   }
