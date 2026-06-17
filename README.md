@@ -27,10 +27,8 @@ It's safe to re-run — anything already installed is skipped. Python is not
 needed, and there are no project dependencies to install.
 
 ## Preview
-
-```bash
-./preview.sh          # opens index.html in your browser (no server)
-```
+- in VS Code: right click on `index.html` -> `Open in Integrated Browser`
+- in Terminal: `./preview.sh` (opens index.html directly in the default browser)
 
 ## How content works
 
