@@ -3,17 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="meta.title">TL Nagarut — Bespoke Woodwork in Haifa</title>
-    <meta name="description" data-i18n="meta.description" data-i18n-attr="content"
-      content="Handcrafted furniture and custom woodwork in Haifa, Israel." />
+    <!-- Title pinned bilingual (NOT toggled) so search results are consistent
+         for Hebrew and English queries; visible page text still toggles. -->
+    <title>TL נגרות — נגרות בהזמנה אישית בחיפה | TL Nagarut Woodwork</title>
+    <!-- SEO description pinned to Hebrew (NOT toggled by the language switch) so
+         search engines and link previews always index the Hebrew text. The
+         visible page content still toggles EN/HE normally via data-i18n. -->
+    <meta name="description"
+      content="רהיטים בעבודת יד ונגרות בהזמנה אישית בחיפה · Handcrafted furniture and custom woodwork in Haifa, Israel" />
+    <meta name="author" content="Tomas Janulionis" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tlnagarut.github.io/workshop/" />
+
+    <!-- Local SEO -->
+    <meta name="geo.region" content="IL-HA" />
+    <meta name="geo.placename" content="Haifa" />
 
     <!-- Open Graph / social sharing -->
-    <meta property="og:title" content="TL Nagarut — Bespoke Woodwork in Haifa" />
-    <meta property="og:description" content="Handcrafted furniture and custom woodwork in Haifa, Israel." />
+    <meta property="og:site_name" content="TL Nagarut" />
+    <meta property="og:title" content="TL נגרות — נגרות בהזמנה אישית בחיפה | TL Nagarut Woodwork" />
+    <meta property="og:description" content="רהיטים בעבודת יד ונגרות בהזמנה אישית בחיפה · Handcrafted furniture and custom woodwork in Haifa, Israel" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/img/og-image.svg" />
+    <meta property="og:url" content="https://tlnagarut.github.io/workshop/" />
+    <meta property="og:image" content="https://tlnagarut.github.io/workshop/assets/img/og-image.svg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="he_IL" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TL נגרות — נגרות בהזמנה אישית בחיפה | TL Nagarut Woodwork" />
+    <meta name="twitter:description" content="רהיטים בעבודת יד ונגרות בהזמנה אישית בחיפה · Handcrafted furniture and custom woodwork in Haifa, Israel" />
+    <meta name="twitter:image" content="https://tlnagarut.github.io/workshop/assets/img/og-image.svg" />
 
     <link rel="icon" href="assets/img/og-image.svg" />
+
+    <!-- Structured data: local business (helps Google show rich / local results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://tlnagarut.github.io/workshop/#business",
+      "name": "TL Nagarut",
+      "alternateName": "TL נגרות",
+      "description": "רהיטים בעבודת יד ונגרות בהזמנה אישית בחיפה · Handcrafted furniture and custom woodwork in Haifa, Israel",
+      "url": "https://tlnagarut.github.io/workshop/",
+      "image": "https://tlnagarut.github.io/workshop/assets/img/og-image.svg",
+      "email": "hello@tlnagarut.com",
+      "telephone": "+972533822875",
+      "founder": "Tomas Janulionis",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Haifa",
+        "addressCountry": "IL"
+      },
+      "areaServed": "Haifa, Israel",
+      "knowsLanguage": ["en", "he", "ru"],
+      "sameAs": ["https://www.instagram.com/tlnagarut/"]
+    }
+    </script>
 
     <!-- Fonts: serif headings (Latin) + Hebrew-capable family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -185,7 +232,7 @@
 
     <!-- Projects and Workshop (with their galleries) are on their own pages. -->
     <script src="assets/js/content.js?v=792edcb0"></script>
-    <script src="assets/js/build.js?v=2fb9709b"></script>
+    <script src="assets/js/build.js?v=26ca70fa"></script>
     <script src="assets/js/main.js?v=d398e0c2"></script>
   </body>
 </html>
