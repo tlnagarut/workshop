@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tlnagarut.github.io/workshop/sitemap.xml
