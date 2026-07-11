@@ -13,10 +13,10 @@ const CONTACT = {
       "phoneHref": "+972523699346"
     }
   ],
-  "email": "hello@tlnagarut.com",
+  "email": "tlnagarut@outlook.com",
   "city": "Haifa, Israel",
   "instagram": "https://www.instagram.com/tlnagarut/",
-  "instagramHandle": "@tlnagarut"
+  "instagramHandle": "https://www.instagram.com/tlnagarut?igsh=MTZ0bGdnbDdnMDJ6dw%3D%3D&utm_source=qr"
 };
 
 const I18N = {
