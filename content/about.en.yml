@@ -13,14 +13,14 @@ dir: ltr
 langName: English
 
 meta:
-  title: TL Nagarut — Bespoke Woodwork in Haifa
+  title: TLnagarut — Bespoke Woodwork in Haifa
   description: >
     Handcrafted furniture and custom woodwork in Haifa, Israel. Tables,
     kitchens, built-ins and commercial fit-outs for private and business
     clients.
 
 nav:
-  brand: TL Nagarut
+  brand: TLnagarut
   about: About
   services: Services
   workshop: Workshop
@@ -31,7 +31,7 @@ nav:
   menuAria: Menu
 
 workshop:
-  metaTitle: Workshop — TL Nagarut
+  metaTitle: Workshop — TLnagarut
 
 hero:
   tagline: Bespoke woodwork · Haifa, Israel
@@ -81,7 +81,7 @@ services:
     and sympathetic alterations.
 
 projects:
-  metaTitle: Projects — TL Nagarut
+  metaTitle: Projects — TLnagarut
   eyebrow: Selected work
   title: Recent projects
   intro: A few recent pieces. More on Instagram —

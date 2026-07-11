@@ -201,7 +201,7 @@
     if (!el) return;
     el.innerHTML =
       '<div class="container footer-inner">' +
-        '<span><span data-i18n="nav.brand">TL Nagarut</span> · ' +
+        '<span><span data-i18n="nav.brand">TLnagarut</span> · ' +
           '<span data-i18n="footer.builtIn">Handmade in Haifa.</span></span>' +
         '<span class="footer-build" id="build-stamp" hidden></span>' +
         '<span>© <span id="year"></span> · ' +
