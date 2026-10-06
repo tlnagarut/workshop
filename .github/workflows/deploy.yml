@@ -1,5 +1,4 @@
-# Builds the projects data from assets/projects/ and deploys to GitHub Pages.
-# After this runs once, adding a project = push a folder with photos + project.md.
+# Rebuilds the pages from templates/ + content/ and deploys to GitHub Pages.
 name: Deploy site
 
 on:
@@ -27,14 +26,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
 
-      # Regenerate static assets
-      - run: node tools/build-content.mjs
-      - run: node tools/build-workshop.mjs
-      - run: node tools/build-projects.mjs
-
-      # Record the deploy time for the footer "last updated" stamp. Pinned to
-      # Israel time so the published stamp matches local ./build.sh runs.
-      - run: node tools/build-stamp.mjs
+      # Rebuild the pages from templates/ + content/ (mirrors build.sh).
+      # Photos and the social image are processed locally and committed, so
+      # process-photos / generate-placeholders don't run here. TZ pins the
+      # footer "last updated" stamp to Israel time, matching local builds.
+      - run: node tools/build-pages.mjs
         env:
           TZ: Asia/Jerusalem
 

@@ -1,42 +1,47 @@
 # ============================================================================
-# Workshop section — English text. Same keys in workshop.he.yml.
+# Workshop page — English text. Same keys in workshop.he.yml.
 # After editing, run:  ./build.sh
 #
-# "features" is a list of capability cards — add, remove or reorder freely.
-# Each card has a "title" and a "description". Keep the "- " in front of each
-# card's title.
+# "equipment" is a list of cards — add, remove or reorder freely. Each card has
+# a "title" and a "description"; keep the "- " in front of each card's title.
+# "spray.points" is a list of short facts, one per line starting with "- ".
+# Photos for this page are listed in content/photos.yml (groups "workshop"
+# and "spray").
 # ============================================================================
 
 eyebrow: The workshop
-title: A fully-equipped Haifa workshop.
+title: Our workshop in Haifa
 intro: >
-  Everything is made in my own workshop in Haifa — from one-off pieces to
-  larger runs for business clients. Machine milling for accuracy, hand tools
-  for the details, and the space and finishing setup to take a project from
-  rough timber to a delivered, installed result.
+  Everything is made here, in our workshop on Arye Shenkar Street in Haifa —
+  design, cutting, assembly and spray finishing — and then installed by us.
 
-features:
+equipmentTitle: Equipment
+equipment:
   - title: Machine room
     description: >
       Panel saw, thicknesser, planer, bandsaw and router table for accurate,
       repeatable milling of solid timber and sheet goods.
-  - title: Joinery bench
+  - title: SCM Minimax edgebander
     description: >
-      Traditional hand-cut joinery — mortise and tenon, dovetails and fitted
-      detail work that machines can't match.
-  - title: Finishing area
+      Applies edge banding to cabinet panels, here in the workshop.
+  - title: Blum hardware systems
     description: >
-      A dedicated, dust-controlled space for oiling, lacquering and spray
-      finishing, so every surface is clean and durable.
-  - title: Timber & materials
+      Blum drawer systems and fittings, fitted to our cabinets.
+  - title: Fuji D6 HVLP spray system
     description: >
-      Carefully sourced hardwoods and sheet materials, stored and conditioned
-      ready for work.
-  - title: Capacity for business
+      A six-stage HVLP turbine system for spray finishing.
+  - title: Raptor downdraft spray booth
     description: >
-      Set up to handle commercial runs and fit-outs — multiple matching
-      pieces, delivered to schedule.
-  - title: Delivery & installation
+      An enclosed spray booth with filtered airflow from ceiling to floor.
+  - title: Busellato Jet Optima RT CNC nesting machine — arriving soon
     description: >
-      Pieces are finished, wrapped and installed on site across Haifa and the
-      north.
+      Purchased for the workshop and not yet installed.
+
+spray:
+  title: Spray finishing
+  lede: Sprayed in-house. Start to finish.
+  points:
+    - Raptor downdraft spray booth with glass double doors, a downdraft grated floor, a digital control panel and filtered airflow from ceiling to floor.
+    - Fuji D6 6-stage HVLP turbine system.
+    - 2K polyurethane coatings, applied and cured in a controlled environment.
+  cta: Ask us about finishes

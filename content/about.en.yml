@@ -1,6 +1,6 @@
 # ============================================================================
 # English site text. Each group below maps to a section of the site.
-# Keep the same keys in he.yml (Hebrew). After editing, run:
+# Keep the same keys in about.he.yml (Hebrew). After editing, run:
 #   ./build.sh
 #
 # Tips:
@@ -12,103 +12,124 @@
 dir: ltr
 langName: English
 
+# What search engines show for each page: a title and a short description
+# saying what we do and where. Keep titles under ~60 characters.
 meta:
-  title: TLnagarut — Bespoke Woodwork in Haifa
-  description: >
-    Handcrafted furniture and custom woodwork in Haifa, Israel. Tables,
-    kitchens, built-ins and commercial fit-outs for private and business
-    clients.
+  homeTitle: Custom Cabinets & Solid Wood Doors in Haifa | TLnagarut
+  homeDescription: >
+    Custom kitchens, cabinets, built-in furniture and solid wood doors from
+    TLnagarut in Haifa — designed, made, spray-finished and installed by our
+    own workshop.
+  workshopTitle: Cabinet Workshop & Spray Booth in Haifa | TLnagarut
+  workshopDescription: >
+    Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: SCM
+    edgebanding, Blum hardware and an in-house downdraft spray booth.
+  projectsTitle: Recent Work — Custom Cabinets in Haifa | TLnagarut
+  projectsDescription: >
+    Recent custom kitchens, cabinets and solid wood doors by TLnagarut in
+    Haifa. New work is posted on our Instagram, @tlnagarut.
+  inWorkshopTitle: In the Workshop — Cabinets in Progress, Haifa | TLnagarut
+  inWorkshopDescription: >
+    Unedited photos from the TLnagarut workshop in Haifa: cabinets, wardrobes
+    and counters in progress, panels and offcuts. No stock, no AI, no filters.
+  socialImageAlt: TLnagarut — custom cabinets and solid wood doors in Haifa
 
 nav:
   brand: TLnagarut
   about: About
   services: Services
   workshop: Workshop
+  inWorkshop: In the workshop
   projects: Projects
   contact: Contact
   langToggle: עברית
   langToggleAria: Switch to Hebrew
   menuAria: Menu
 
-workshop:
-  metaTitle: Workshop — TLnagarut
-
 hero:
-  tagline: Bespoke woodwork · Haifa, Israel
-  title: Furniture made by hand, built to last.
+  tagline: Custom cabinetry · Haifa, Israel
+  title: Custom cabinets and solid wood doors, made in Haifa.
   subtitle: >
-    Custom tables, kitchens, built-ins and commercial joinery — designed
-    around how you live and work, and crafted from solid timber in Haifa.
-  ctaProjects: See projects
-  ctaContact: Start a project
+    Kitchens, cabinets, built-in furniture and solid wood doors — designed,
+    cut, assembled, spray-finished and installed by our own workshop.
+  ctaWorkshop: See the workshop
+  ctaContact: Get in touch
 
 about:
   eyebrow: About
   title: Hello, I'm Tomas.
   p1: >
-    TLnagarut is a Haifa-based woodworking studio led by Tomas, offering
-    bespoke furniture and fitted joinery with 22+ years of experience.
+    TLnagarut is a custom cabinetry and solid wood door workshop in Haifa, led
+    by Tomas, with 25 years in the trade.
   p2: >
-    Every piece is crafted in solid timber using traditional joinery, from
-    concept to installation, personally overseen by Tomas.
+    We make custom cabinets and kitchens, built-in furniture and solid wood
+    doors, and we also do commercial work. Everything is made in our own
+    workshop — design, cutting, assembly and spray finishing — and we deliver
+    and install it ourselves, across Haifa and the north.
   p3: >
     Tomas trained on demanding residential and commercial projects in the UK.
-  stat1Value: 22+
-  stat1Label: years at the bench
-  stat2Value: 100%
+  stat1Value: "25"
+  stat1Label: years in the trade
+  stat2Value: Custom
   stat2Label: made to order
   stat3Value: Haifa
-  stat3Label: workshop & delivery
+  stat3Label: our own workshop, from design to installation
 
 services:
-  eyebrow: What I make
-  title: For homes and for businesses.
-  privateTitle: For private clients
-  privateBody: >
-    Dining and coffee tables, beds, wardrobes, built-in storage, kitchens and
-    one-off pieces designed for your space.
-  businessTitle: For business clients
-  businessBody: >
-    Café and restaurant fit-outs, reception desks, boardroom tables, retail
-    displays and bespoke furniture runs, delivered to schedule.
-  restoreTitle: Repair & restoration
-  restoreBody: >
-    Bringing tired or inherited furniture back to life — repairs, refinishing
-    and sympathetic alterations.
+  eyebrow: What we make
+  title: Made to measure, made in-house.
+  kitchensTitle: Kitchens & cabinets
+  kitchensBody: >
+    Custom kitchens and cabinets, made to measure. Panels are cut and
+    edge-banded in our workshop and fitted with Blum drawer systems and
+    hardware.
+  builtinTitle: Built-in furniture
+  builtinBody: >
+    Built-in furniture and storage, designed around your space and installed
+    by us.
+  doorsTitle: Solid wood doors
+  doorsBody: >
+    Solid wood doors made in our workshop and spray-finished in our own booth.
+  repairTitle: Repair & restoration
+  repairBody: >
+    We also repair and restore existing wooden furniture.
+
+inWorkshop:
+  eyebrow: Work in progress
+  title: In the workshop
+  note: Every photo here is ours, from our workshop. No stock, no AI, no filters.
 
 projects:
-  metaTitle: Projects — TLnagarut
-  eyebrow: Selected work
-  title: Recent projects
-  intro: A few recent pieces. More on Instagram —
-  tagPrivate: Private
-  tagBusiness: Business
-  tagBoth: Private & business
-  viewGallery: View photos
-  noPhotos: Photos coming soon
+  eyebrow: Our work
+  title: Recent work
+  body: >
+    Our recent work — kitchens, cabinets and solid wood doors — is posted on
+    Instagram.
+  instagramCta: See our work on Instagram
 
 contact:
   eyebrow: Get in touch
-  title: Let's make something.
+  title: Let's talk about your project.
   body: >
-    Tell me a little about your project — a room, a piece, a rough budget or a
-    deadline — and I'll come back to you with thoughts and next steps.
+    Tell us about your project — the room, what you have in mind, a rough
+    budget or a deadline — and we'll get back to you with ideas and next steps.
   phoneLabel: Phone / WhatsApp
   person1Name: Tomas
   person1Langs: (English/Russian)
   person2Name: Lina
   person2Langs: (Hebrew)
   emailLabel: Email
-  locationLabel: Location
+  addressLabel: Workshop address
   instagramLabel: Instagram
   whatsappAria: Message on WhatsApp
 
 footer:
   rights: All rights reserved
-  builtIn: Handmade in Haifa
+  builtIn: Made in Haifa
   updated: Last updated
 
 gallery:
+  label: Photo viewer
   close: Close
   prev: Previous photo
   next: Next photo

@@ -1,0 +1,480 @@
+{
+  "process": [
+    {
+      "name": "bookcase-carcass-in-progress",
+      "file": "IMG_0691.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1424185|1791299953130|top|IMG_0691.HEIC"
+    },
+    {
+      "name": "fluted-column-on-base-board",
+      "file": "IMG_0811.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1502732|1791299957910|top|IMG_0811.HEIC"
+    },
+    {
+      "name": "fluted-column-workshop-floor",
+      "file": "IMG_0815.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1451579|1791299960804|top|IMG_0815.HEIC"
+    },
+    {
+      "name": "long-cabinet-run-cardboard",
+      "file": "IMG_0878.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1567921|1791299965579|top|IMG_0878.HEIC"
+    },
+    {
+      "name": "cabinet-run-labelled-doors-panel-saw",
+      "file": "IMG_0884.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1653271|1791299966830||IMG_0884.HEIC"
+    },
+    {
+      "name": "cabinet-doors-position-notes",
+      "file": "IMG_0885.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1323209|1791299967931||IMG_0885.HEIC"
+    },
+    {
+      "name": "cabinet-run-by-roller-door",
+      "file": "IMG_0890.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1387253|1791299970150||IMG_0890.HEIC"
+    },
+    {
+      "name": "hand-checking-grey-worktop",
+      "file": "IMG_0917.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1686569|1791299972087||IMG_0917.HEIC"
+    },
+    {
+      "name": "fluted-pieces-taped-on-trestles",
+      "file": "IMG_0926.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1367354|1791299973357|top|IMG_0926.HEIC"
+    },
+    {
+      "name": "fluted-cabinet-open-side",
+      "file": "IMG_0927.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1321182|1791299974504|top|IMG_0927.HEIC"
+    },
+    {
+      "name": "grey-top-table-fluted-legs",
+      "file": "IMG_1084.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1390548|1791299997615||IMG_1084.HEIC"
+    },
+    {
+      "name": "grey-top-table-by-panel-saw",
+      "file": "IMG_1105.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1871029|1791300026891||IMG_1105.HEIC"
+    },
+    {
+      "name": "table-in-front-of-minimax-si-400es",
+      "file": "IMG_1140.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1411241|1791300051673||IMG_1140.HEIC"
+    },
+    {
+      "name": "panels-leaning-on-workshop-wall",
+      "file": "IMG_1149.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3186373|1791300339752||IMG_1149.HEIC"
+    },
+    {
+      "name": "sheet-materials-and-offcuts",
+      "file": "IMG_1150 (1).HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2879741|1791300341725||IMG_1150 (1).HEIC"
+    },
+    {
+      "name": "bookcase-on-base-cabinets",
+      "file": "IMG_1211 (1).HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2818847|1791300411493||IMG_1211 (1).HEIC"
+    },
+    {
+      "name": "bookcase-and-base-cabinets-close",
+      "file": "IMG_1213.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2788056|1791300414530|top|IMG_1213.HEIC"
+    },
+    {
+      "name": "slatted-panels-on-floor",
+      "file": "IMG_1220.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2061590|1791300417556||IMG_1220.HEIC"
+    },
+    {
+      "name": "long-dark-board-roller-door-open",
+      "file": "IMG_1362 (1).HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2704904|1791300686451||IMG_1362 (1).HEIC"
+    },
+    {
+      "name": "shelving-units-and-panels-workshop",
+      "file": "IMG_1363 (1).HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1665673|1791300687702||IMG_1363 (1).HEIC"
+    },
+    {
+      "name": "shelving-unit-on-work-table",
+      "file": "IMG_1364 (1).HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1680766|1791300689631||IMG_1364 (1).HEIC"
+    },
+    {
+      "name": "green-and-wood-grain-bookcase-unit",
+      "file": "IMG_1533.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2745792|1791300849977||IMG_1533.HEIC"
+    },
+    {
+      "name": "bookcase-unit-and-work-cart",
+      "file": "IMG_1536.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1927066|1791300854859||IMG_1536.HEIC"
+    },
+    {
+      "name": "workbench-tools-before-bookcase",
+      "file": "IMG_1538.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2316932|1791300857119||IMG_1538.HEIC"
+    },
+    {
+      "name": "white-cabinet-carcasses",
+      "file": "IMG_1655.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1076697|1791300140246||IMG_1655.HEIC"
+    },
+    {
+      "name": "tall-unit-protective-film",
+      "file": "IMG_1679.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1505964|1791300150036|top|IMG_1679.HEIC"
+    },
+    {
+      "name": "cabinets-in-assembly-wide",
+      "file": "IMG_1680.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1235385|1791300151325||IMG_1680.HEIC"
+    },
+    {
+      "name": "wardrobe-with-drawers",
+      "file": "IMG_1684.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1394635|1791300153682||IMG_1684.HEIC"
+    },
+    {
+      "name": "wardrobe-closer-view",
+      "file": "IMG_1686.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1212733|1791300155958||IMG_1686.HEIC"
+    },
+    {
+      "name": "base-cabinets-on-cardboard",
+      "file": "IMG_1688.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1372975|1791300158316||IMG_1688.HEIC"
+    },
+    {
+      "name": "shelving-unit-and-dust-extractor",
+      "file": "IMG_1845.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1616881|1791300223228||IMG_1845.HEIC"
+    },
+    {
+      "name": "l-shaped-counter-frame",
+      "file": "IMG_2133.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1545957|1791300296616||IMG_2133.HEIC"
+    },
+    {
+      "name": "hands-at-work-on-worktop",
+      "file": "IMG_2151.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1818413|1791300300572||IMG_2151.HEIC"
+    },
+    {
+      "name": "panels-against-roller-door",
+      "file": "IMG_2156.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1530268|1791300302436||IMG_2156.HEIC"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+# ============================================================================
+# Photos on the site. Your ORIGINAL photos stay outside the site folder, in
+#   ~/dev/tl-nagarut-photos/<group>/        (e.g. ~/dev/tl-nagarut-photos/spray/)
+# and are never changed. ./build.sh makes the web versions automatically:
+# rotated upright, cropped to the shape below, resized (480–1600 px, WebP +
+# JPEG, each under ~300 KB) and saved in assets/img/photos/. No filters.
+#
+# Groups (one per place on the site):
+#   hero      the big banner at the top of the home page — cropped 16:9.
+#             Only the first photo is used. Leave empty for the plain banner.
+#   workshop  gallery on the Workshop page — cropped 4:3
+#   spray     gallery in the "Spray finishing" section — cropped 4:3
+#   process   the "In the workshop" page: raw, unedited process photos — 4:3
+#
+# For each photo:
+#   file:        the original's file name inside its group folder
+#   name:        descriptive web file name — lowercase words with dashes,
+#                saying what it shows (e.g. raptor-spray-booth-glass-doors)
+#   alt_en / alt_he:          what the photo shows, for screen readers & Google
+#   caption_en / caption_he:  short caption shown when the photo is opened
+#   focus:       optional — which part to keep when cropping: attention
+#                (default: finds the main subject), centre, top, bottom,
+#                left or right
+#
+# Example (remove the # signs to use it):
+#   spray:
+#     - file: IMG_2041.HEIC
+#       name: raptor-spray-booth-glass-doors
+#       alt_en: Raptor downdraft spray booth with glass double doors
+#       alt_he: תא צביעה Raptor עם דלתות זכוכית כפולות
+#       caption_en: Our Raptor downdraft spray booth
+#       caption_he: תא הצביעה Raptor שלנו
+# ============================================================================
+
+hero:
+
+workshop:
+
+spray:
+
+# The "In the workshop" page. Only real photos from our workshop: no faces
+# without the owner's OK, nothing unsafe, nothing from a client's home.
+process:
+  - file: IMG_0691.HEIC
+    name: bookcase-carcass-in-progress
+    focus: top
+    alt_en: Pale green bookcase carcass standing in the workshop
+    alt_he: גוף ספרייה בגוון ירוק בהיר עומד בנגרייה
+    caption_en: Bookcase carcass, mid-build
+    caption_he: גוף ספרייה, באמצע הבנייה
+  - file: IMG_0811.HEIC
+    name: fluted-column-on-base-board
+    focus: top
+    alt_en: Fluted column cladding standing on a white board, workshop machines behind
+    alt_he: חיפוי עמוד מחורץ עומד על לוח לבן, מכונות הנגרייה ברקע
+    caption_en: Fluted column, before fitting
+    caption_he: עמוד מחורץ, לפני ההתקנה
+  - file: IMG_0815.HEIC
+    name: fluted-column-workshop-floor
+    focus: top
+    alt_en: Fluted column cladding on the workshop floor, masking tape at the base
+    alt_he: חיפוי עמוד מחורץ על רצפת הנגרייה, נייר דבק בבסיס
+    caption_en: Taped up at the base
+    caption_he: מודבק בנייר דבק בבסיס
+  - file: IMG_0878.HEIC
+    name: long-cabinet-run-cardboard
+    focus: top
+    alt_en: Long run of base cabinets on the workshop floor, cardboard laid alongside
+    alt_he: שורה ארוכה של ארונות תחתונים על רצפת הנגרייה, קרטון פרוש לצידם
+    caption_en: A long run of base cabinets
+    caption_he: שורה ארוכה של ארונות תחתונים
+  - file: IMG_0884.HEIC
+    name: cabinet-run-labelled-doors-panel-saw
+    alt_en: Base cabinets with labelled doors, the SCM Minimax panel saw behind
+    alt_he: ארונות תחתונים עם דלתות מסומנות, מסור הפאנל SCM Minimax ברקע
+    caption_en: Doors labelled for assembly
+    caption_he: דלתות מסומנות להרכבה
+  - file: IMG_0885.HEIC
+    name: cabinet-doors-position-notes
+    alt_en: Close view of grooved cabinet doors with handwritten position notes
+    alt_he: מבט קרוב על דלתות ארון מחורצות עם פתקי מיקום בכתב יד
+    caption_en: Every door marked with its place
+    caption_he: כל דלת מסומנת במקומה
+  - file: IMG_0890.HEIC
+    name: cabinet-run-by-roller-door
+    alt_en: End of a long cabinet run by the workshop's roller door
+    alt_he: קצה שורת ארונות ארוכה ליד דלת הגלילה של הנגרייה
+    caption_en: Ready for the next stage
+    caption_he: מוכן לשלב הבא
+  - file: IMG_0917.HEIC
+    name: hand-checking-grey-worktop
+    alt_en: A hand checking a grey worktop panel in the workshop
+    alt_he: יד בודקת לוח משטח אפור בנגרייה
+    caption_en: Checking a worktop
+    caption_he: בדיקת משטח
+  - file: IMG_0926.HEIC
+    name: fluted-pieces-taped-on-trestles
+    focus: top
+    alt_en: Two fluted cabinet pieces taped up on trestles
+    alt_he: שני חלקי ארון מחורצים, מודבקים בנייר דבק על חמורים
+    caption_en: Taped and waiting
+    caption_he: מודבקים וממתינים
+  - file: IMG_0927.HEIC
+    name: fluted-cabinet-open-side
+    focus: top
+    alt_en: Fluted cabinet body with one side open, on trestles
+    alt_he: גוף ארון מחורץ עם צד פתוח, על חמורים
+    caption_en: Fluted cabinet, open side
+    caption_he: ארון מחורץ, צד פתוח
+  - file: IMG_1084.HEIC
+    name: grey-top-table-fluted-legs
+    alt_en: Table with a grey top and fluted pedestal legs, in the workshop
+    alt_he: שולחן עם משטח אפור ורגלי עמוד מחורצות, בנגרייה
+    caption_en: Table, almost done
+    caption_he: שולחן, כמעט גמור
+  - file: IMG_1105.HEIC
+    name: grey-top-table-by-panel-saw
+    alt_en: The same table from another angle, the panel saw behind it
+    alt_he: אותו שולחן מזווית אחרת, מסור הפאנל מאחוריו
+    caption_en: Another angle
+    caption_he: מזווית אחרת
+  - file: IMG_1140.HEIC
+    name: table-in-front-of-minimax-si-400es
+    alt_en: Finished table in front of the SCM Minimax si 400es panel saw
+    alt_he: שולחן גמור מול מסור הפאנל SCM Minimax si 400es
+    caption_en: Finished, in the workshop
+    caption_he: גמור, בנגרייה
+  - file: IMG_1149.HEIC
+    name: panels-leaning-on-workshop-wall
+    alt_en: Wood-grain and black panels leaning on the workshop wall, a long panel on the bench
+    alt_he: לוחות בגוון עץ ובשחור נשענים על קיר הנגרייה, לוח ארוך על השולחן
+    caption_en: Panels, cut and labelled
+    caption_he: לוחות, חתוכים ומסומנים
+  - file: IMG_1150 (1).HEIC
+    name: sheet-materials-and-offcuts
+    alt_en: Sheet materials and offcuts stacked against the wall
+    alt_he: לוחות ושאריות חיתוך מאוחסנים ליד הקיר
+    caption_en: Sheets and offcuts
+    caption_he: לוחות ושאריות
+  - file: IMG_1211 (1).HEIC
+    name: bookcase-on-base-cabinets
+    alt_en: Dark wood-grain bookcase on dark base cabinets, assembled in the workshop
+    alt_he: ספרייה בגוון עץ כהה על ארונות תחתונים כהים, מורכבת בנגרייה
+    caption_en: Assembled in the workshop
+    caption_he: מורכבת בנגרייה
+  - file: IMG_1213.HEIC
+    name: bookcase-and-base-cabinets-close
+    focus: top
+    alt_en: Close view of the bookcase and base cabinets against the wall
+    alt_he: מבט קרוב על הספרייה והארונות התחתונים ליד הקיר
+    caption_en: Close up
+    caption_he: מקרוב
+  - file: IMG_1220.HEIC
+    name: slatted-panels-on-floor
+    alt_en: Long slatted panels laid out on the workshop floor
+    alt_he: לוחות מחורצים ארוכים פרושים על רצפת הנגרייה
+    caption_en: Slatted panels
+    caption_he: לוחות מחורצים
+  - file: IMG_1362 (1).HEIC
+    name: long-dark-board-roller-door-open
+    alt_en: A long dark wood-grain board on the bench, the roller door open behind
+    alt_he: לוח ארוך בגוון עץ כהה על השולחן, דלת הגלילה פתוחה מאחור
+    caption_en: Roller door open
+    caption_he: דלת הגלילה פתוחה
+  - file: IMG_1363 (1).HEIC
+    name: shelving-units-and-panels-workshop
+    alt_en: Workshop with shelving units, plywood panels and boards on a cart
+    alt_he: הנגרייה עם יחידות מדפים, לוחות דיקט ולוחות על עגלה
+    caption_en: Shelving units and panels
+    caption_he: יחידות מדפים ולוחות
+  - file: IMG_1364 (1).HEIC
+    name: shelving-unit-on-work-table
+    alt_en: Shelving unit being assembled on a work table
+    alt_he: יחידת מדפים בהרכבה על שולחן עבודה
+    caption_en: Shelving unit in assembly
+    caption_he: יחידת מדפים בהרכבה
+  - file: IMG_1533.HEIC
+    name: green-and-wood-grain-bookcase-unit
+    alt_en: Bookcase unit with green side panels and dark base cabinets, in the workshop
+    alt_he: יחידת ספרייה עם פאנלים צדדיים ירוקים וארונות תחתונים כהים, בנגרייה
+    caption_en: Green and wood-grain
+    caption_he: ירוק וגוון עץ
+  - file: IMG_1536.HEIC
+    name: bookcase-unit-and-work-cart
+    alt_en: The same bookcase unit with a work cart in front
+    alt_he: אותה יחידת ספרייה עם עגלת עבודה לפניה
+    caption_en: Still in progress
+    caption_he: עדיין בעבודה
+  - file: IMG_1538.HEIC
+    name: workbench-tools-before-bookcase
+    alt_en: Workbench with a tool case and power tools in front of the bookcase unit
+    alt_he: שולחן עבודה עם ארגז כלים וכלי עבודה חשמליים לפני יחידת הספרייה
+    caption_en: At the bench
+    caption_he: ליד שולחן העבודה
+  - file: IMG_1655.HEIC
+    name: white-cabinet-carcasses
+    alt_en: White cabinet carcasses waiting for assembly
+    alt_he: גופי ארונות לבנים ממתינים להרכבה
+    caption_en: Carcasses
+    caption_he: גופי ארונות
+  - file: IMG_1679.HEIC
+    name: tall-unit-protective-film
+    focus: top
+    alt_en: Tall dark unit with a panel still under protective film, next to a workbench
+    alt_he: יחידה גבוהה כהה עם פאנל שעדיין מכוסה בניילון מגן, ליד שולחן עבודה
+    caption_en: Protective film still on
+    caption_he: ניילון המגן עדיין עליו
+  - file: IMG_1680.HEIC
+    name: cabinets-in-assembly-wide
+    alt_en: Wide view of cabinets being assembled across the workshop
+    alt_he: מבט רחב על ארונות בהרכבה ברחבי הנגרייה
+    caption_en: Cabinets in assembly
+    caption_he: ארונות בהרכבה
+  - file: IMG_1684.HEIC
+    name: wardrobe-with-drawers
+    alt_en: Wardrobe with drawers and a panel under protective film, base cabinets beside it
+    alt_he: ארון בגדים עם מגירות ופאנל מכוסה בניילון מגן, ולצידו ארונות תחתונים
+    caption_en: Wardrobe and drawers
+    caption_he: ארון ומגירות
+  - file: IMG_1686.HEIC
+    name: wardrobe-closer-view
+    alt_en: Closer view of the wardrobe, a ladder beside it
+    alt_he: מבט קרוב יותר על הארון, סולם לצידו
+    caption_en: Closer look
+    caption_he: מקרוב יותר
+  - file: IMG_1688.HEIC
+    name: base-cabinets-on-cardboard
+    alt_en: Base cabinets on protective cardboard on the workshop floor
+    alt_he: ארונות תחתונים על קרטון מגן על רצפת הנגרייה
+    caption_en: Base cabinets
+    caption_he: ארונות תחתונים
+  - file: IMG_1845.HEIC
+    name: shelving-unit-and-dust-extractor
+    alt_en: Wood-grain shelving unit with a dust extractor in front
+    alt_he: יחידת מדפים בגוון עץ עם שואב אבק תעשייתי לפניה
+    caption_en: Shelving and dust extractor
+    caption_he: מדפים ושואב אבק
+  - file: IMG_2133.HEIC
+    name: l-shaped-counter-frame
+    alt_en: L-shaped counter frame with a wood-look top, being built in the workshop
+    alt_he: מסגרת דלפק בצורת L עם משטח בגוון עץ, בבנייה בנגרייה
+    caption_en: Counter, being built
+    caption_he: דלפק בבנייה
+  - file: IMG_2151.HEIC
+    name: hands-at-work-on-worktop
+    alt_en: Hands at work on a wood worktop with battens laid across it
+    alt_he: ידיים בעבודה על משטח עץ עם פסים מונחים לרוחבו
+    caption_en: Hands at work
+    caption_he: ידיים בעבודה
+  - file: IMG_2156.HEIC
+    name: panels-against-roller-door
+    alt_en: Panels and a green board leaning against the roller door
+    alt_he: לוחות ולוח ירוק נשענים על דלת הגלילה
+    caption_en: Panels by the door
+    caption_he: לוחות ליד הדלת

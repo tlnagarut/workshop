@@ -1,18 +1,11 @@
-// Generates lightweight SVG placeholder images so the site looks complete
-// before real photos are added. Run: node tools/generate-placeholders.mjs
-// Safe to re-run; it only writes placeholder files.
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
+// Generates the lightweight SVG wood-tone graphics used where there is no real
+// photo yet. Run: node tools/generate-placeholders.mjs
+// Safe to re-run; it only writes these two files.
+import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-
-// Don't overwrite a project that already has real (non-SVG) photos.
-function hasRealPhotos(slug) {
-  const dir = join(root, "assets", "projects", slug);
-  if (!existsSync(dir)) return false;
-  return readdirSync(dir).some((f) => /\.(jpe?g|png|webp|gif|avif)$/i.test(f));
-}
 
 // Warm wood-tone palettes (top, bottom) for variety.
 const palettes = [
@@ -64,44 +57,15 @@ function write(rel, contents) {
   console.log("wrote", rel);
 }
 
-// Scaffolding placeholders for the original demo projects only. A new project
-// added without photos is NOT given placeholders — the site renders a clean
-// "photos coming soon" card instead (see renderProjects in assets/js/main.js).
-const projects = [
-  "oak-dining-table",
-  "walnut-kitchen",
-  "live-edge-conference-table",
-  "built-in-library",
-  "cafe-counter",
-  "solid-oak-bed",
-];
-
-projects.forEach((id, idx) => {
-  if (hasRealPhotos(id)) {
-    console.log("skip", id, "(already has real photos)");
-    return;
-  }
-  const palette = palettes[idx % palettes.length];
-  write(
-    `assets/projects/${id}/cover.svg`,
-    woodGrainSvg({ w: 1200, h: 900, palette, label: "PHOTO", seed: idx + 1 })
-  );
-  for (let n = 1; n <= 3; n++) {
-    write(
-      `assets/projects/${id}/0${n}.svg`,
-      woodGrainSvg({ w: 1600, h: 1100, palette, label: `PHOTO ${n}`, seed: idx + n + 1 })
-    );
-  }
-});
-
-// Hero + social-share image.
+// Plain wood-tone background for the home-page banner (used until a real
+// "hero" photo is listed in content/photos.yml) and the browser-tab icon.
 write(
   "assets/img/hero.svg",
   woodGrainSvg({ w: 1920, h: 1080, palette: palettes[2], label: "", seed: 9 })
 );
 write(
   "assets/img/og-image.svg",
-  woodGrainSvg({ w: 1200, h: 630, palette: palettes[2], label: "TL NAGARUT", seed: 4 })
+  woodGrainSvg({ w: 1200, h: 630, palette: palettes[2], label: "TLnagarut", seed: 4 })
 );
 
 console.log("Done.");

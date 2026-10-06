@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html {{htmlAttrs}}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- @lang-script -->
+    <!-- @head -->
+    <meta name="author" content="Tomas Janulionis" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="sfGgKdDO6nTgUCeM4-wBKZIN2Vd91FYlrBvU7rzPVPA" />
+
+    <!-- Local SEO -->
+    <meta name="geo.region" content="IL-HA" />
+    <meta name="geo.placename" content="Haifa" />
+
+    <link rel="icon" href="assets/img/og-image.svg" />
+
+    <!-- Structured data: local business (helps Google show rich / local results) -->
+    <!-- @jsonld -->
+
+    <!-- Fonts: serif headings (Latin) + Hebrew-capable family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/styles.css?v=0" />
+  </head>
+  <body>
+    <!-- @header -->
+
+    <main>
+      <!-- ===================== Hero ===================== -->
+      <section class="hero" style="background-image: url('assets/img/hero.svg')">
+        <!-- @hero-media -->
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow light" data-i18n="hero.tagline"></p>
+          <h1 data-i18n="hero.title"></h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="workshop.html" data-i18n="hero.ctaWorkshop"></a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== About ===================== -->
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow" data-i18n="about.eyebrow"></p>
+            <h2 data-i18n="about.title"></h2>
+            <p class="lede" data-i18n="about.p1"></p>
+            <p data-i18n="about.p2"></p>
+            <p data-i18n="about.p3"></p>
+          </div>
+          <ul class="stats">
+            <li>
+              <span class="stat-value" data-i18n="about.stat1Value"></span>
+              <span class="stat-label" data-i18n="about.stat1Label"></span>
+            </li>
+            <li>
+              <span class="stat-value" data-i18n="about.stat2Value"></span>
+              <span class="stat-label" data-i18n="about.stat2Label"></span>
+            </li>
+            <li>
+              <span class="stat-value" data-i18n="about.stat3Value"></span>
+              <span class="stat-label" data-i18n="about.stat3Label"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===================== Services ===================== -->
+      <section class="section section-alt" id="services">
+        <div class="container">
+          <p class="eyebrow" data-i18n="services.eyebrow"></p>
+          <h2 data-i18n="services.title"></h2>
+          <div class="cards cards-2">
+            <article class="card">
+              <h3 data-i18n="services.kitchensTitle"></h3>
+              <p data-i18n="services.kitchensBody"></p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="services.builtinTitle"></h3>
+              <p data-i18n="services.builtinBody"></p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="services.doorsTitle"></h3>
+              <p data-i18n="services.doorsBody"></p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="services.repairTitle"></h3>
+              <p data-i18n="services.repairBody"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workshop and Projects live on their own pages (workshop.html, projects.html) -->
+
+      <!-- ===================== Contact ===================== -->
+      <section class="section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow" data-i18n="contact.eyebrow"></p>
+            <h2 data-i18n="contact.title"></h2>
+            <p class="lede" data-i18n="contact.body"></p>
+          </div>
+          <!-- WhatsApp icon defined once, reused by each person's button -->
+          <svg width="0" height="0" class="svg-defs" aria-hidden="true" focusable="false">
+            <symbol id="ico-whatsapp" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7zm-7.01 15.24h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/>
+            </symbol>
+          </svg>
+          <!-- @contact-list -->
+        </div>
+      </section>
+    </main>
+
+    <!-- @footer -->
+
+    <script src="assets/js/main.js?v=0"></script>
+  </body>
+</html>

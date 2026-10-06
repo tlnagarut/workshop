@@ -1,26 +1,24 @@
 #!/bin/bash
-# Rebuild all static content in one go
+# Rebuild the whole site in one go.
 # Run: ./build.sh
+#
+# Steps 1–2 run on this computer only (they need the originals folder and
+# libvips); their output is committed, so the deploy skips them. Steps 3–4 are
+# mirrored in .github/workflows/deploy.yml — keep the two in sync.
 
 set -e  # Exit on first error
 
-echo "🔨 Rebuilding all static content..."
+echo "🔨 Rebuilding the site..."
 echo ""
 
-echo "▶ generate-placeholders.mjs"
+echo "▶ generate-placeholders.mjs   (local only)"
 node tools/generate-placeholders.mjs
 
-echo "▶ build-content.mjs"
-node tools/build-content.mjs
+echo "▶ process-photos.mjs         (local only)"
+node tools/process-photos.mjs
 
-echo "▶ build-workshop.mjs"
-node tools/build-workshop.mjs
-
-echo "▶ build-projects.mjs"
-node tools/build-projects.mjs
-
-echo "▶ build-stamp.mjs"
-node tools/build-stamp.mjs
+echo "▶ build-pages.mjs"
+node tools/build-pages.mjs
 
 echo "▶ stamp-versions.mjs"
 node tools/stamp-versions.mjs

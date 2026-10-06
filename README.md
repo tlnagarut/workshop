@@ -1,30 +1,26 @@
-# TL Nagarut — woodworking website
+# TLnagarut — custom cabinetry website
 
-A small, fast intro site for Tomas Janulionis' woodworking business in Haifa.
-Plain HTML/CSS/JS, no framework, hosts on GitHub Pages.
+A small, fast showcase site for Tomas Janulionis' custom cabinetry and solid
+wood door workshop in Haifa (TL נגרות). Plain HTML/CSS/JS, no framework, hosted
+on GitHub Pages at https://tlnagarut.github.io/workshop/.
 
-- **Bilingual:** English (default) with an English ⇄ Hebrew toggle; RTL handled automatically.
-- **Three pages:** `index.html` (Hero · About · Services · Contact), `workshop.html`, `projects.html`.
-- Light, warm woodworking palette.
-
-> ⚠️ Contact details, "about" text, and project photos are placeholders
-> (Pexels stock — free for commercial use). Replace before promoting the site.
+- **Bilingual:** English (default) ⇄ Hebrew toggle; RTL handled automatically.
+  Both languages are written into the HTML, so search engines see full pages.
+- **Three pages:** `index.html` (Hero · About · Services · Contact),
+  `workshop.html` (equipment, spray finishing), `projects.html` (links to Instagram
+  until real project photos are added).
 
 ## First-time setup (new Mac)
 
-On a brand-new Mac you don't have this project (or any tools) yet.\
-Open **Terminal** (press ⌘+Space, type "Terminal", hit Enter) and paste this one line:
+Open **Terminal** (⌘+Space, type "Terminal", Enter) and paste:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/tlnagarut/workshop/main/setup.sh | bash
 ```
 
-That installs everything you need (git, Node.js, VS Code — via Homebrew) and
-downloads the project to `~/dev/tl-nagarut-site`. If you already have the project
-folder, just run `./setup.sh` from inside it instead.
-
-It's safe to re-run — anything already installed is skipped. Python is not
-needed, and there are no project dependencies to install.
+That installs git, Node.js, VS Code and libvips (for photos) via Homebrew, and
+downloads the project to `~/dev/tl-nagarut-site`. If you already have the
+folder, run `./setup.sh` inside it. Safe to re-run.
 
 ## Preview
 - in VS Code: right click on `index.html` -> `Open in Integrated Browser`
@@ -32,79 +28,46 @@ needed, and there are no project dependencies to install.
 
 ## How content works
 
-Source content lives in YAML and per-project folders. Several JS data files are
-**auto-generated** from it — don't edit them by hand:
+| Edit this (source)                               | What it controls                          |
+|--------------------------------------------------|-------------------------------------------|
+| `content/about.en.yml`, `content/about.he.yml`   | site text, page titles & descriptions     |
+| `content/workshop.en.yml`, `content/workshop.he.yml` | Workshop page: equipment, spray finishing |
+| `content/contact.yml`                            | phones, email, address, Instagram (both languages) |
+| `content/photos.yml`                             | which photos appear, names, alt text, captions |
+| `templates/*.html`                               | page structure                            |
 
-| Edit this (source)                           | Generates                     |
-|----------------------------------------------|-------------------------------|
-| `content/about.en.yml`, `content/about.he.yml` | `assets/js/content.js`         |
-| `content/contact.yml`                        | (shared by both languages)    |
-| `content/workshop.{en,he}.yml`               | `assets/js/workshop.js`       |
-| `assets/projects/<slug>/project.md` + photos | `assets/js/projects.js`       |
+After editing, **run `./build.sh`** (or the `rebuild-content` skill). It writes
+the root `index.html` / `workshop.html` / `projects.html` — never edit those by
+hand. See `AUTHORING.md` for a plain-English guide and `CLAUDE.md` for the
+photo rules.
 
-After editing any source file, **run `./build.sh`** (or the `rebuild-content`
-skill) to regenerate. Skip the build for edits to HTML, CSS, or `assets/js/main.js`.
+## Photos
 
-## Add a project
-
-A project is just a folder with photos and a `project.md` — no code:
-
-```
-assets/projects/my-new-table/
-    project.md
-    cover.jpg     # card thumbnail (or any file named cover.*)
-    01.jpg        # gallery photos (any names; jpg/png/webp)
-```
-
-```markdown
----
-title: My New Table
-title_he: השולחן החדש שלי     # optional
-audience: private             # private | business | both
-order: 5                      # optional; lower shows first
-cover: cover.jpg              # optional; defaults to cover.* or first photo
----
-Short description in English.
-
-%%he%%
-תיאור קצר בעברית.
-```
-
-All Hebrew is optional — omit `title_he` / `%%he%%` and English is used for both.
-Then `./build.sh` and commit.
-
-## Edit text & contact details
-
-- **English / Hebrew strings:** `content/about.en.yml`, `content/about.he.yml` (same keys).
-- **Contact (name, phone, email, Instagram, city):** `content/contact.yml`.
-- **Workshop:** `content/workshop.{en,he}.yml` for text. Photos are picked up
-  automatically from `assets/workshop/` (any image files, in filename order).
-
-Run `./build.sh` after editing. The build warns if a key exists in one language
-but is missing from the other.
+Originals stay outside the site, in `~/dev/tl-nagarut-photos/<group>/`
+(`hero`, `workshop`, `spray`, `process`). `./build.sh` rotates, crops (4:3 tiles, 16:9
+banner), resizes (480–1600 px, WebP + JPEG, < 300 KB) and strips metadata into
+`assets/img/photos/`, which is committed — the deploy needs no extra steps.
 
 ## Deploy (GitHub Pages)
 
-`.github/workflows/deploy.yml` builds and deploys on every push to `main`.
-One-time: repo **Settings → Pages → Source → GitHub Actions**. Site goes live at
-`https://<username>.github.io/<repo>/`.
+`.github/workflows/deploy.yml` rebuilds the pages and deploys on every push to
+`main`. One-time: repo **Settings → Pages → Source → GitHub Actions**.
 
 ## File map
 
 ```
-index.html / workshop.html / projects.html   the three pages
-assets/css/styles.css                         all styling (light theme + RTL)
-assets/js/main.js                             language switch, rendering, gallery
-assets/js/content.js · projects.js · workshop.js   AUTO-GENERATED — do not edit
-content/*.yml                                  source text (edit here)
-assets/projects/<slug>/                        one folder per project
-assets/img/                                    hero + social-share images
-tools/build-content.mjs                           content/*.yml → content.js
-tools/build-workshop.mjs                        content/workshop*.yml → assets/js/workshop.js
-tools/build-projects.mjs                        assets/projects/ → projects.js
-tools/generate-placeholders.mjs                regenerates placeholder images
-tools/yaml.mjs                                  shared YAML reader
-setup.sh                                        one-time install of git/node/VS Code (new Mac)
-build.sh                                        runs all generators
-preview.sh                                      opens the site in a browser
+templates/*.html                 page structure (edit these)
+index.html · workshop.html · projects.html   GENERATED — do not edit
+content/*.yml                    text, contact details, photo list (edit here)
+assets/css/styles.css            all styling (light theme + RTL)
+assets/js/main.js                language switch, mobile menu, photo viewer
+assets/img/photos/               GENERATED web photos + manifest.json
+assets/img/                      banner background, social preview image, tab icon
+tools/build-pages.mjs            templates + content → the three pages
+tools/process-photos.mjs         original photos → web photos (local, libvips)
+tools/make-social-card.mjs       makes the 1200×630 link-preview image (local)
+tools/generate-placeholders.mjs  plain wood-tone banner + tab icon
+tools/stamp-versions.mjs         cache-busting ?v= hashes
+tools/yaml.mjs                   shared YAML reader
+setup.sh · build.sh · preview.sh one-time setup · rebuild · open in browser
 ```

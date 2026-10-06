@@ -1,33 +1,29 @@
 ---
 name: rebuild-content
-description: Rebuild static content for the TL Nagarut workshop site after editing source files. Use this skill after modifying YAML content files (content/*.yml), project markdown files (assets/projects/*/project.md), adding new project folders, or replacing project/workshop photos. Runs ./build.sh which regenerates placeholder images and compiles all i18n, workshop, and project data files.
+description: Rebuild the TLnagarut website after editing content. Use after modifying text or contact details (content/*.yml), the photo list (content/photos.yml), page templates (templates/*.html), or adding/replacing original photos in ~/dev/tl-nagarut-photos/. Runs ./build.sh, which processes photos and writes all page text (EN + HE) into index.html, workshop.html and projects.html.
 ---
 
-# Rebuild Static Content
+# Rebuild the site
 
-This repo has a no-build-step site, but several JS data files are **auto-generated** from YAML content and project folders. After editing any source file listed below, you MUST run `./build.sh` so the generated files reflect the changes. Failing to do so means the live site won't show the edits.
+The three pages in the repo root (`index.html`, `workshop.html`,
+`projects.html`) are **generated** from `templates/*.html` + `content/*.yml`.
+After editing any source listed below, run `./build.sh` so the pages reflect
+the change — otherwise the live site won't show the edits.
 
 ## When to run
 
-Run `./build.sh` after editing **any** of these:
-
 | Edited source | Regenerates |
 | --- | --- |
-| `content/about.en.yml`, `content/about.he.yml`, `content/contact.yml` | `assets/js/content.js` |
-| `content/workshop.en.yml`, `content/workshop.he.yml` | `assets/js/workshop.js` |
-| `assets/projects/<slug>/project.md` (any add/edit/remove) | `assets/js/projects.js` |
-| Added/removed photo files in `assets/projects/<slug>/` | `assets/js/projects.js` |
-| Added/removed photo files in `assets/workshop/` | `assets/js/workshop.js` |
-| Created a brand-new empty project folder | placeholder SVGs + `assets/js/projects.js` |
+| `content/about.en.yml`, `content/about.he.yml` (site text) | all three pages |
+| `content/workshop.en.yml`, `content/workshop.he.yml` | `workshop.html` |
+| `content/contact.yml` (phones, email, address, Instagram) | all three pages (contact, Google data) |
+| `content/photos.yml`, or photos in `~/dev/tl-nagarut-photos/` | `assets/img/photos/` + the pages |
+| `templates/*.html` | the matching page |
 
 ## When NOT to run
 
-Skip the build if the edit only touches:
-
-- `index.html`, `workshop.html`, `projects.html` (static HTML, no build needed)
-- `assets/css/styles.css` (CSS is loaded directly)
-- `assets/js/main.js` (loaded directly, not generated)
-- `README.md` or other docs
+Skip the build if the edit only touches `assets/css/styles.css`,
+`assets/js/main.js`, or docs (README, AUTHORING, CLAUDE.md).
 
 ## How to run
 
@@ -35,15 +31,20 @@ Skip the build if the edit only touches:
 ./build.sh
 ```
 
-The script runs these steps in order and stops on the first failure:
+Steps, in order (stops on the first failure):
 
-1. `node tools/generate-placeholders.mjs` — SVG placeholders for empty project folders (safe; skips folders with real photos)
-2. `node tools/build-content.mjs` — compiles `content/*.yml` → `assets/js/content.js`
-3. `node tools/build-workshop.mjs` — compiles `content/workshop*.yml` → `assets/js/workshop.js`
-4. `node tools/build-projects.mjs` — scans `assets/projects/` → `assets/js/projects.js`
+1. `generate-placeholders.mjs` — plain wood-tone banner + tab icon (local only)
+2. `process-photos.mjs` — originals → web photos, following the Photos rules in
+   CLAUDE.md (local only; needs `brew install vips`; skips unchanged photos)
+3. `build-pages.mjs` — writes the three pages, with all text in both languages
+4. `stamp-versions.mjs` — cache-busting `?v=` hashes on CSS/JS
 
 ## Important
 
-- **Never edit** `assets/js/content.js`, `assets/js/projects.js`, or `assets/js/workshop.js` directly. They are auto-generated and will be overwritten.
-- The GitHub Action (`.github/workflows/deploy.yml`) runs these same builds on push, so committing un-rebuilt source is recoverable — but local previews will be stale until you rebuild.
-- If `./build.sh` fails, read the error: most failures are YAML syntax issues (mismatched indentation, unquoted special chars) or a `project.md` missing required frontmatter.
+- **Never edit** the root `index.html` / `workshop.html` / `projects.html` or
+  anything in `assets/img/photos/` by hand — they are overwritten.
+- Read the `!` warnings: a key missing in one language, a photo listed but not
+  processed, or a photo without alt text in both languages.
+- After building, look at the result (`./preview.sh`), in English and Hebrew.
+- The GitHub Action (`.github/workflows/deploy.yml`) re-runs steps 3–4 on push;
+  keep it in sync with `build.sh`.

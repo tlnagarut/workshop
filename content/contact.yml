@@ -1,12 +1,15 @@
 # ============================================================================
 # Contact details — shared across BOTH languages. Edit here once.
+# This file is the single source of truth: the Contact section, the footer and
+# the Google business data (structured data) are all built from it.
 # After editing, run:  ./build.sh
 # ============================================================================
 
 # Two contact people — both are shown, each with its own WhatsApp button.
 # phoneDisplay = what's shown on the page.  phoneHref = dialable, with country
-# code (e.g. +972...). The people's NAMES live in en.yml / he.yml under
-# "contact" (person1Name / person2Name) so they can be translated.
+# code (e.g. +972...). The people's NAMES live in about.en.yml / about.he.yml
+# under "contact" (person1Name / person2Name) so they can be translated.
+# The first number is the main business number given to Google.
 people:
   - phoneDisplay: "053-382-2875"
     phoneHref: "+972533822875"
@@ -14,7 +17,23 @@ people:
     phoneHref: "+972523699346"
 
 email: "tlnagarut@outlook.com"
-city: Haifa, Israel
+
+# Owner's name, given to Google as the business founder.
+founder: Tomas Janulionis
+
+# Workshop address, in English and Hebrew.
+address:
+  streetEn: Arye Shenkar Street 35
+  streetHe: רחוב אריה שנקר 35
+  cityEn: Haifa
+  cityHe: חיפה
+  countryEn: Israel
+  countryHe: ישראל
+  countryCode: IL
 
 instagram: "https://www.instagram.com/tlnagarut/"
-instagramHandle: "https://www.instagram.com/tlnagarut?igsh=MTZ0bGdnbDdnMDJ6dw%3D%3D&utm_source=qr"
+instagramHandle: "@tlnagarut"
+
+# The site's public web address (used for links shared on social media and
+# for Google). Keep the slash at the end.
+siteUrl: "https://tlnagarut.github.io/workshop/"

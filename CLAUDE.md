@@ -1,7 +1,41 @@
 # CLAUDE.md
 
-TL Nagarut — a small static intro site for Tomas Janulionis' woodworking business in Haifa.
-Plain HTML/CSS/JS, **no build framework**, hosts on GitHub Pages.
+TLnagarut (TL נגרות) — a small, fast, bilingual (English / Hebrew) showcase site for
+Tomas Janulionis' custom woodworking and cabinetry workshop in Haifa, Israel.
+Plain HTML/CSS/JS, **no build framework**, hosted on GitHub Pages.
+
+## What this site is for
+
+It is a shop window, not a web shop. It has three jobs:
+
+1. Be **found** — on Google and by AI assistants — when someone looks for custom
+   cabinets or solid wood doors in Haifa.
+2. Build **trust** — clients and interior designers check the site before they call.
+3. Make it **easy to get in touch**.
+
+Keep it lean: a short intro, the best project photos, the workshop's equipment,
+and contact details. Do not add pages, sections, blogs or features unless the
+owner asks.
+
+## About the business — use only these facts
+
+- Names: "TLnagarut" in English, "TL נגרות" in Hebrew. Use exactly these
+  spellings everywhere (pages, titles, metadata, structured data).
+- Custom cabinetry and furniture, solid wood doors, cabinet panel production,
+  hardware installation.
+- Workshop address: Arye Shenkar Street 35, Haifa, Israel.
+- Everything is done in-house: design, cutting, assembly, spray finishing,
+  installation.
+- Equipment worth showing: SCM Minimax edgebander, Blum hardware systems,
+  Fuji HVLP spray finishing.
+- Busellato Jet Optima RT CNC nesting machine: purchased, not yet installed.
+  Show as 'arriving soon' until the owner says it is installed.
+- Phone, email, Instagram and any other contact details live in
+  `content/contact.yml`. That file is the **single source of truth**.
+
+**Never invent** a phone number, email, price, client name, years in business,
+award, certificate or business registration number. If something is missing,
+leave it out and tell the owner what's missing.
 
 ## Audience — the person editing this is non-technical
 
@@ -13,12 +47,18 @@ Keep this in mind:
 - Default to making the change yourself rather than handing back instructions or
   code snippets for them to run.
 - Most requests will be about **content** (text, photos, project entries, contact
-  details) — these live in `content/*.yml` and `assets/projects/`. Make the edit,
+  details) — these live in `content/*.yml` and the photos folder (see Photos). Make the edit,
   then run the build for them (see below); don't ask them to run commands.
 - After a change, tell them how to see the result (e.g. "run `./preview.sh`" or
   describe what changed) and confirm it looks right.
 - Before anything irreversible (deleting files, removing a project, force-pushing),
   pause and explain in plain terms what will happen, and ask first.
+
+## Which files you may open
+
+Only open files inside the site folder, the photo folders
+(`~/dev/tl-nagarut-photos/`), or files the owner names. Never browse
+Downloads, Desktop or other personal folders.
 
 ## Start of session — sync with git first
 
@@ -35,33 +75,73 @@ copy causes conflicts later.
 
 ## Layout
 
-- `index.html`, `workshop.html`, `projects.html` — the three pages (static HTML).
-- `assets/css/`, `assets/js/` — styles and scripts, loaded directly.
-- `content/*.yml` — source content (i18n strings, workshop, contact).
-- `assets/projects/<slug>/` — one folder per project (a `project.md` + photos).
-- `tools/*.mjs` — generators that compile YAML/markdown into JS data files.
-- `build.sh` — runs all generators. `preview.sh` — opens the site in a browser.
+- `templates/index.html`, `templates/workshop.html`, `templates/projects.html`
+  — the three pages' structure. **Edit these, not the root HTML files.**
+- `index.html`, `workshop.html`, `projects.html` (repo root) — **generated** by
+  `tools/build-pages.mjs` from the templates + `content/`. Never edit by hand.
+- `content/*.yml` — all text (EN/HE), contact details, and the photo list.
+- `assets/css/styles.css`, `assets/js/main.js` — styles and the small script
+  (language switch, mobile menu, photo viewer), loaded directly.
+- `assets/img/photos/` — **generated** web-ready photos + `manifest.json`.
+- `tools/*.mjs` — the build steps. `build.sh` runs them all. `preview.sh` opens
+  the site in a browser.
 
-## Generated files — run the build after editing source
+## How pages are built
 
-Several JS data files (`assets/js/content.js`, `assets/js/projects.js`,
-`assets/js/workshop.js`) are **auto-generated** from the YAML content
-and project folders. They are not edited by hand.
+All page text — English **and** Hebrew — is written into the HTML at build time,
+so search engines see full pages without running scripts. In a template,
+`<h1 data-i18n="hero.title"></h1>` becomes that text in both languages
+(`<span class="t-en">…</span><span class="t-he">…</span>`); CSS shows the active
+one. `data-i18n-aria="key"` gives a translated `aria-label`. `<!-- @name -->`
+marks a generated block (head tags, Google business data, contact list,
+equipment cards, photo grids, footer …) — see `BLOCKS` in `tools/build-pages.mjs`.
 
-After editing any `content/*.yml`, any `assets/projects/<slug>/project.md`, or
-adding/removing project or workshop photos, **run `./build.sh`** (or use the
-**`rebuild-content` skill**) so the generated files reflect your changes.
-Skip the build for edits to HTML, CSS, `assets/js/main.js`, or docs.
+After editing any `content/*.yml`, a template, or the photo list, **run
+`./build.sh`** (or use the **`rebuild-content` skill**). Skip the build for
+edits to CSS or `assets/js/main.js`.
+
+## Photos
+
+The owner's **original photos live outside the site folder**, in
+`~/dev/tl-nagarut-photos/<group>/` (groups: `hero`, `workshop`, `spray`,
+`process` = the "In the workshop" page), and
+are never modified. `content/photos.yml` lists which photos are used, with a
+descriptive file `name`, `alt_en`/`alt_he` and `caption_en`/`caption_he`.
+`./build.sh` runs `tools/process-photos.mjs` (needs libvips: `brew install
+vips`), which applies these rules to **every** photo — follow them for any photo
+the owner adds later:
+
+- **Upright:** rotate using the phone's rotation (EXIF orientation) tag.
+- **Fixed shape per place:** gallery tiles **4:3**, big banner photos (`hero`)
+  **16:9**. Crop so the important part of the piece stays in frame
+  (libvips "attention" crop by default; set `focus:` — top / bottom / left /
+  right / centre — when it picks wrong). Look at the result and check.
+- **Sizes:** 480, 800, 1200 and 1600 px wide (never upscaled), **WebP + JPEG
+  fallback**, each file **under ~300 KB**. Colours converted to sRGB; camera and
+  GPS metadata stripped.
+- **No filters or editing** — only rotate, crop, resize, compress, so the work
+  looks the way it really looks.
+- **Descriptive file names and alt text in both languages** — never `IMG_1234`.
+- The build writes `width`/`height` on every image (no layout jumps), loads
+  photos lazily except the top banner, and shows galleries as a grid of equal
+  tiles; tapping opens a larger view (swipe on phones) with a bilingual caption.
+- Processed files are **committed**, so the deploy needs no extra steps.
+- Only use photos of the owner's real shop and work — no stock photos, no
+  manufacturer screenshots.
+
+The link-preview image (`assets/img/tlnagarut-custom-cabinets-solid-wood-doors-haifa.jpg`,
+1200×630 JPG) is made by `tools/make-social-card.mjs`; replace it with a real
+workshop photo when there is one.
 
 ## Deploy — keep `.github/workflows/deploy.yml` in sync with `build.sh`
 
-The deploy workflow does **not** call `build.sh`. It re-runs the generators
-itself, step by step, so its list of `node tools/*.mjs` steps is a hand-kept
-copy of what `build.sh` runs. **Whenever you add, remove, or reorder a generator
-in `build.sh`, mirror that change in `deploy.yml`** — otherwise the deployed
-site is built differently from local. (Exception: `generate-placeholders.mjs`
-is intentionally local-only.) Keep `stamp-versions.mjs` last so it hashes the
-freshly generated files.
+The deploy workflow does **not** call `build.sh`. It re-runs the build steps
+itself, so its list of `node tools/*.mjs` steps is a hand-kept copy of what
+`build.sh` runs. **Whenever you add, remove, or reorder a step in `build.sh`,
+mirror that change in `deploy.yml`** — otherwise the deployed site is built
+differently from local. (Exceptions: `generate-placeholders.mjs` and
+`process-photos.mjs` are local-only — their output is committed.) Keep
+`stamp-versions.mjs` last so it hashes the freshly generated files.
 
 ## Preview
 - in VS Code: right click on `index.html` -> `Open in Integrated Browser`

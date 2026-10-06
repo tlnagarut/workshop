@@ -27,7 +27,7 @@ Google's side.
 6. Add **photos** (project shots), **opening hours**, and a short description.
 
 ### Keep it consistent with the site
-Use the same business name (**TL Nagarut / TL נגרות**), **phone**, and **city
-(Haifa)** as the `LocalBusiness` structured data in `index.html`. Matching
+Use the same business name (**TLnagarut / TL נגרות**), **phone**, and **address
+(Arye Shenkar Street 35, Haifa)** as the `LocalBusiness` structured data in `index.html`. Matching
 name/address/phone (NAP consistency) across the site and the profile helps
 ranking.

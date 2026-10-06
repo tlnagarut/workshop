@@ -7,7 +7,8 @@
 # Or, if you already have the project folder:
 #   ./setup.sh
 #
-# Installs (via Homebrew): git, Node.js, and VS Code, then downloads the project.
+# Installs (via Homebrew): git, Node.js, libvips (photo processing) and VS Code,
+# then downloads the project.
 # Python is NOT needed. There are no project dependencies to install.
 
 set -e
@@ -15,7 +16,7 @@ set -e
 REPO_URL="https://github.com/tlnagarut/workshop.git"
 CLONE_DIR="$HOME/dev/tl-nagarut-site"
 
-echo "🛠  TL Nagarut — setting up your Mac"
+echo "🛠  TLnagarut — setting up your Mac"
 echo ""
 
 # --- Homebrew -------------------------------------------------------------
@@ -49,6 +50,14 @@ else
   echo "✓ Node.js already installed ($(node --version))"
 fi
 
+# --- libvips (turns original photos into web photos) -----------------------
+if ! command -v vips >/dev/null 2>&1; then
+  echo "▶ Installing libvips (for photos)..."
+  brew install vips
+else
+  echo "✓ libvips already installed ($(vips --version))"
+fi
+
 # --- VS Code --------------------------------------------------------------
 if [ ! -d "/Applications/Visual Studio Code.app" ]; then
   echo "▶ Installing VS Code..."
@@ -78,6 +87,7 @@ fi
 echo ""
 echo "✅ All set! Next steps:"
 echo "   1. Open the project:   cd \"$PROJECT_DIR\"  (and: code .  to edit in VS Code)"
-echo "   2. After editing, run  ./build.sh    to rebuild the site"
-echo "   3. Run  ./preview.sh   to see it in your browser"
+echo "   2. Put original photos in ~/dev/tl-nagarut-photos/ (see AUTHORING.md)"
+echo "   3. After editing, run  ./build.sh    to rebuild the site"
+echo "   4. Run  ./preview.sh   to see it in your browser"
 echo ""
