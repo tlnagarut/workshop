@@ -1,13 +1,16 @@
 /* ============================================================================
- * Builds the pages (index.html, workshop.html, in-the-workshop.html,
- * projects.html) from the
- * templates in templates/ and the text in content/. Run:
+ * Builds the pages from the templates in templates/ and the text in content/,
+ * once per language, plus sitemap.xml. Run:
  *   node tools/build-pages.mjs        (invoked by build.sh and the deploy)
  *
- * All text — English AND Hebrew — is written into the HTML itself, so search
- * engines and AI assistants see a complete page without running any script.
- * The language button only switches which language is visible (see .t-en /
- * .t-he in styles.css and setLanguage() in main.js).
+ *   English: index.html, workshop.html, in-the-workshop.html, projects.html
+ *   Hebrew:  he/index.html, he/workshop.html, … (right-to-left)
+ *
+ * Each page has its own address, title and description in its language, and
+ * hreflang links to its twin in the other language. All text is written into
+ * the HTML itself, so search engines and AI assistants see a complete page
+ * without running any script. The language button is a plain link to the
+ * same page in the other language.
  *
  * Sources:
  *   content/about.en.yml, about.he.yml      site text (keys like hero.title)
@@ -16,12 +19,12 @@
  *   content/photos.yml + assets/img/photos/manifest.json   photos
  *
  * Template syntax (templates/*.html):
- *   <h1 data-i18n="hero.title"></h1>     → the text in both languages
+ *   <h1 data-i18n="hero.title"></h1>     → the text in the page's language
  *   <button data-i18n-aria="nav.menuAria">  → translated aria-label
  *   <!-- @footer -->                     → a generated block (see BLOCKS)
  *   {{htmlAttrs}}                        → a generated value (see INLINE)
  * ========================================================================== */
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseYaml, flatten } from "./yaml.mjs";
@@ -43,12 +46,19 @@ const manifest = existsSync(join(root, manifestPath)) ? JSON.parse(read(manifest
 const SITE = contact.siteUrl.replace(/\/?$/, "/");
 const SOCIAL_IMAGE = "assets/img/tlnagarut-custom-cabinets-solid-wood-doors-haifa.jpg";
 
+// Hebrew pages live one folder down, in he/.
+const LANGS = { en: { dir: "ltr", folder: "", locale: "en_US" }, he: { dir: "rtl", folder: "he/", locale: "he_IL" } };
+const other = (lang) => (lang === "he" ? "en" : "he");
+
 const PAGES = [
   { key: "home", template: "templates/index.html", out: "index.html", path: "" },
   { key: "workshop", template: "templates/workshop.html", out: "workshop.html", path: "workshop.html" },
   { key: "inWorkshop", template: "templates/in-the-workshop.html", out: "in-the-workshop.html", path: "in-the-workshop.html" },
   { key: "projects", template: "templates/projects.html", out: "projects.html", path: "projects.html" },
 ];
+
+// The language of the page being rendered (set by render()).
+let LANG = "en";
 
 const warnings = new Set();
 const warn = (msg) => warnings.add(msg);
@@ -67,19 +77,11 @@ function t(lang, key) {
   return "";
 }
 
-// Both languages side by side; CSS shows the active one. Identical text
-// (numbers, names) is written once.
-function both(en, he) {
-  if (en === he) return esc(en);
-  return `<span class="t-en" lang="en">${esc(en)}</span><span class="t-he" lang="he">${esc(he)}</span>`;
-}
-const tr = (key) => both(t("en", key), t("he", key));
-
-// A translated attribute: English by default, Hebrew swapped in by main.js.
-function attr(name, en, he) {
-  return `${name}="${esc(en)}" data-${name.replace("aria-label", "aria")}-en="${esc(en)}" ` +
-    `data-${name.replace("aria-label", "aria")}-he="${esc(he)}"`;
-}
+// Pick the English or Hebrew version for the page being rendered.
+const pick = (en, he) => (LANG === "he" ? he : en);
+const both = (en, he) => esc(pick(en, he));
+const tr = (key) => esc(t(LANG, key));
+const attr = (name, en, he) => `${name}="${esc(pick(en, he))}"`;
 const aria = (key) => attr("aria-label", t("en", key), t("he", key));
 
 // Pair up an English list with its Hebrew twin (workshop cards, spray facts).
@@ -90,7 +92,11 @@ function pairs(key) {
   return en.map((item, i) => [item, he[i] ?? item]);
 }
 
-const pageUrl = (page) => SITE + page.path;
+const pageUrl = (page, lang = LANG) => SITE + LANGS[lang].folder + page.path;
+// Link from one language's page to the other's (explicit index.html so it
+// also works when the files are opened straight from disk).
+const twinHref = (page) =>
+  (LANG === "he" ? "../" : "he/") + (page.path || "index.html");
 const address = (lang) => {
   const a = contact.address;
   return lang === "he"
@@ -142,27 +148,31 @@ function photoGrid(group) {
     `data-webp="${srcset(p, "webp")}" data-jpg="${srcset(p, "jpg")}" ` +
     `data-src="assets/img/photos/${p.group}/${p.name}-${p.widths[p.widths.length - 1]}.jpg" ` +
     `data-width="${p.width}" data-height="${p.height}" ` +
-    `data-caption-en="${esc(p.caption.en)}" data-caption-he="${esc(p.caption.he)}">` +
+    `data-caption="${esc(pick(p.caption.en, p.caption.he))}">` +
     picture(p, { sizes }) + `</button></li>`);
   return `<ul class="photo-grid">\n${items.join("\n")}\n</ul>`;
 }
 
 // ---------------------------------------------------------------- blocks
 const BLOCKS = {
-  // Title, description, canonical address and social-sharing tags.
+  // Title, description, canonical address, language twins and social-sharing
+  // tags — all in the page's own language.
   head(page) {
-    const title = t("en", `meta.${page.key}Title`);
-    const desc = t("en", `meta.${page.key}Description`);
+    const title = t(LANG, `meta.${page.key}Title`);
+    const desc = t(LANG, `meta.${page.key}Description`);
     const url = pageUrl(page);
     const img = SITE + SOCIAL_IMAGE;
-    const imgAlt = t("en", "meta.socialImageAlt");
+    const imgAlt = t(LANG, "meta.socialImageAlt");
     return [
       `<title>${esc(title)}</title>`,
       `<meta name="description" content="${esc(desc)}" />`,
       `<link rel="canonical" href="${url}" />`,
+      `<link rel="alternate" hreflang="en" href="${pageUrl(page, "en")}" />`,
+      `<link rel="alternate" hreflang="he" href="${pageUrl(page, "he")}" />`,
+      `<link rel="alternate" hreflang="x-default" href="${pageUrl(page, "en")}" />`,
       ``,
       `<!-- Open Graph / social sharing (WhatsApp, Facebook, …) -->`,
-      `<meta property="og:site_name" content="${esc(t("en", "nav.brand"))}" />`,
+      `<meta property="og:site_name" content="${esc(t(LANG, "nav.brand"))}" />`,
       `<meta property="og:title" content="${esc(title)}" />`,
       `<meta property="og:description" content="${esc(desc)}" />`,
       `<meta property="og:type" content="website" />`,
@@ -172,8 +182,8 @@ const BLOCKS = {
       `<meta property="og:image:width" content="1200" />`,
       `<meta property="og:image:height" content="630" />`,
       `<meta property="og:image:alt" content="${esc(imgAlt)}" />`,
-      `<meta property="og:locale" content="en_US" />`,
-      `<meta property="og:locale:alternate" content="he_IL" />`,
+      `<meta property="og:locale" content="${LANGS[LANG].locale}" />`,
+      `<meta property="og:locale:alternate" content="${LANGS[other(LANG)].locale}" />`,
       ``,
       `<!-- Twitter / X card -->`,
       `<meta name="twitter:card" content="summary_large_image" />`,
@@ -211,11 +221,6 @@ const BLOCKS = {
     return `<script type="application/ld+json">\n${json}\n</script>`;
   },
 
-  // Sets the saved language before the page paints, so there is no flash.
-  "lang-script"() {
-    return `<script>try{if(localStorage.getItem("tln-lang")==="he"){document.documentElement.lang="he";document.documentElement.dir="rtl";}}catch(e){}</script>`;
-  },
-
   header(page) {
     const home = page.key === "home";
     const link = (href, key, current) =>
@@ -239,8 +244,8 @@ const BLOCKS = {
       `      <span></span><span></span><span></span>`,
       `    </button>`,
       ``,
-      `    <button id="lang-toggle" class="lang-toggle" type="button"`,
-      `      data-i18n-aria="nav.langToggleAria" data-i18n="nav.langToggle"></button>`,
+      `    <a class="lang-toggle" href="${twinHref(page)}" hreflang="${other(LANG)}" lang="${other(LANG)}"`,
+      `      data-i18n-aria="nav.langToggleAria" data-i18n="nav.langToggle"></a>`,
       `  </div>`,
       `</header>`,
     ].join("\n");
@@ -353,9 +358,7 @@ const BLOCKS = {
 };
 
 const INLINE = {
-  htmlAttrs: (page) => `lang="en" dir="ltr" ` +
-    `data-title-en="${esc(t("en", `meta.${page.key}Title`))}" ` +
-    `data-title-he="${esc(t("he", `meta.${page.key}Title`))}"`,
+  htmlAttrs: () => `lang="${LANG}" dir="${LANGS[LANG].dir}"`,
   siteUrl: () => SITE,
 };
 
@@ -367,7 +370,8 @@ const BUILD_TIME = (() => {
 })();
 
 // ---------------------------------------------------------------- render
-function render(page) {
+function render(page, lang) {
+  LANG = lang;
   let html = read(page.template);
 
   // Blocks keep the indentation of the comment that marks them.
@@ -380,7 +384,7 @@ function render(page) {
     if (!INLINE[name]) throw new Error(`${page.template}: unknown value {{${name}}}`);
     return INLINE[name](page);
   });
-  // Leaf elements with data-i18n get their text in both languages.
+  // Leaf elements with data-i18n get their text in the page's language.
   html = html.replace(/<([a-z][a-z0-9]*)\b([^>]*?)\sdata-i18n="([^"]+)"([^>]*)>[^<]*<\/\1>/g,
     (m, tag, before, key, after) => `<${tag}${before}${after}>${tr(key)}</${tag}>`);
   html = html.replace(/\sdata-i18n-aria="([^"]+)"/g, (m, key) => " " + aria(key));
@@ -388,9 +392,38 @@ function render(page) {
   const leftover = html.match(/\{\{\w+\}\}|<!-- @[\w-]+ -->|data-i18n/);
   if (leftover) throw new Error(`${page.template}: could not fill "${leftover[0]}"`);
 
+  // Hebrew pages sit one folder down: point asset paths up a level.
+  if (LANGS[lang].folder) html = html.replace(/(["'(,\s])assets\//g, "$1../assets/");
+
+  const out = LANGS[lang].folder + page.out;
   const banner = `<!-- AUTO-GENERATED by tools/build-pages.mjs from ${page.template} — do not edit.\n` +
     `     Edit the template or the text in content/, then run ./build.sh -->\n`;
-  writeFileSync(join(root, page.out), html.replace(/^(<!DOCTYPE html>\n)/i, `$1${banner}`));
+  mkdirSync(dirname(join(root, out)), { recursive: true });
+  writeFileSync(join(root, out), html.replace(/^(<!DOCTYPE html>\n)/i, `$1${banner}`));
+  return out;
+}
+
+// sitemap.xml: every page in both languages, each listing its language twin.
+function writeSitemap() {
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = PAGES.flatMap((page) => Object.keys(LANGS).map((lang) => [
+    `  <url>`,
+    `    <loc>${pageUrl(page, lang)}</loc>`,
+    ...Object.keys(LANGS).map((l) =>
+      `    <xhtml:link rel="alternate" hreflang="${l}" href="${pageUrl(page, l)}" />`),
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl(page, "en")}" />`,
+    `    <lastmod>${today}</lastmod>`,
+    `  </url>`,
+  ].join("\n")));
+  writeFileSync(join(root, "sitemap.xml"), [
+    `<?xml version="1.0" encoding="UTF-8"?>`,
+    `<!-- AUTO-GENERATED by tools/build-pages.mjs — do not edit. -->`,
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"`,
+    `        xmlns:xhtml="http://www.w3.org/1999/xhtml">`,
+    ...urls,
+    `</urlset>`,
+    ``,
+  ].join("\n"));
 }
 
 // Flag keys that exist in one language only.
@@ -402,6 +435,7 @@ for (const [a, b] of [["en", "he"], ["he", "en"]]) {
   }
 }
 
-PAGES.forEach(render);
+const written = Object.keys(LANGS).flatMap((lang) => PAGES.map((page) => render(page, lang)));
+writeSitemap();
 warnings.forEach((w) => console.warn("! " + w));
-console.log(`Wrote ${PAGES.map((p) => p.out).join(", ")} (built ${BUILD_TIME})`);
+console.log(`Wrote ${written.join(", ")} and sitemap.xml (built ${BUILD_TIME})`);

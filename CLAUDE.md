@@ -75,24 +75,30 @@ copy causes conflicts later.
 
 ## Layout
 
-- `templates/index.html`, `templates/workshop.html`, `templates/projects.html`
-  — the three pages' structure. **Edit these, not the root HTML files.**
-- `index.html`, `workshop.html`, `projects.html` (repo root) — **generated** by
-  `tools/build-pages.mjs` from the templates + `content/`. Never edit by hand.
+- `templates/index.html`, `workshop.html`, `in-the-workshop.html`,
+  `projects.html` — the four pages' structure. **Edit these, not the generated
+  HTML files.**
+- `index.html`, `workshop.html`, `in-the-workshop.html`, `projects.html` (repo
+  root, English), the same four in `he/` (Hebrew) and `sitemap.xml` —
+  **generated** by `tools/build-pages.mjs` from the templates + `content/`.
+  Never edit by hand.
 - `content/*.yml` — all text (EN/HE), contact details, and the photo list.
 - `assets/css/styles.css`, `assets/js/main.js` — styles and the small script
-  (language switch, mobile menu, photo viewer), loaded directly.
+  (mobile menu, photo viewer), loaded directly.
 - `assets/img/photos/` — **generated** web-ready photos + `manifest.json`.
 - `tools/*.mjs` — the build steps. `build.sh` runs them all. `preview.sh` opens
   the site in a browser.
 
 ## How pages are built
 
-All page text — English **and** Hebrew — is written into the HTML at build time,
-so search engines see full pages without running scripts. In a template,
-`<h1 data-i18n="hero.title"></h1>` becomes that text in both languages
-(`<span class="t-en">…</span><span class="t-he">…</span>`); CSS shows the active
-one. `data-i18n-aria="key"` gives a translated `aria-label`. `<!-- @name -->`
+Each template is built twice: an English page in the repo root and a Hebrew
+page (right-to-left) at the same name in `he/` — e.g. `workshop.html` and
+`he/workshop.html`. Each has its own address, title and description in its
+language, `hreflang` links to its twin, and is listed in `sitemap.xml`. The
+language button is a plain link to the twin page. All text is written into the
+HTML at build time, so search engines see full pages without running scripts.
+In a template, `<h1 data-i18n="hero.title"></h1>` becomes that text in the
+page's language; `data-i18n-aria="key"` gives a translated `aria-label`. `<!-- @name -->`
 marks a generated block (head tags, Google business data, contact list,
 equipment cards, photo grids, footer …) — see `BLOCKS` in `tools/build-pages.mjs`.
 

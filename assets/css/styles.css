@@ -37,11 +37,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Every text is in the HTML in both languages (see tools/build-pages.mjs);
-   only the active language is shown. */
-html[lang="he"] .t-en,
-html:not([lang="he"]) .t-he { display: none !important; }
-
 /* When Hebrew is active, prefer the Hebrew font everywhere. */
 html[dir="rtl"] body,
 html[dir="rtl"] h1,
@@ -140,7 +135,7 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
   cursor: pointer;
   font-family: var(--sans);
 }
-.lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.lang-toggle:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
 /* Hamburger toggle — hidden on desktop, shown on small screens */
 .nav-toggle {

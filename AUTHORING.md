@@ -4,11 +4,14 @@ This guide is for **non-technical people**. You do **not** need to know how to
 code. If you can edit a text file and put photos in a folder, you can update
 this site. (Or just ask Claude Code to do it for you.)
 
-The website has three pages:
+The website has four pages, each in English and in Hebrew:
 
 - **Home** — the welcome page (intro, "about", services, contact).
 - **Workshop** — our equipment and spray finishing.
+- **In the workshop** — photos of work in progress.
 - **Projects** — for now, a short page pointing to our Instagram.
+
+The Hebrew pages are in the `he/` folder and have their own web addresses.
 
 Everything you'll edit lives in two places:
 
@@ -39,8 +42,8 @@ The text files end in **`.yml`**. You open them like any text file.
    `title:` is the label (leave it alone). Everything after the colon is what
    shows on the site.
 3. **Lines starting with `#` are notes to yourself** and never appear on the site.
-4. **Never edit `index.html`, `workshop.html` or `projects.html`** in the main
-   folder, or anything in `assets/img/photos/`. Those are built
+4. **Never edit the `.html` pages** in the main folder or in `he/`,
+   `sitemap.xml`, or anything in `assets/img/photos/`. Those are built
    **automatically** — your changes there would be wiped out.
 
 ---
@@ -160,8 +163,8 @@ To see the site on your own computer before publishing:
 - In Terminal, type `./preview.sh` and press Enter — it opens the site in
   your default browser.
 
-Click around — check the Home, Workshop, and Projects pages, and try the
-**English ⇄ Hebrew** toggle. If something looks wrong, fix the text, run
+Click around — check every page, and use the **עברית / English** button to
+see each page in the other language. If something looks wrong, fix the text, run
 `./build.sh` again, and refresh the browser.
 
 > The preview is **only on your computer**. Nobody else can see it yet. To make

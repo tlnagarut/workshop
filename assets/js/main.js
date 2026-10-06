@@ -1,45 +1,16 @@
 /* ============================================================================
- * Site behaviour: language switch, mobile menu, photo viewer.
- * All page text — English and Hebrew — is already in the HTML (written by
- * tools/build-pages.mjs). Switching language only changes which one is
- * visible (CSS hides .t-en / .t-he) plus the page title, aria-labels and
- * photo alt text, which are stored as data-*-en / data-*-he attributes.
+ * Site behaviour: mobile menu, photo viewer.
+ * Each page is in one language (English pages in the root, Hebrew in he/),
+ * written by tools/build-pages.mjs. The language button is a plain link to
+ * the same page in the other language, so no script is involved.
  * ========================================================================== */
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "tln-lang";
-  var html = document.documentElement;
-  // The inline script in <head> may already have switched to Hebrew.
-  var current = html.lang === "he" ? "he" : "en";
+  // Hebrew pages read right-to-left, which mirrors the photo viewer's arrows.
+  var rtl = document.documentElement.dir === "rtl";
 
   function byId(id) { return document.getElementById(id); }
-
-  // ---- Language ----
-  function setLanguage(lang) {
-    current = lang === "he" ? "he" : "en";
-    html.lang = current;
-    html.dir = current === "he" ? "rtl" : "ltr";
-    try { localStorage.setItem(STORAGE_KEY, current); } catch (e) {}
-
-    var title = html.getAttribute("data-title-" + current);
-    if (title) document.title = title;
-    document.querySelectorAll("[data-aria-" + current + "]").forEach(function (el) {
-      el.setAttribute("aria-label", el.getAttribute("data-aria-" + current));
-    });
-    document.querySelectorAll("[data-alt-" + current + "]").forEach(function (el) {
-      el.alt = el.getAttribute("data-alt-" + current);
-    });
-    if (galleryEl && !galleryEl.hidden) showPhoto(); // caption follows language
-  }
-
-  function setupLanguage() {
-    setLanguage(current);
-    var toggle = byId("lang-toggle");
-    if (toggle) toggle.addEventListener("click", function () {
-      setLanguage(current === "en" ? "he" : "en");
-    });
-  }
 
   // ---- Photo viewer (lightbox) ----
   // Each gallery tile is a <button data-gallery="group"> carrying its image
@@ -76,7 +47,7 @@
     imgEl.width = Number(tile.getAttribute("data-width"));
     imgEl.height = Number(tile.getAttribute("data-height"));
     imgEl.alt = thumb ? thumb.alt : "";
-    var caption = tile.getAttribute("data-caption-" + current) || "";
+    var caption = tile.getAttribute("data-caption") || "";
     if (tiles.length > 1) caption += "  ·  " + (index + 1) + " / " + tiles.length;
     captionEl.textContent = caption;
     prevBtn.hidden = nextBtn.hidden = tiles.length < 2;
@@ -115,8 +86,8 @@
     document.addEventListener("keydown", function (e) {
       if (galleryEl.hidden) return;
       if (e.key === "Escape") closeGallery();
-      else if (e.key === "ArrowRight") step(current !== "he");
-      else if (e.key === "ArrowLeft") step(current === "he");
+      else if (e.key === "ArrowRight") step(!rtl);
+      else if (e.key === "ArrowLeft") step(rtl);
     });
 
     // Swipe on phones: a mostly-horizontal swipe of 50px+ changes photo.
@@ -133,7 +104,7 @@
       startX = null;
       if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
       // Swiping left shows the next photo in English; in Hebrew it's mirrored.
-      step(current === "he" ? dx > 0 : dx < 0);
+      step(rtl ? dx > 0 : dx < 0);
     });
   }
 
@@ -160,6 +131,5 @@
   document.addEventListener("DOMContentLoaded", function () {
     setupGallery();
     setupNav();
-    setupLanguage();
   });
 })();

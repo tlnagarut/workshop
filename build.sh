@@ -17,9 +17,11 @@ node tools/generate-placeholders.mjs
 echo "▶ process-photos.mjs         (local only)"
 node tools/process-photos.mjs
 
+# English pages in the root, Hebrew pages in he/, and sitemap.xml
 echo "▶ build-pages.mjs"
 node tools/build-pages.mjs
 
+# Cache-busting ?v= hashes on CSS/JS, in the root and he/ pages
 echo "▶ stamp-versions.mjs"
 node tools/stamp-versions.mjs
 

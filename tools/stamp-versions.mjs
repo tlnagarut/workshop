@@ -1,6 +1,6 @@
 // Stamp cache-busting ?v=<hash> query strings on versioned CSS/JS references.
 //
-// For every *.html in the repo root, finds asset references that already carry
+// For every *.html in the repo root and in he/ (Hebrew pages), finds asset references that already carry
 // a ?v= query (e.g. styles.css?v=9) and rewrites the value to a short content
 // hash of the referenced file. Each asset is versioned independently, so a
 // visitor's cache only busts for files that actually changed.
@@ -14,9 +14,10 @@ import { dirname, join, resolve } from "node:path";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
-// Matches  href="assets/css/styles.css?v=9"  or  src="assets/js/main.js?v=2"
-// Captures: 1=attr+path up to the file, 2=the asset path, 3=closing quote tail
-const REF = /((?:href|src)="(assets\/[^"?]+\.(?:css|js))\?v=)[^"]*(")/g;
+// Matches  href="assets/css/styles.css?v=9"  or  src="../assets/js/main.js?v=2"
+// Captures: 1=attr+path up to the file, 2=the asset path (from the site root),
+// 3=closing quote tail
+const REF = /((?:href|src)="(?:\.\.\/)?(assets\/[^"?]+\.(?:css|js))\?v=)[^"]*(")/g;
 
 const hashCache = new Map();
 function hashOf(assetPath) {
@@ -31,7 +32,10 @@ function hashOf(assetPath) {
   return h;
 }
 
-const htmlFiles = readdirSync(root).filter((f) => f.endsWith(".html"));
+const htmlFiles = ["", "he/"].flatMap((dir) =>
+  existsSync(join(root, dir))
+    ? readdirSync(join(root, dir)).filter((f) => f.endsWith(".html")).map((f) => dir + f)
+    : []);
 let totalChanged = 0;
 
 for (const file of htmlFiles) {

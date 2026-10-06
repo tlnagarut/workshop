@@ -4,11 +4,14 @@ A small, fast showcase site for Tomas Janulionis' custom cabinetry and solid
 wood door workshop in Haifa (TL נגרות). Plain HTML/CSS/JS, no framework, hosted
 on GitHub Pages at https://tlnagarut.github.io/workshop/.
 
-- **Bilingual:** English (default) ⇄ Hebrew toggle; RTL handled automatically.
-  Both languages are written into the HTML, so search engines see full pages.
-- **Three pages:** `index.html` (Hero · About · Services · Contact),
-  `workshop.html` (equipment, spray finishing), `projects.html` (links to Instagram
-  until real project photos are added).
+- **Bilingual:** English pages at the site root, Hebrew (right-to-left) pages
+  under `he/`, linked with `hreflang`; the language button links to the same
+  page in the other language. All text is in the HTML, so search engines see
+  full pages.
+- **Four pages:** `index.html` (Hero · About · Services · Contact),
+  `workshop.html` (equipment, spray finishing), `in-the-workshop.html` (work in
+  progress photos), `projects.html` (links to Instagram until real project
+  photos are added).
 
 ## First-time setup (new Mac)
 
@@ -37,7 +40,7 @@ folder, run `./setup.sh` inside it. Safe to re-run.
 | `templates/*.html`                               | page structure                            |
 
 After editing, **run `./build.sh`** (or the `rebuild-content` skill). It writes
-the root `index.html` / `workshop.html` / `projects.html` — never edit those by
+the generated pages (root `*.html` and `he/*.html`) — never edit those by
 hand. See `AUTHORING.md` for a plain-English guide and `CLAUDE.md` for the
 photo rules.
 
@@ -57,13 +60,13 @@ banner), resizes (480–1600 px, WebP + JPEG, < 300 KB) and strips metadata into
 
 ```
 templates/*.html                 page structure (edit these)
-index.html · workshop.html · projects.html   GENERATED — do not edit
+*.html (root) · he/*.html · sitemap.xml   GENERATED — do not edit
 content/*.yml                    text, contact details, photo list (edit here)
 assets/css/styles.css            all styling (light theme + RTL)
-assets/js/main.js                language switch, mobile menu, photo viewer
+assets/js/main.js                mobile menu, photo viewer
 assets/img/photos/               GENERATED web photos + manifest.json
 assets/img/                      banner background, social preview image, tab icon
-tools/build-pages.mjs            templates + content → the three pages
+tools/build-pages.mjs            templates + content → EN + HE pages, sitemap
 tools/process-photos.mjs         original photos → web photos (local, libvips)
 tools/make-social-card.mjs       makes the 1200×630 link-preview image (local)
 tools/generate-placeholders.mjs  plain wood-tone banner + tab icon
