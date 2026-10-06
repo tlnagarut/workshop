@@ -116,7 +116,7 @@ function photos(group) {
     if (!done) { warn(`photo ${group}/${cfg.file} is listed but not processed yet — run ./build.sh with the originals folder present`); return null; }
     if (!cfg.alt_en || !cfg.alt_he) warn(`photo ${group}/${name} needs alt_en and alt_he`);
     return {
-      ...done, group,
+      ...done, group, section: cfg.section || "",
       alt: { en: cfg.alt_en || "", he: cfg.alt_he || cfg.alt_en || "" },
       caption: { en: cfg.caption_en || cfg.alt_en || "", he: cfg.caption_he || cfg.alt_he || "" },
     };
@@ -139,8 +139,7 @@ function picture(p, { sizes, eager = false, cls = "" }) {
 }
 
 // Equal 4:3 tiles; tapping one opens the photo viewer (main.js).
-function photoGrid(group) {
-  const list = photos(group);
+function photoGrid(group, list = photos(group)) {
   if (!list.length) return "";
   const sizes = "(max-width: 860px) 50vw, 340px";
   const items = list.map((p) =>
@@ -320,8 +319,18 @@ const BLOCKS = {
     return photoGrid("spray");
   },
 
+  // "In the workshop": one heading + grid per section (section: in
+  // photos.yml), in this order. The viewer still browses all of them.
   "process-photos"() {
-    return photoGrid("process");
+    const list = photos("process");
+    const sections = ["materials", "assembly", "finished"];
+    list.filter((p) => !sections.includes(p.section))
+      .forEach((p) => warn(`photo process/${p.name} needs section: ${sections.join(" / ")}`));
+    return sections.map((key) => {
+      const group = list.filter((p) => p.section === key);
+      if (!group.length) return "";
+      return `<h2 class="section-sub">${tr(`inWorkshop.${key}Title`)}</h2>\n` + photoGrid("process", group);
+    }).filter(Boolean).join("\n");
   },
 
   "projects-photos"() {

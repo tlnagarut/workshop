@@ -475,6 +475,174 @@
       "width": 1600,
       "height": 1200,
       "stamp": "1|1530268|1791300302436||IMG_2156.HEIC"
+    },
+    {
+      "name": "fluted-column-on-white-board-side",
+      "file": "IMG_0812.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1527211|1791299959555|centre|IMG_0812.HEIC"
+    },
+    {
+      "name": "long-cabinet-run-grooved-doors",
+      "file": "IMG_0886.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1500343|1791299969013||IMG_0886.HEIC"
+    },
+    {
+      "name": "curved-side-clamped",
+      "file": "IMG_2599.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1730377|1791301441622|centre|IMG_2599.HEIC"
+    },
+    {
+      "name": "sander-on-cabinet-curved-end",
+      "file": "IMG_2611.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2248171|1791301446229||IMG_2611.HEIC"
+    },
+    {
+      "name": "panel-glue-up-pipe-clamps",
+      "file": "IMG_2622.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2493419|1791301448878||IMG_2622.HEIC"
+    },
+    {
+      "name": "rounded-cabinet-tape-measure",
+      "file": "IMG_3158.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2298671|1791301718077|centre|IMG_3158.HEIC"
+    },
+    {
+      "name": "rounded-drawer-unit-on-bench",
+      "file": "IMG_3188.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1058843|1791301728684||IMG_3188.HEIC"
+    },
+    {
+      "name": "desk-and-rounded-drawer-unit",
+      "file": "IMG_3254.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2442583|1791301856679||IMG_3254.HEIC"
+    },
+    {
+      "name": "desk-drawer-unit-arch-template",
+      "file": "IMG_3583.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2570392|1791302254859|top|IMG_3583.HEIC"
+    },
+    {
+      "name": "grey-chest-of-drawers-and-cabinet",
+      "file": "IMG_3301.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2496661|1791302040842||IMG_3301.HEIC"
+    },
+    {
+      "name": "grey-chest-of-drawers-on-bench",
+      "file": "IMG_3303.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2197342|1791302050455||IMG_3303.HEIC"
+    },
+    {
+      "name": "white-top-desk-black-edge",
+      "file": "IMG_3398.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2513937|1791302199796||IMG_3398.HEIC"
     }
   ],
   "projects": [
