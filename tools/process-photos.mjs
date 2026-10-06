@@ -77,8 +77,16 @@ function processPhoto(group, entry, srcFile, tmp) {
   const crop = FOCUS[String(entry.focus || "attention").toLowerCase()] || "attention";
 
   // 1. Rotate upright using the EXIF orientation tag, then read the real size.
-  const upright = join(tmp, "upright.v");
+  //    `rotate: 90 / 180 / 270` in photos.yml turns it further (clockwise) for
+  //    the odd photo whose phone tag is wrong.
+  let upright = join(tmp, "upright.v");
   vips("autorot", srcFile, upright);
+  const turn = { 90: "d90", 180: "d180", 270: "d270" }[Number(entry.rotate)];
+  if (turn) {
+    const turned = join(tmp, "turned.v");
+    vips("rot", upright, turned, turn);
+    upright = turned;
+  }
   const w0 = header(upright, "width");
   const h0 = header(upright, "height");
 
@@ -138,7 +146,8 @@ function main() {
           continue;
         }
         const st = statSync(srcFile);
-        const stamp = `${VERSION}|${st.size}|${Math.round(st.mtimeMs)}|${entry.focus || ""}|${raw.file}`;
+        const stamp = `${VERSION}|${st.size}|${Math.round(st.mtimeMs)}|${entry.focus || ""}|${raw.file}` +
+          (entry.rotate ? `|r${entry.rotate}` : "");
         const outputsExist = prev && prev.widths.every((w) =>
           existsSync(join(outRoot, group, `${entry.name}-${w}.webp`)) &&
           existsSync(join(outRoot, group, `${entry.name}-${w}.jpg`)));

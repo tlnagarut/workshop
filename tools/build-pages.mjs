@@ -139,17 +139,24 @@ function picture(p, { sizes, eager = false, cls = "" }) {
 }
 
 // Equal 4:3 tiles; tapping one opens the photo viewer (main.js).
-function photoGrid(group, list = photos(group)) {
+// With `limit`, tiles after the first `limit` are hidden behind a
+// "show more" button (main.js); without scripts they all show.
+function photoGrid(group, list = photos(group), limit = 0) {
   if (!list.length) return "";
+  const extra = limit && list.length > limit ? list.length - limit : 0;
   const sizes = "(max-width: 860px) 50vw, 340px";
-  const items = list.map((p) =>
-    `  <li><button class="photo-tile" type="button" data-gallery="${group}" ` +
+  const items = list.map((p, i) =>
+    `  <li${extra && i >= limit ? ' class="photo-extra"' : ""}><button class="photo-tile" type="button" data-gallery="${group}" ` +
     `data-webp="${srcset(p, "webp")}" data-jpg="${srcset(p, "jpg")}" ` +
     `data-src="assets/img/photos/${p.group}/${p.name}-${p.widths[p.widths.length - 1]}.jpg" ` +
     `data-width="${p.width}" data-height="${p.height}" ` +
     `data-caption="${esc(pick(p.caption.en, p.caption.he))}">` +
     picture(p, { sizes }) + `</button></li>`);
-  return `<ul class="photo-grid">\n${items.join("\n")}\n</ul>`;
+  const grid = `<ul class="photo-grid">\n${items.join("\n")}\n</ul>`;
+  if (!extra) return grid;
+  const label = (lang) => t(lang, "gallery.showMore").replace("{n}", extra);
+  return grid + `\n<button class="btn btn-outline photo-more" type="button" data-show-more>` +
+    `${esc(pick(label("en"), label("he")))}</button>`;
 }
 
 // ---------------------------------------------------------------- blocks
@@ -334,7 +341,7 @@ const BLOCKS = {
   },
 
   "projects-photos"() {
-    return photoGrid("projects");
+    return photoGrid("projects", photos("projects"), 30);
   },
 
   "instagram-cta"() {

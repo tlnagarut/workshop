@@ -93,6 +93,8 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 .btn-primary:hover { background: var(--accent-dark); color: #fff; }
 .btn-ghost { border-color: rgba(255, 255, 255, 0.7); color: #fff; }
 .btn-ghost:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
+.btn-outline { border-color: var(--accent); color: var(--accent); background: transparent; }
+.btn-outline:hover { background: var(--accent); color: #fff; }
 
 /* ----------------------- Header ----------------------- */
 .site-header {
@@ -455,3 +457,9 @@ html[dir="rtl"] .gallery-next { transform: translateY(-50%) scaleX(-1); }
   max-width: 62ch;
 }
 html[dir="rtl"] .photo-note { border-radius: var(--radius) 0 0 var(--radius); }
+
+/* Long galleries: photos after the first 30 wait behind "show more"
+   (only when scripts run — see the inline script in projects.html). */
+.photo-more { display: none; margin-top: 28px; }
+html.js .photo-more { display: inline-block; }
+html.js .photo-extra { display: none; }

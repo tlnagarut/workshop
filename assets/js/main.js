@@ -108,6 +108,21 @@
     });
   }
 
+  // ---- "Show more" under a long gallery ----
+  function setupShowMore() {
+    document.querySelectorAll("[data-show-more]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var grid = btn.previousElementSibling;
+        var first = grid.querySelector(".photo-extra .photo-tile");
+        grid.querySelectorAll(".photo-extra").forEach(function (li) {
+          li.classList.remove("photo-extra");
+        });
+        btn.remove();
+        if (first) first.focus();
+      });
+    });
+  }
+
   // ---- Mobile nav (hamburger) ----
   function setupNav() {
     var toggle = byId("nav-toggle");
@@ -130,6 +145,7 @@
   // ---- Boot ----
   document.addEventListener("DOMContentLoaded", function () {
     setupGallery();
+    setupShowMore();
     setupNav();
   });
 })();

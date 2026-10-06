@@ -841,6 +841,1000 @@
       "width": 1600,
       "height": 1200,
       "stamp": "1|2340783|1791301404833|bottom|IMG_2488.HEIC"
+    },
+    {
+      "name": "kitchen-with-a-long-island",
+      "file": "IMG_1695.JPG",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1445116|1791299919872||IMG_1695.JPG"
+    },
+    {
+      "name": "kitchen-island-with-hob-and-sink",
+      "file": "IMG_1696.JPG",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1388118|1791299921166||IMG_1696.JPG"
+    },
+    {
+      "name": "kitchen-island-closer-view",
+      "file": "IMG_1697.JPG",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1195433|1791299923004||IMG_1697.JPG"
+    },
+    {
+      "name": "dark-panelled-wall-with-floating-shelves",
+      "file": "IMG_1698.JPG",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1042308|1791299924692||IMG_1698.JPG"
+    },
+    {
+      "name": "kitchen-island-and-tall-cabinets",
+      "file": "IMG_1708.JPG",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1589113|1791299926679||IMG_1708.JPG"
+    },
+    {
+      "name": "garden-with-planters-and-seating",
+      "file": "IMG_1907.JPG",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3481759|1791299942157||IMG_1907.JPG|r270"
+    },
+    {
+      "name": "tall-cabinet-and-table-behind-glass-partitions",
+      "file": "IMG_1158.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1403937|1791300072691||IMG_1158.HEIC"
+    },
+    {
+      "name": "table-on-grooved-round-bases-by-the-windows",
+      "file": "IMG_1164.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1163851|1791300076528||IMG_1164.HEIC"
+    },
+    {
+      "name": "desk-with-a-grooved-base-and-drawers",
+      "file": "IMG_1172.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|760512|1791300079293||IMG_1172.HEIC"
+    },
+    {
+      "name": "empty-bookcases-between-windows",
+      "file": "IMG_1195.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1647324|1791300092638||IMG_1195.HEIC"
+    },
+    {
+      "name": "bookcases-between-windows-second-view",
+      "file": "IMG_1198.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1645624|1791300096580||IMG_1198.HEIC"
+    },
+    {
+      "name": "kitchenette-built-into-tall-cabinets",
+      "file": "IMG_1341.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1277298|1791300119663||IMG_1341.HEIC"
+    },
+    {
+      "name": "kitchenette-and-tall-cabinet",
+      "file": "IMG_1348.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1346016|1791300125992||IMG_1348.HEIC"
+    },
+    {
+      "name": "shelving-units-with-grooved-sides",
+      "file": "IMG_1364.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1132708|1791300135657||IMG_1364.HEIC"
+    },
+    {
+      "name": "bookcases-and-a-grooved-column",
+      "file": "IMG_1162.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3086131|1791300360544||IMG_1162.HEIC"
+    },
+    {
+      "name": "display-shelves-and-counter-during-fit-out",
+      "file": "IMG_1163.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2963857|1791300362653||IMG_1163.HEIC"
+    },
+    {
+      "name": "bookcase-between-two-windows",
+      "file": "IMG_1164 (1).HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1690327|1791300364256||IMG_1164 (1).HEIC"
+    },
+    {
+      "name": "handrail-along-a-stairwell",
+      "file": "IMG_1248.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1891582|1791300429230||IMG_1248.HEIC"
+    },
+    {
+      "name": "counter-with-bar-stools-and-shelving",
+      "file": "IMG_1254.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3146854|1791300443226||IMG_1254.HEIC"
+    },
+    {
+      "name": "long-table-with-bookshelves-behind",
+      "file": "IMG_1270.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2693374|1791300478916||IMG_1270.HEIC"
+    },
+    {
+      "name": "table-and-shelving-under-pendant-lights",
+      "file": "IMG_1272.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3624050|1791300483261||IMG_1272.HEIC"
+    },
+    {
+      "name": "grooved-cabinet-doors-and-counter",
+      "file": "IMG_1274.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3085852|1791300487828||IMG_1274.HEIC"
+    },
+    {
+      "name": "shelving-wall-around-an-opening",
+      "file": "IMG_1284.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2632397|1791300509847||IMG_1284.HEIC"
+    },
+    {
+      "name": "bookcases-and-seating-area",
+      "file": "IMG_1294.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3204938|1791300532295||IMG_1294.HEIC"
+    },
+    {
+      "name": "bookcases-along-the-room",
+      "file": "IMG_1305.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2721147|1791300556789||IMG_1305.HEIC"
+    },
+    {
+      "name": "shelving-wall-and-freestanding-bookcase",
+      "file": "IMG_1308.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3182164|1791300564438||IMG_1308.HEIC"
+    },
+    {
+      "name": "reading-corner-with-low-shelving",
+      "file": "IMG_1344.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2949005|1791300660706||IMG_1344.HEIC"
+    },
+    {
+      "name": "display-shelves-and-l-shaped-counter",
+      "file": "IMG_1352.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2556787|1791300671008||IMG_1352.HEIC"
+    },
+    {
+      "name": "kitchenette-with-a-fluted-panel",
+      "file": "IMG_1391.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2325884|1791300711849||IMG_1391.HEIC"
+    },
+    {
+      "name": "tall-cabinet-with-a-fluted-panel",
+      "file": "IMG_1393.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2205083|1791300714597||IMG_1393.HEIC"
+    },
+    {
+      "name": "fluted-panel-and-tall-cabinets",
+      "file": "IMG_1399.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2133085|1791300721382||IMG_1399.HEIC"
+    },
+    {
+      "name": "fluted-panel-close-view",
+      "file": "IMG_1402.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1287903|1791300727385||IMG_1402.HEIC"
+    },
+    {
+      "name": "low-bookshelves-and-a-corner-unit",
+      "file": "IMG_1496.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3435726|1791300786970||IMG_1496.HEIC"
+    },
+    {
+      "name": "bookcases-between-windows-tables-in-front",
+      "file": "IMG_1498.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|4015580|1791300792008||IMG_1498.HEIC"
+    },
+    {
+      "name": "lit-wall-unit-with-green-doors",
+      "file": "IMG_1570.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2499384|1791300897101||IMG_1570.HEIC"
+    },
+    {
+      "name": "long-counter-top",
+      "file": "IMG_1623.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2882699|1791300945748||IMG_1623.HEIC"
+    },
+    {
+      "name": "window-seat-and-green-cabinets",
+      "file": "IMG_1763.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2663558|1791301043723||IMG_1763.HEIC"
+    },
+    {
+      "name": "tall-white-cabinets-along-a-corridor",
+      "file": "IMG_1856.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2533042|1791301049463||IMG_1856.HEIC"
+    },
+    {
+      "name": "lit-shelves-above-grooved-cabinets",
+      "file": "IMG_2283.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2315864|1791301108383||IMG_2283.HEIC"
+    },
+    {
+      "name": "lit-shelving-unit-pendant-lights-above",
+      "file": "IMG_2290.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2752810|1791301129862||IMG_2290.HEIC"
+    },
+    {
+      "name": "lit-shelving-unit-and-counter",
+      "file": "IMG_2291.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2933789|1791301131898||IMG_2291.HEIC"
+    },
+    {
+      "name": "counter-with-curved-brackets",
+      "file": "IMG_2296.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3107513|1791301142665||IMG_2296.HEIC"
+    },
+    {
+      "name": "lit-shelving-unit-side-view",
+      "file": "IMG_2312.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2296072|1791301171290||IMG_2312.HEIC"
+    },
+    {
+      "name": "lit-shelving-unit-front-view",
+      "file": "IMG_2313.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2367799|1791301172600||IMG_2313.HEIC"
+    },
+    {
+      "name": "tall-unit-with-a-display-niche",
+      "file": "IMG_2319.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3801493|1791301180378||IMG_2319.HEIC"
+    },
+    {
+      "name": "display-niche-closer-view",
+      "file": "IMG_2321.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2708925|1791301183074||IMG_2321.HEIC"
+    },
+    {
+      "name": "desk-and-low-cabinets",
+      "file": "IMG_2387.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1900601|1791301201535||IMG_2387.HEIC"
+    },
+    {
+      "name": "desk-and-back-cabinets",
+      "file": "IMG_2390.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2087732|1791301205909||IMG_2390.HEIC"
+    },
+    {
+      "name": "desk-and-cabinets-seen-through-glass",
+      "file": "IMG_2391.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2051576|1791301207771||IMG_2391.HEIC"
+    },
+    {
+      "name": "desk-with-cabinets-and-drawers",
+      "file": "IMG_2395.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2357666|1791301218732||IMG_2395.HEIC"
+    },
+    {
+      "name": "desk-front-view",
+      "file": "IMG_2397.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1878539|1791301222955||IMG_2397.HEIC"
+    },
+    {
+      "name": "desk-and-drawer-cabinets",
+      "file": "IMG_2402.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1945957|1791301239394||IMG_2402.HEIC"
+    },
+    {
+      "name": "desk-and-drawer-cabinets-side-view",
+      "file": "IMG_2405.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2078445|1791301245652||IMG_2405.HEIC"
+    },
+    {
+      "name": "desk-and-cabinets-behind-a-glass-wall",
+      "file": "IMG_2407.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2347549|1791301249072||IMG_2407.HEIC"
+    },
+    {
+      "name": "tall-cabinet-with-lit-display-shelves",
+      "file": "IMG_2416.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2484983|1791301265817||IMG_2416.HEIC"
+    },
+    {
+      "name": "shelving-wall-and-low-cabinet",
+      "file": "IMG_2434.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2238643|1791301271084||IMG_2434.HEIC"
+    },
+    {
+      "name": "room-lined-with-shelving",
+      "file": "IMG_2438.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2396114|1791301282678||IMG_2438.HEIC"
+    },
+    {
+      "name": "shelving-wall-front-view",
+      "file": "IMG_2444.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1953833|1791301299987||IMG_2444.HEIC"
+    },
+    {
+      "name": "low-cabinet-and-shelving-wall",
+      "file": "IMG_2456.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1714901|1791301322993||IMG_2456.HEIC"
+    },
+    {
+      "name": "shelving-on-two-walls",
+      "file": "IMG_2492.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2257937|1791301413545||IMG_2492.HEIC"
+    },
+    {
+      "name": "tv-wall-unit-with-tall-cabinets",
+      "file": "IMG_2826.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2224405|1789741799867||IMG_2826.HEIC"
+    },
+    {
+      "name": "tv-wall-unit-front-view",
+      "file": "IMG_2855.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2220793|1789741812330||IMG_2855.HEIC"
+    },
+    {
+      "name": "tv-wall-unit-with-open-shelves",
+      "file": "IMG_2879.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1929530|1789741805902||IMG_2879.HEIC"
+    },
+    {
+      "name": "tv-wall-unit-angled-view",
+      "file": "IMG_2881.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2285121|1791301562926||IMG_2881.HEIC"
+    },
+    {
+      "name": "tv-wall-unit-full-width",
+      "file": "IMG_2897.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1997628|1789741809951||IMG_2897.HEIC"
+    },
+    {
+      "name": "slatted-screen-and-platform-seating-during-fit-out",
+      "file": "IMG_2950.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3326834|1791301694799||IMG_2950.HEIC"
+    },
+    {
+      "name": "drawers-and-wall-cabinets-around-a-window",
+      "file": "IMG_3351.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3111824|1789741687826||IMG_3351.HEIC"
+    },
+    {
+      "name": "drawers-and-wall-cabinets-second-view",
+      "file": "IMG_3352.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3134685|1789741671688||IMG_3352.HEIC"
+    },
+    {
+      "name": "drawers-by-the-stairs",
+      "file": "IMG_3355.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3473422|1789741680647||IMG_3355.HEIC"
+    },
+    {
+      "name": "drawers-by-the-stairs-second-view",
+      "file": "IMG_3356.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3507256|1789741691474||IMG_3356.HEIC"
+    },
+    {
+      "name": "shelving-room-with-a-table",
+      "file": "IMG_3384.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2345945|1789741681287||IMG_3384.HEIC"
     }
   ]
 }

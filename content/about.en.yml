@@ -137,3 +137,4 @@ gallery:
   close: Close
   prev: Previous photo
   next: Next photo
+  showMore: Show {n} more photos

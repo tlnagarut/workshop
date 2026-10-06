@@ -21,6 +21,8 @@
 #                saying what it shows (e.g. raptor-spray-booth-glass-doors)
 #   alt_en / alt_he:          what the photo shows, for screen readers & Google
 #   caption_en / caption_he:  short caption shown when the photo is opened
+#   rotate:      optional — 90, 180 or 270 (clockwise) when a photo still
+#                comes out sideways (its phone rotation tag is wrong)
 #   focus:       optional — which part to keep when cropping: attention
 #                (default: finds the main subject), centre, top, bottom,
 #                left or right
@@ -472,3 +474,430 @@ projects:
     alt_he: קיר מדפים עם ארונות נמוכים לצידו
     caption_en: Shelving wall and low cupboards
     caption_he: קיר מדפים וארונות נמוכים
+  - file: IMG_1695.JPG
+    name: kitchen-with-a-long-island
+    alt_en: Kitchen with a long island
+    alt_he: מטבח עם אי ארוך
+    caption_en: Kitchen with a long island
+    caption_he: מטבח עם אי ארוך
+  - file: IMG_1696.JPG
+    name: kitchen-island-with-hob-and-sink
+    alt_en: Kitchen island with hob and sink
+    alt_he: אי מטבח עם כיריים וכיור
+    caption_en: Kitchen island with hob and sink
+    caption_he: אי מטבח עם כיריים וכיור
+  - file: IMG_1697.JPG
+    name: kitchen-island-closer-view
+    alt_en: Kitchen island, closer view
+    alt_he: אי מטבח, מבט מקרוב
+    caption_en: Kitchen island, closer view
+    caption_he: אי מטבח, מבט מקרוב
+  - file: IMG_1698.JPG
+    name: dark-panelled-wall-with-floating-shelves
+    alt_en: Dark panelled wall with floating shelves
+    alt_he: קיר מחופה כהה עם מדפים צפים
+    caption_en: Dark panelled wall with floating shelves
+    caption_he: קיר מחופה כהה עם מדפים צפים
+  - file: IMG_1708.JPG
+    name: kitchen-island-and-tall-cabinets
+    alt_en: Kitchen island and tall cabinets
+    alt_he: אי מטבח וארונות גבוהים
+    caption_en: Kitchen island and tall cabinets
+    caption_he: אי מטבח וארונות גבוהים
+  - file: IMG_1907.JPG
+    name: garden-with-planters-and-seating
+    rotate: 270
+    alt_en: Garden with planters and seating
+    alt_he: גינה עם אדניות ומקומות ישיבה
+    caption_en: Garden with planters and seating
+    caption_he: גינה עם אדניות ומקומות ישיבה
+  - file: IMG_1158.HEIC
+    name: tall-cabinet-and-table-behind-glass-partitions
+    alt_en: Tall cabinet and table behind glass partitions
+    alt_he: ארון גבוה ושולחן מאחורי מחיצות זכוכית
+    caption_en: Tall cabinet and table behind glass partitions
+    caption_he: ארון גבוה ושולחן מאחורי מחיצות זכוכית
+  - file: IMG_1164.HEIC
+    name: table-on-grooved-round-bases-by-the-windows
+    alt_en: Table on grooved round bases by the windows
+    alt_he: שולחן על בסיסים עגולים מחורצים ליד החלונות
+    caption_en: Table on grooved round bases by the windows
+    caption_he: שולחן על בסיסים עגולים מחורצים ליד החלונות
+  - file: IMG_1172.HEIC
+    name: desk-with-a-grooved-base-and-drawers
+    alt_en: Desk with a grooved base and drawers
+    alt_he: שולחן עם בסיס מחורץ ומגירות
+    caption_en: Desk with a grooved base and drawers
+    caption_he: שולחן עם בסיס מחורץ ומגירות
+  - file: IMG_1195.HEIC
+    name: empty-bookcases-between-windows
+    alt_en: Empty bookcases between windows
+    alt_he: ספריות ריקות בין החלונות
+    caption_en: Empty bookcases between windows
+    caption_he: ספריות ריקות בין החלונות
+  - file: IMG_1198.HEIC
+    name: bookcases-between-windows-second-view
+    alt_en: Bookcases between windows, second view
+    alt_he: ספריות בין החלונות, מבט נוסף
+    caption_en: Bookcases between windows, second view
+    caption_he: ספריות בין החלונות, מבט נוסף
+  - file: IMG_1341.HEIC
+    name: kitchenette-built-into-tall-cabinets
+    alt_en: Kitchenette built into tall cabinets
+    alt_he: מטבחון בנוי בארונות גבוהים
+    caption_en: Kitchenette built into tall cabinets
+    caption_he: מטבחון בנוי בארונות גבוהים
+  - file: IMG_1348.HEIC
+    name: kitchenette-and-tall-cabinet
+    alt_en: Kitchenette and tall cabinet
+    alt_he: מטבחון וארון גבוה
+    caption_en: Kitchenette and tall cabinet
+    caption_he: מטבחון וארון גבוה
+  - file: IMG_1364.HEIC
+    name: shelving-units-with-grooved-sides
+    alt_en: Shelving units with grooved sides
+    alt_he: יחידות מדפים עם דפנות מחורצות
+    caption_en: Shelving units with grooved sides
+    caption_he: יחידות מדפים עם דפנות מחורצות
+  - file: IMG_1162.HEIC
+    name: bookcases-and-a-grooved-column
+    alt_en: Bookcases and a grooved column
+    alt_he: ספריות ועמוד מחורץ
+    caption_en: Bookcases and a grooved column
+    caption_he: ספריות ועמוד מחורץ
+  - file: IMG_1163.HEIC
+    name: display-shelves-and-counter-during-fit-out
+    alt_en: Display shelves and counter, during fit-out
+    alt_he: מדפי תצוגה ודלפק, בזמן ההתקנה
+    caption_en: Display shelves and counter, during fit-out
+    caption_he: מדפי תצוגה ודלפק, בזמן ההתקנה
+  - file: "IMG_1164 (1).HEIC"
+    name: bookcase-between-two-windows
+    alt_en: Bookcase between two windows
+    alt_he: ספרייה בין שני חלונות
+    caption_en: Bookcase between two windows
+    caption_he: ספרייה בין שני חלונות
+  - file: IMG_1248.HEIC
+    name: handrail-along-a-stairwell
+    alt_en: Handrail along a stairwell
+    alt_he: מעקה לאורך גרם המדרגות
+    caption_en: Handrail along a stairwell
+    caption_he: מעקה לאורך גרם המדרגות
+  - file: IMG_1254.HEIC
+    name: counter-with-bar-stools-and-shelving
+    alt_en: Counter with bar stools and shelving
+    alt_he: דלפק עם כיסאות בר ומדפים
+    caption_en: Counter with bar stools and shelving
+    caption_he: דלפק עם כיסאות בר ומדפים
+  - file: IMG_1270.HEIC
+    name: long-table-with-bookshelves-behind
+    alt_en: Long table with bookshelves behind
+    alt_he: שולחן ארוך ומדפי ספרים מאחור
+    caption_en: Long table with bookshelves behind
+    caption_he: שולחן ארוך ומדפי ספרים מאחור
+  - file: IMG_1272.HEIC
+    name: table-and-shelving-under-pendant-lights
+    alt_en: Table and shelving under pendant lights
+    alt_he: שולחן ומדפים מתחת למנורות תלויות
+    caption_en: Table and shelving under pendant lights
+    caption_he: שולחן ומדפים מתחת למנורות תלויות
+  - file: IMG_1274.HEIC
+    name: grooved-cabinet-doors-and-counter
+    alt_en: Grooved cabinet doors and counter
+    alt_he: דלתות ארון מחורצות ודלפק
+    caption_en: Grooved cabinet doors and counter
+    caption_he: דלתות ארון מחורצות ודלפק
+  - file: IMG_1284.HEIC
+    name: shelving-wall-around-an-opening
+    alt_en: Shelving wall around an opening
+    alt_he: קיר מדפים סביב פתח
+    caption_en: Shelving wall around an opening
+    caption_he: קיר מדפים סביב פתח
+  - file: IMG_1294.HEIC
+    name: bookcases-and-seating-area
+    alt_en: Bookcases and seating area
+    alt_he: ספריות ופינת ישיבה
+    caption_en: Bookcases and seating area
+    caption_he: ספריות ופינת ישיבה
+  - file: IMG_1305.HEIC
+    name: bookcases-along-the-room
+    alt_en: Bookcases along the room
+    alt_he: ספריות לאורך החדר
+    caption_en: Bookcases along the room
+    caption_he: ספריות לאורך החדר
+  - file: IMG_1308.HEIC
+    name: shelving-wall-and-freestanding-bookcase
+    alt_en: Shelving wall and freestanding bookcase
+    alt_he: קיר מדפים וספרייה עומדת
+    caption_en: Shelving wall and freestanding bookcase
+    caption_he: קיר מדפים וספרייה עומדת
+  - file: IMG_1344.HEIC
+    name: reading-corner-with-low-shelving
+    alt_en: Reading corner with low shelving
+    alt_he: פינת קריאה עם מדפים נמוכים
+    caption_en: Reading corner with low shelving
+    caption_he: פינת קריאה עם מדפים נמוכים
+  - file: IMG_1352.HEIC
+    name: display-shelves-and-l-shaped-counter
+    alt_en: Display shelves and L-shaped counter
+    alt_he: מדפי תצוגה ודלפק בצורת L
+    caption_en: Display shelves and L-shaped counter
+    caption_he: מדפי תצוגה ודלפק בצורת L
+  - file: IMG_1391.HEIC
+    name: kitchenette-with-a-fluted-panel
+    alt_en: Kitchenette with a fluted panel
+    alt_he: מטבחון עם פאנל מחורץ
+    caption_en: Kitchenette with a fluted panel
+    caption_he: מטבחון עם פאנל מחורץ
+  - file: IMG_1393.HEIC
+    name: tall-cabinet-with-a-fluted-panel
+    alt_en: Tall cabinet with a fluted panel
+    alt_he: ארון גבוה עם פאנל מחורץ
+    caption_en: Tall cabinet with a fluted panel
+    caption_he: ארון גבוה עם פאנל מחורץ
+  - file: IMG_1399.HEIC
+    name: fluted-panel-and-tall-cabinets
+    alt_en: Fluted panel and tall cabinets
+    alt_he: פאנל מחורץ וארונות גבוהים
+    caption_en: Fluted panel and tall cabinets
+    caption_he: פאנל מחורץ וארונות גבוהים
+  - file: IMG_1402.HEIC
+    name: fluted-panel-close-view
+    alt_en: Fluted panel, close view
+    alt_he: פאנל מחורץ, מבט מקרוב
+    caption_en: Fluted panel, close view
+    caption_he: פאנל מחורץ, מבט מקרוב
+  - file: IMG_1496.HEIC
+    name: low-bookshelves-and-a-corner-unit
+    alt_en: Low bookshelves and a corner unit
+    alt_he: מדפי ספרים נמוכים ויחידת פינה
+    caption_en: Low bookshelves and a corner unit
+    caption_he: מדפי ספרים נמוכים ויחידת פינה
+  - file: IMG_1498.HEIC
+    name: bookcases-between-windows-tables-in-front
+    alt_en: Bookcases between windows, tables in front
+    alt_he: ספריות בין החלונות, שולחנות לפניהן
+    caption_en: Bookcases between windows, tables in front
+    caption_he: ספריות בין החלונות, שולחנות לפניהן
+  - file: IMG_1570.HEIC
+    name: lit-wall-unit-with-green-doors
+    alt_en: Lit wall unit with green doors
+    alt_he: יחידת קיר מוארת עם דלתות ירוקות
+    caption_en: Lit wall unit with green doors
+    caption_he: יחידת קיר מוארת עם דלתות ירוקות
+  - file: IMG_1623.HEIC
+    name: long-counter-top
+    alt_en: Long counter top
+    alt_he: משטח דלפק ארוך
+    caption_en: Long counter top
+    caption_he: משטח דלפק ארוך
+  - file: IMG_1763.HEIC
+    name: window-seat-and-green-cabinets
+    alt_en: Window seat and green cabinets
+    alt_he: ספסל חלון וארונות ירוקים
+    caption_en: Window seat and green cabinets
+    caption_he: ספסל חלון וארונות ירוקים
+  - file: IMG_1856.HEIC
+    name: tall-white-cabinets-along-a-corridor
+    alt_en: Tall white cabinets along a corridor
+    alt_he: ארונות לבנים גבוהים לאורך מסדרון
+    caption_en: Tall white cabinets along a corridor
+    caption_he: ארונות לבנים גבוהים לאורך מסדרון
+  - file: IMG_2283.HEIC
+    name: lit-shelves-above-grooved-cabinets
+    alt_en: Lit shelves above grooved cabinets
+    alt_he: מדפים מוארים מעל ארונות מחורצים
+    caption_en: Lit shelves above grooved cabinets
+    caption_he: מדפים מוארים מעל ארונות מחורצים
+  - file: IMG_2290.HEIC
+    name: lit-shelving-unit-pendant-lights-above
+    alt_en: Lit shelving unit, pendant lights above
+    alt_he: יחידת מדפים מוארת, מנורות תלויות מעל
+    caption_en: Lit shelving unit, pendant lights above
+    caption_he: יחידת מדפים מוארת, מנורות תלויות מעל
+  - file: IMG_2291.HEIC
+    name: lit-shelving-unit-and-counter
+    alt_en: Lit shelving unit and counter
+    alt_he: יחידת מדפים מוארת ודלפק
+    caption_en: Lit shelving unit and counter
+    caption_he: יחידת מדפים מוארת ודלפק
+  - file: IMG_2296.HEIC
+    name: counter-with-curved-brackets
+    alt_en: Counter with curved brackets
+    alt_he: דלפק עם תומכות מעוגלות
+    caption_en: Counter with curved brackets
+    caption_he: דלפק עם תומכות מעוגלות
+  - file: IMG_2312.HEIC
+    name: lit-shelving-unit-side-view
+    alt_en: Lit shelving unit, side view
+    alt_he: יחידת מדפים מוארת, מבט מהצד
+    caption_en: Lit shelving unit, side view
+    caption_he: יחידת מדפים מוארת, מבט מהצד
+  - file: IMG_2313.HEIC
+    name: lit-shelving-unit-front-view
+    alt_en: Lit shelving unit, front view
+    alt_he: יחידת מדפים מוארת, מבט מלפנים
+    caption_en: Lit shelving unit, front view
+    caption_he: יחידת מדפים מוארת, מבט מלפנים
+  - file: IMG_2319.HEIC
+    name: tall-unit-with-a-display-niche
+    alt_en: Tall unit with a display niche
+    alt_he: יחידה גבוהה עם נישת תצוגה
+    caption_en: Tall unit with a display niche
+    caption_he: יחידה גבוהה עם נישת תצוגה
+  - file: IMG_2321.HEIC
+    name: display-niche-closer-view
+    alt_en: Display niche, closer view
+    alt_he: נישת תצוגה, מבט מקרוב
+    caption_en: Display niche, closer view
+    caption_he: נישת תצוגה, מבט מקרוב
+  - file: IMG_2387.HEIC
+    name: desk-and-low-cabinets
+    alt_en: Desk and low cabinets
+    alt_he: שולחן עבודה וארונות נמוכים
+    caption_en: Desk and low cabinets
+    caption_he: שולחן עבודה וארונות נמוכים
+  - file: IMG_2390.HEIC
+    name: desk-and-back-cabinets
+    alt_en: Desk and back cabinets
+    alt_he: שולחן עבודה וארונות מאחור
+    caption_en: Desk and back cabinets
+    caption_he: שולחן עבודה וארונות מאחור
+  - file: IMG_2391.HEIC
+    name: desk-and-cabinets-seen-through-glass
+    alt_en: Desk and cabinets, seen through glass
+    alt_he: שולחן וארונות, מבט דרך הזכוכית
+    caption_en: Desk and cabinets, seen through glass
+    caption_he: שולחן וארונות, מבט דרך הזכוכית
+  - file: IMG_2395.HEIC
+    name: desk-with-cabinets-and-drawers
+    alt_en: Desk with cabinets and drawers
+    alt_he: שולחן עם ארונות ומגירות
+    caption_en: Desk with cabinets and drawers
+    caption_he: שולחן עם ארונות ומגירות
+  - file: IMG_2397.HEIC
+    name: desk-front-view
+    alt_en: Desk, front view
+    alt_he: שולחן עבודה, מבט מלפנים
+    caption_en: Desk, front view
+    caption_he: שולחן עבודה, מבט מלפנים
+  - file: IMG_2402.HEIC
+    name: desk-and-drawer-cabinets
+    alt_en: Desk and drawer cabinets
+    alt_he: שולחן וארונות מגירות
+    caption_en: Desk and drawer cabinets
+    caption_he: שולחן וארונות מגירות
+  - file: IMG_2405.HEIC
+    name: desk-and-drawer-cabinets-side-view
+    alt_en: Desk and drawer cabinets, side view
+    alt_he: שולחן וארונות מגירות, מבט מהצד
+    caption_en: Desk and drawer cabinets, side view
+    caption_he: שולחן וארונות מגירות, מבט מהצד
+  - file: IMG_2407.HEIC
+    name: desk-and-cabinets-behind-a-glass-wall
+    alt_en: Desk and cabinets behind a glass wall
+    alt_he: שולחן וארונות מאחורי קיר זכוכית
+    caption_en: Desk and cabinets behind a glass wall
+    caption_he: שולחן וארונות מאחורי קיר זכוכית
+  - file: IMG_2416.HEIC
+    name: tall-cabinet-with-lit-display-shelves
+    alt_en: Tall cabinet with lit display shelves
+    alt_he: ארון גבוה עם מדפי תצוגה מוארים
+    caption_en: Tall cabinet with lit display shelves
+    caption_he: ארון גבוה עם מדפי תצוגה מוארים
+  - file: IMG_2434.HEIC
+    name: shelving-wall-and-low-cabinet
+    alt_en: Shelving wall and low cabinet
+    alt_he: קיר מדפים וארון נמוך
+    caption_en: Shelving wall and low cabinet
+    caption_he: קיר מדפים וארון נמוך
+  - file: IMG_2438.HEIC
+    name: room-lined-with-shelving
+    alt_en: Room lined with shelving
+    alt_he: חדר מרופד במדפים
+    caption_en: Room lined with shelving
+    caption_he: חדר מרופד במדפים
+  - file: IMG_2444.HEIC
+    name: shelving-wall-front-view
+    alt_en: Shelving wall, front view
+    alt_he: קיר מדפים, מבט מלפנים
+    caption_en: Shelving wall, front view
+    caption_he: קיר מדפים, מבט מלפנים
+  - file: IMG_2456.HEIC
+    name: low-cabinet-and-shelving-wall
+    alt_en: Low cabinet and shelving wall
+    alt_he: ארון נמוך וקיר מדפים
+    caption_en: Low cabinet and shelving wall
+    caption_he: ארון נמוך וקיר מדפים
+  - file: IMG_2492.HEIC
+    name: shelving-on-two-walls
+    alt_en: Shelving on two walls
+    alt_he: מדפים על שני קירות
+    caption_en: Shelving on two walls
+    caption_he: מדפים על שני קירות
+  - file: IMG_2826.HEIC
+    name: tv-wall-unit-with-tall-cabinets
+    alt_en: TV wall unit with tall cabinets
+    alt_he: יחידת קיר לטלוויזיה עם ארונות גבוהים
+    caption_en: TV wall unit with tall cabinets
+    caption_he: יחידת קיר לטלוויזיה עם ארונות גבוהים
+  - file: IMG_2855.HEIC
+    name: tv-wall-unit-front-view
+    alt_en: TV wall unit, front view
+    alt_he: יחידת קיר לטלוויזיה, מבט מלפנים
+    caption_en: TV wall unit, front view
+    caption_he: יחידת קיר לטלוויזיה, מבט מלפנים
+  - file: IMG_2879.HEIC
+    name: tv-wall-unit-with-open-shelves
+    alt_en: TV wall unit with open shelves
+    alt_he: יחידת קיר לטלוויזיה עם מדפים פתוחים
+    caption_en: TV wall unit with open shelves
+    caption_he: יחידת קיר לטלוויזיה עם מדפים פתוחים
+  - file: IMG_2881.HEIC
+    name: tv-wall-unit-angled-view
+    alt_en: TV wall unit, angled view
+    alt_he: יחידת קיר לטלוויזיה, מבט מהצד
+    caption_en: TV wall unit, angled view
+    caption_he: יחידת קיר לטלוויזיה, מבט מהצד
+  - file: IMG_2897.HEIC
+    name: tv-wall-unit-full-width
+    alt_en: TV wall unit, full width
+    alt_he: יחידת קיר לטלוויזיה, לכל הרוחב
+    caption_en: TV wall unit, full width
+    caption_he: יחידת קיר לטלוויזיה, לכל הרוחב
+  - file: IMG_2950.HEIC
+    name: slatted-screen-and-platform-seating-during-fit-out
+    alt_en: Slatted screen and platform seating, during fit-out
+    alt_he: מחיצת רפפות ובמת ישיבה, בזמן ההתקנה
+    caption_en: Slatted screen and platform seating, during fit-out
+    caption_he: מחיצת רפפות ובמת ישיבה, בזמן ההתקנה
+  - file: IMG_3351.HEIC
+    name: drawers-and-wall-cabinets-around-a-window
+    alt_en: Drawers and wall cabinets around a window
+    alt_he: מגירות וארונות קיר סביב חלון
+    caption_en: Drawers and wall cabinets around a window
+    caption_he: מגירות וארונות קיר סביב חלון
+  - file: IMG_3352.HEIC
+    name: drawers-and-wall-cabinets-second-view
+    alt_en: Drawers and wall cabinets, second view
+    alt_he: מגירות וארונות קיר, מבט נוסף
+    caption_en: Drawers and wall cabinets, second view
+    caption_he: מגירות וארונות קיר, מבט נוסף
+  - file: IMG_3355.HEIC
+    name: drawers-by-the-stairs
+    alt_en: Drawers by the stairs
+    alt_he: מגירות ליד המדרגות
+    caption_en: Drawers by the stairs
+    caption_he: מגירות ליד המדרגות
+  - file: IMG_3356.HEIC
+    name: drawers-by-the-stairs-second-view
+    alt_en: Drawers by the stairs, second view
+    alt_he: מגירות ליד המדרגות, מבט נוסף
+    caption_en: Drawers by the stairs, second view
+    caption_he: מגירות ליד המדרגות, מבט נוסף
+  - file: IMG_3384.HEIC
+    name: shelving-room-with-a-table
+    alt_en: Shelving room with a table
+    alt_he: חדר מדפים עם שולחן
+    caption_en: Shelving room with a table
+    caption_he: חדר מדפים עם שולחן
