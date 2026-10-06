@@ -476,5 +476,203 @@
       "height": 1200,
       "stamp": "1|1530268|1791300302436||IMG_2156.HEIC"
     }
+  ],
+  "projects": [
+    {
+      "name": "bookcase-with-lit-shelves-green-doors",
+      "file": "IMG_1565.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2354167|1791300885349|centre|IMG_1565.HEIC"
+    },
+    {
+      "name": "floor-to-ceiling-tv-wall-unit",
+      "file": "IMG_2896.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2077965|1789741824729||IMG_2896.HEIC"
+    },
+    {
+      "name": "counter-with-bar-stools-pendant-lights",
+      "file": "IMG_1245.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3150509|1791300421152||IMG_1245.HEIC"
+    },
+    {
+      "name": "built-in-shelving-wall-with-cabinets",
+      "file": "IMG_1158 (1).HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2633432|1791300353696||IMG_1158 (1).HEIC"
+    },
+    {
+      "name": "tall-cabinets-gold-trim-and-table",
+      "file": "IMG_1741.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1380591|1791300179256|centre|IMG_1741.HEIC"
+    },
+    {
+      "name": "kitchenette-in-tall-cabinets",
+      "file": "IMG_1384.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2425277|1791300699569||IMG_1384.HEIC"
+    },
+    {
+      "name": "two-sided-shelving-room-divider",
+      "file": "IMG_2322.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2604645|1791301184309|top|IMG_2322.HEIC"
+    },
+    {
+      "name": "lit-display-shelves-grooved-cabinets",
+      "file": "IMG_2279.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2720159|1791301097221||IMG_2279.HEIC"
+    },
+    {
+      "name": "chest-of-drawers-under-window",
+      "file": "IMG_3353.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3305195|1791302136211|bottom|IMG_3353.HEIC"
+    },
+    {
+      "name": "tall-bookcases-and-shelving-wall",
+      "file": "IMG_1289.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|3170676|1791300521316||IMG_1289.HEIC"
+    },
+    {
+      "name": "built-in-bookshelves-cupboards-drawers",
+      "file": "IMG_1315.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2834765|1791300581130||IMG_1315.HEIC"
+    },
+    {
+      "name": "table-on-grooved-round-bases",
+      "file": "IMG_1106.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|1795822|1791300028081||IMG_1106.HEIC"
+    },
+    {
+      "name": "room-of-floor-to-ceiling-shelving",
+      "file": "IMG_3371.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2391331|1791302183597|centre|IMG_3371.HEIC"
+    },
+    {
+      "name": "shelving-wall-with-low-cupboards",
+      "file": "IMG_2488.HEIC",
+      "shape": "4:3",
+      "widths": [
+        480,
+        800,
+        1200,
+        1600
+      ],
+      "width": 1600,
+      "height": 1200,
+      "stamp": "1|2340783|1791301404833|bottom|IMG_2488.HEIC"
+    }
   ]
 }

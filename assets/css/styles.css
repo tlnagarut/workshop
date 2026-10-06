@@ -198,6 +198,7 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 .section-sub { margin-top: 64px; }
 .page-short { min-height: 55vh; }
 .instagram-handle { margin-top: 18px; }
+.projects-more { margin-top: 48px; }
 
 .about-grid {
   display: grid;

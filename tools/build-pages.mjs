@@ -324,6 +324,10 @@ const BLOCKS = {
     return photoGrid("process");
   },
 
+  "projects-photos"() {
+    return photoGrid("projects");
+  },
+
   "instagram-cta"() {
     return `<a class="btn btn-primary" href="${esc(contact.instagram)}" target="_blank" rel="noopener">${tr("projects.instagramCta")}</a>\n` +
       `<p class="instagram-handle"><a href="${esc(contact.instagram)}" target="_blank" rel="noopener" dir="ltr">${esc(contact.instagramHandle)}</a></p>`;

@@ -10,8 +10,8 @@ on GitHub Pages at https://tlnagarut.github.io/workshop/.
   full pages.
 - **Four pages:** `index.html` (Hero · About · Services · Contact),
   `workshop.html` (equipment, spray finishing), `in-the-workshop.html` (work in
-  progress photos), `projects.html` (links to Instagram until real project
-  photos are added).
+  progress photos), `projects.html` (gallery of finished work, plus a link to
+  Instagram for more).
 
 ## First-time setup (new Mac)
 

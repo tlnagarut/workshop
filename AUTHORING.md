@@ -9,7 +9,7 @@ The website has four pages, each in English and in Hebrew:
 - **Home** — the welcome page (intro, "about", services, contact).
 - **Workshop** — our equipment and spray finishing.
 - **In the workshop** — photos of work in progress.
-- **Projects** — for now, a short page pointing to our Instagram.
+- **Projects** — photos of finished work, and a link to our Instagram.
 
 The Hebrew pages are in the `he/` folder and have their own web addresses.
 

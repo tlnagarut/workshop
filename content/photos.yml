@@ -11,6 +11,7 @@
 #   workshop  gallery on the Workshop page — cropped 4:3
 #   spray     gallery in the "Spray finishing" section — cropped 4:3
 #   process   the "In the workshop" page: raw, unedited process photos — 4:3
+#   projects  gallery on the Projects page: finished work only — 4:3
 #
 # For each photo:
 #   file:        the original's file name inside its group folder
@@ -253,3 +254,97 @@ process:
     alt_he: לוחות ולוח ירוק נשענים על דלת הגלילה
     caption_en: Panels by the door
     caption_he: לוחות ליד הדלת
+
+# The Projects page: finished work only. Captions say what the photo shows —
+# no client names, materials or prices unless the owner confirms them.
+projects:
+  - file: IMG_1565.HEIC
+    name: bookcase-with-lit-shelves-green-doors
+    focus: centre
+    alt_en: Large bookcase with lit shelves, green side niches and green doors below
+    alt_he: ספרייה גדולה עם מדפים מוארים, נישות צד ירוקות ודלתות ירוקות מתחת
+    caption_en: Bookcase with built-in lighting
+    caption_he: ספרייה עם תאורה מובנית
+  - file: IMG_2896.HEIC
+    name: floor-to-ceiling-tv-wall-unit
+    alt_en: Floor-to-ceiling TV wall unit with light doors and open shelves
+    alt_he: יחידת קיר לטלוויזיה מהרצפה עד התקרה, עם דלתות בהירות ומדפים פתוחים
+    caption_en: TV wall unit
+    caption_he: יחידת קיר לטלוויזיה
+  - file: IMG_1245.HEIC
+    name: counter-with-bar-stools-pendant-lights
+    alt_en: Counter with bar stools under pendant lights, bookshelves behind
+    alt_he: דלפק עם כיסאות בר מתחת למנורות תלויות, מדפי ספרים ברקע
+    caption_en: Counter with bar seating
+    caption_he: דלפק עם מקומות ישיבה
+  - file: "IMG_1158 (1).HEIC"
+    name: built-in-shelving-wall-with-cabinets
+    alt_en: Long wall of built-in open shelving with cabinets below
+    alt_he: קיר ארוך של מדפים פתוחים בנויים, עם ארונות מתחת
+    caption_en: Built-in shelving wall
+    caption_he: קיר מדפים בנוי
+  - file: IMG_1741.HEIC
+    name: tall-cabinets-gold-trim-and-table
+    focus: centre
+    alt_en: Wall of tall cabinets with gold trim, a table with a grooved base in front
+    alt_he: קיר ארונות גבוהים עם פסים בגוון זהב, ושולחן עם בסיס מחורץ לפניו
+    caption_en: Tall cabinets and table
+    caption_he: ארונות גבוהים ושולחן
+  - file: IMG_1384.HEIC
+    name: kitchenette-in-tall-cabinets
+    alt_en: Kitchenette built into tall cabinets, with a grooved panel beside it
+    alt_he: מטבחון בנוי בתוך ארונות גבוהים, עם פאנל מחורץ לצידו
+    caption_en: Kitchenette in tall cabinets
+    caption_he: מטבחון בארונות גבוהים
+  - file: IMG_2322.HEIC
+    name: two-sided-shelving-room-divider
+    focus: top
+    alt_en: Two-sided shelving unit used as a room divider
+    alt_he: יחידת מדפים דו-צדדית המשמשת כמחיצה
+    caption_en: Shelving unit as a room divider
+    caption_he: יחידת מדפים כמחיצה
+  - file: IMG_2279.HEIC
+    name: lit-display-shelves-grooved-cabinets
+    alt_en: Built-in display shelves lit from behind, grooved grey cabinets below
+    alt_he: מדפי תצוגה בנויים עם תאורה מאחור, וארונות אפורים מחורצים מתחת
+    caption_en: Lit display shelves
+    caption_he: מדפי תצוגה מוארים
+  - file: IMG_3353.HEIC
+    name: chest-of-drawers-under-window
+    focus: bottom
+    alt_en: Grey textured chest of drawers and cupboards under a window
+    alt_he: שידת מגירות וארונות באפור עם מרקם, מתחת לחלון
+    caption_en: Drawers and cupboards under a window
+    caption_he: מגירות וארונות מתחת לחלון
+  - file: IMG_1289.HEIC
+    name: tall-bookcases-and-shelving-wall
+    alt_en: Tall bookcases and a full shelving wall around a seating area
+    alt_he: ספריות גבוהות וקיר מדפים מלא סביב פינת ישיבה
+    caption_en: Bookcases and shelving wall
+    caption_he: ספריות וקיר מדפים
+  - file: IMG_1315.HEIC
+    name: built-in-bookshelves-cupboards-drawers
+    alt_en: Built-in bookshelves along a wall, with cupboards and drawers
+    alt_he: מדפי ספרים בנויים לאורך קיר, עם ארונות ומגירות
+    caption_en: Built-in bookshelves
+    caption_he: מדפי ספרים בנויים
+  - file: IMG_1106.HEIC
+    name: table-on-grooved-round-bases
+    alt_en: Table with a stone-look top on two grooved round bases, in our workshop
+    alt_he: שולחן עם משטח במראה אבן על שני בסיסים עגולים מחורצים, בנגרייה שלנו
+    caption_en: Table, ready in our workshop
+    caption_he: שולחן, מוכן בנגרייה שלנו
+  - file: IMG_3371.HEIC
+    name: room-of-floor-to-ceiling-shelving
+    focus: centre
+    alt_en: Room lined with floor-to-ceiling open shelving
+    alt_he: חדר מרופד במדפים פתוחים מהרצפה עד התקרה
+    caption_en: Floor-to-ceiling shelving
+    caption_he: מדפים מהרצפה עד התקרה
+  - file: IMG_2488.HEIC
+    name: shelving-wall-with-low-cupboards
+    focus: bottom
+    alt_en: Shelving wall with low cupboards beside it
+    alt_he: קיר מדפים עם ארונות נמוכים לצידו
+    caption_en: Shelving wall and low cupboards
+    caption_he: קיר מדפים וארונות נמוכים
