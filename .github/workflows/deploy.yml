@@ -27,7 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
 
       # Rebuild the pages from templates/ + content/ (mirrors build.sh):
-      # English pages in the root, Hebrew pages in he/, and sitemap.xml.
+      # English pages in the root, Hebrew pages in he/, sitemap.xml and
+      # robots.txt (addresses from siteUrl in content/contact.yml).
       # Photos and the social image are processed locally and committed, so
       # process-photos / generate-placeholders don't run here. TZ pins the
       # footer "last updated" stamp to Israel time, matching local builds.

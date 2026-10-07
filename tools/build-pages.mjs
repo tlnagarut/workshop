@@ -1,6 +1,7 @@
 /* ============================================================================
  * Builds the pages from the templates in templates/ and the text in content/,
- * once per language, plus sitemap.xml. Run:
+ * once per language, plus sitemap.xml and robots.txt (addresses come from
+ * siteUrl in content/contact.yml). Run:
  *   node tools/build-pages.mjs        (invoked by build.sh and the deploy)
  *
  *   English: index.html, workshop.html, in-the-workshop.html, projects.html
@@ -423,6 +424,12 @@ function render(page, lang) {
   return out;
 }
 
+// robots.txt: allow everything and point to the sitemap.
+function writeRobots() {
+  writeFileSync(join(root, "robots.txt"),
+    `User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
+}
+
 // sitemap.xml: every page in both languages, each listing its language twin.
 function writeSitemap() {
   const today = new Date().toISOString().slice(0, 10);
@@ -457,5 +464,6 @@ for (const [a, b] of [["en", "he"], ["he", "en"]]) {
 
 const written = Object.keys(LANGS).flatMap((lang) => PAGES.map((page) => render(page, lang)));
 writeSitemap();
+writeRobots();
 warnings.forEach((w) => console.warn("! " + w));
-console.log(`Wrote ${written.join(", ")} and sitemap.xml (built ${BUILD_TIME})`);
+console.log(`Wrote ${written.join(", ")}, sitemap.xml and robots.txt (built ${BUILD_TIME})`);

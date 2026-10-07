@@ -4,6 +4,12 @@ TLnagarut (TL נגרות) — a small, fast, bilingual (English / Hebrew) showca
 Tomas Janulionis' custom woodworking and cabinetry workshop in Haifa, Israel.
 Plain HTML/CSS/JS, **no build framework**, hosted on GitHub Pages.
 
+Live address: **https://tlnagarut.co.il/** (English) and
+**https://tlnagarut.co.il/he/** (Hebrew). The old address
+https://tlnagarut.github.io/workshop/ redirects there. The address is set once,
+as `siteUrl` in `content/contact.yml`; the build writes it into every page,
+`sitemap.xml` and `robots.txt`.
+
 ## What this site is for
 
 It is a shop window, not a web shop. It has three jobs:
@@ -79,7 +85,8 @@ copy causes conflicts later.
   `projects.html` — the four pages' structure. **Edit these, not the generated
   HTML files.**
 - `index.html`, `workshop.html`, `in-the-workshop.html`, `projects.html` (repo
-  root, English), the same four in `he/` (Hebrew) and `sitemap.xml` —
+  root, English), the same four in `he/` (Hebrew), `sitemap.xml` and
+  `robots.txt` —
   **generated** by `tools/build-pages.mjs` from the templates + `content/`.
   Never edit by hand.
 - `content/*.yml` — all text (EN/HE), contact details, and the photo list.

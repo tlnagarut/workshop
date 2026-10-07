@@ -197,7 +197,7 @@ you). This takes about **1–3 minutes**.
 
 Then open the live site:
 
-**https://tlnagarut.github.io/workshop/**
+**https://tlnagarut.co.il/**
 
 Refresh the page to see your changes. (If you don't see them right away, wait a
 minute and refresh again — your browser sometimes shows an old copy. A "hard
@@ -219,4 +219,4 @@ Every time you change something:
 3. 👀  Preview in your browser (`./preview.sh` or right-click `index.html`).
 4. 💾  **Commit** with a short message.
 5. ⬆️  **Push** / **Sync Changes**.
-6. ⏳  Wait 1–3 minutes, then check **https://tlnagarut.github.io/workshop/**.
+6. ⏳  Wait 1–3 minutes, then check **https://tlnagarut.co.il/**.

@@ -17,7 +17,7 @@ node tools/generate-placeholders.mjs
 echo "▶ process-photos.mjs         (local only)"
 node tools/process-photos.mjs
 
-# English pages in the root, Hebrew pages in he/, and sitemap.xml
+# English pages in the root, Hebrew pages in he/, sitemap.xml and robots.txt
 echo "▶ build-pages.mjs"
 node tools/build-pages.mjs
 

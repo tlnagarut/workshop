@@ -2,7 +2,8 @@
 
 A small, fast showcase site for Tomas Janulionis' custom cabinetry and solid
 wood door workshop in Haifa (TL נגרות). Plain HTML/CSS/JS, no framework, hosted
-on GitHub Pages at https://tlnagarut.github.io/workshop/.
+on GitHub Pages at https://tlnagarut.co.il/ (the old address
+https://tlnagarut.github.io/workshop/ redirects there).
 
 - **Bilingual:** English pages at the site root, Hebrew (right-to-left) pages
   under `he/`, linked with `hreflang`; the language button links to the same

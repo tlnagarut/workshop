@@ -34,6 +34,6 @@ address:
 instagram: "https://www.instagram.com/tlnagarut/"
 instagramHandle: "@tlnagarut"
 
-# The site's public web address (used for links shared on social media and
-# for Google). Keep the slash at the end.
-siteUrl: "https://tlnagarut.github.io/workshop/"
+# The site's public web address (used for links shared on social media, for
+# Google, sitemap.xml and robots.txt). Keep the slash at the end.
+siteUrl: "https://tlnagarut.co.il/"
