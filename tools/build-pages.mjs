@@ -265,6 +265,26 @@ const BLOCKS = {
     return p ? picture(p, { sizes: "100vw", eager: true, cls: "hero-media" }) : "";
   },
 
+  // The owners' portraits with their full names (photos: "people" group in
+  // content/photos.yml; names: contact.portrait1Name / portrait2Name).
+  "contact-portraits"() {
+    const people = photos("people");
+    if (!people.length) return "";
+    const figures = people.map((p, i) => {
+      const w = p.widths[p.widths.length - 1];
+      const base = `assets/img/photos/people/${p.name}-${w}`;
+      return [
+        `  <figure class="portrait">`,
+        `    <picture><source type="image/webp" srcset="${base}.webp" />` +
+          `<img src="${base}.jpg" width="${p.width}" height="${p.height}" loading="lazy" decoding="async" ` +
+          `${attr("alt", p.alt.en, p.alt.he)} /></picture>`,
+        `    <figcaption>${tr(`contact.portrait${i + 1}Name`)}</figcaption>`,
+        `  </figure>`,
+      ].join("\n");
+    });
+    return `<div class="portraits">\n${figures.join("\n")}\n</div>`;
+  },
+
   "contact-list"() {
     const people = contact.people.map((p, i) => [
       `    <div class="contact-person">`,

@@ -9,6 +9,8 @@
  * Which photos to use, and their file names / alt text / captions, are listed
  * in content/photos.yml. Each group is one place on the site:
  *   hero      → home-page banner, cropped 16:9
+ *   people    → portraits in the Contact section: square, one 600 px size,
+ *               each file under ~100 KB
  *   anything else (workshop, spray, …) → gallery tiles, cropped 4:3
  *
  * For every photo it: rotates it upright (using the phone's rotation tag),
@@ -39,7 +41,10 @@ const manifestFile = join(outRoot, "manifest.json");
 
 const WIDTHS = [480, 800, 1200, 1600];
 const MAX_BYTES = 300 * 1024;
-const SHAPES = { hero: [16, 9] }; // every other group is 4:3
+const SHAPES = { hero: [16, 9], people: [1, 1] }; // every other group is 4:3
+// Groups that need other sizes or a smaller file limit than the defaults.
+const GROUP_WIDTHS = { people: [600] };
+const GROUP_MAX_BYTES = { people: 100 * 1024 };
 const DEFAULT_SHAPE = [4, 3];
 // focus: in photos.yml → libvips crop mode. "low" keeps the top/left edge,
 // "high" keeps the bottom/right edge.
@@ -60,16 +65,16 @@ function slugify(s) {
     .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-// Save `src` at `width` px as `out`, lowering quality until it fits MAX_BYTES.
-function saveSized(src, out, width, height, format) {
+// Save `src` at `width` px as `out`, lowering quality until it fits maxBytes.
+function saveSized(src, out, width, height, format, maxBytes = MAX_BYTES) {
   for (let q = format === "webp" ? 80 : 82; q >= 50; q -= 6) {
     const opts = format === "webp"
       ? `[Q=${q},keep=none]`
       : `[Q=${q},optimize_coding,interlace,keep=none]`;
     vips("thumbnail", src, out + opts, String(width), "--height", String(height));
-    if (statSync(out).size <= MAX_BYTES) return;
+    if (statSync(out).size <= maxBytes) return;
   }
-  console.warn(`  ! ${out} is still over ${MAX_BYTES / 1024} KB at the lowest quality`);
+  console.warn(`  ! ${out} is still over ${maxBytes / 1024} KB at the lowest quality`);
 }
 
 function processPhoto(group, entry, srcFile, tmp) {
@@ -87,25 +92,35 @@ function processPhoto(group, entry, srcFile, tmp) {
     vips("rot", upright, turned, turn);
     upright = turned;
   }
+  //    `crop: left top size` in photos.yml cuts a square (in pixels of the
+  //    upright original) first, e.g. to frame a portrait as face and shoulders.
+  const box = String(entry.crop || "").trim().split(/[\s,]+/).map(Number);
+  if (box.length === 3 && box.every((n) => Number.isFinite(n) && n >= 0)) {
+    const cropped = join(tmp, "cropped.v");
+    vips("crop", upright, cropped, String(box[0]), String(box[1]), String(box[2]), String(box[2]));
+    upright = cropped;
+  }
   const w0 = header(upright, "width");
   const h0 = header(upright, "height");
 
   // 2. Crop once, at the largest size, so every width shows the same framing.
-  const master = Math.min(WIDTHS[WIDTHS.length - 1], w0, Math.floor((h0 * aw) / ah));
+  const groupWidths = GROUP_WIDTHS[group] || WIDTHS;
+  const maxBytes = GROUP_MAX_BYTES[group] || MAX_BYTES;
+  const master = Math.min(groupWidths[groupWidths.length - 1], w0, Math.floor((h0 * aw) / ah));
   const masterH = Math.round((master * ah) / aw);
   const masterFile = join(tmp, "master.v");
   vips("thumbnail", upright, masterFile, String(master), "--height", String(masterH),
     "--crop", crop, "--export-profile", "srgb");
 
   // 3. Resize the crop to each width (never upscaling) and encode.
-  let widths = WIDTHS.filter((w) => w <= master);
+  let widths = groupWidths.filter((w) => w <= master);
   if (!widths.length) widths = [master];
   const dir = join(outRoot, group);
   mkdirSync(dir, { recursive: true });
   for (const w of widths) {
     const h = Math.round((w * ah) / aw);
-    saveSized(masterFile, join(dir, `${entry.name}-${w}.webp`), w, h, "webp");
-    saveSized(masterFile, join(dir, `${entry.name}-${w}.jpg`), w, h, "jpg");
+    saveSized(masterFile, join(dir, `${entry.name}-${w}.webp`), w, h, "webp", maxBytes);
+    saveSized(masterFile, join(dir, `${entry.name}-${w}.jpg`), w, h, "jpg", maxBytes);
   }
   const big = widths[widths.length - 1];
   return { name: entry.name, file: entry.file, shape: `${aw}:${ah}`, widths,
@@ -147,7 +162,7 @@ function main() {
         }
         const st = statSync(srcFile);
         const stamp = `${VERSION}|${st.size}|${Math.round(st.mtimeMs)}|${entry.focus || ""}|${raw.file}` +
-          (entry.rotate ? `|r${entry.rotate}` : "");
+          (entry.rotate ? `|r${entry.rotate}` : "") + (entry.crop ? `|c${entry.crop}` : "");
         const outputsExist = prev && prev.widths.every((w) =>
           existsSync(join(outRoot, group, `${entry.name}-${w}.webp`)) &&
           existsSync(join(outRoot, group, `${entry.name}-${w}.jpg`)));

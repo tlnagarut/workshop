@@ -122,6 +122,9 @@ contact:
   person1Langs: (English/Russian)
   person2Name: Lina
   person2Langs: (Hebrew)
+  # Full names under the two portraits in the Contact section.
+  portrait1Name: Tomas Janulionis
+  portrait2Name: Lina Janulionis
   emailLabel: Email
   addressLabel: Workshop address
   instagramLabel: Instagram

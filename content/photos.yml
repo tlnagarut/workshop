@@ -14,6 +14,7 @@
 #             Each has a section: materials, assembly or finished (a heading
 #             on the page).
 #   projects  gallery on the Projects page: finished work only — 4:3
+#   people    portraits in the Contact section — square, 600 px, under 100 KB
 #
 # For each photo:
 #   file:        the original's file name inside its group folder
@@ -21,6 +22,8 @@
 #                saying what it shows (e.g. raptor-spray-booth-glass-doors)
 #   alt_en / alt_he:          what the photo shows, for screen readers & Google
 #   caption_en / caption_he:  short caption shown when the photo is opened
+#   crop:        optional — 'left top size' in pixels: cut a square from the
+#                original first (e.g. a portrait framed as face and shoulders)
 #   rotate:      optional — 90, 180 or 270 (clockwise) when a photo still
 #                comes out sideways (its phone rotation tag is wrong)
 #   focus:       optional — which part to keep when cropping: attention
@@ -36,6 +39,19 @@
 #       caption_en: Our Raptor downdraft spray booth
 #       caption_he: תא הצביעה Raptor שלנו
 # ============================================================================
+
+# Portraits in the Contact section (the owners agreed to show their faces).
+# The names shown under them are in content/about.*.yml (contact.portrait…).
+people:
+  - file: Tomas.jpg
+    name: tomas-janulionis-tlnagarut
+    alt_en: Tomas Janulionis, owner of TLnagarut
+    alt_he: תומאס יאנוליוניס, הבעלים של TL נגרות
+  - file: Gemini_Generated_Image_shdb5xshdb5xshdb.jpg
+    name: lina-janulionis-tlnagarut-contact-new
+    crop: 100 140 750
+    alt_en: Lina Janulionis
+    alt_he: לינה יאנוליוניס
 
 hero:
 

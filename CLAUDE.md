@@ -118,7 +118,8 @@ edits to CSS or `assets/js/main.js`.
 The owner's **original photos live outside the site folder**, in
 `~/dev/tl-nagarut-photos/<group>/` (groups: `hero`, `workshop`, `spray`,
 `process` = the "In the workshop" page, `projects` = finished work on the
-Projects page), and
+Projects page, `people` = the owners' portraits in Contact: square, 600 px,
+under 100 KB), and
 are never modified. `content/photos.yml` lists which photos are used, with a
 descriptive file `name`, `alt_en`/`alt_he` and `caption_en`/`caption_he`.
 `./build.sh` runs `tools/process-photos.mjs` (needs libvips: `brew install

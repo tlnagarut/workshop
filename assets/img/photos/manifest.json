@@ -1,4 +1,28 @@
 {
+  "people": [
+    {
+      "name": "tomas-janulionis-tlnagarut",
+      "file": "Tomas.jpg",
+      "shape": "1:1",
+      "widths": [
+        600
+      ],
+      "width": 600,
+      "height": 600,
+      "stamp": "1|637876|1790062208398||Tomas.jpg"
+    },
+    {
+      "name": "lina-janulionis-tlnagarut-contact-new",
+      "file": "Gemini_Generated_Image_shdb5xshdb5xshdb.jpg",
+      "shape": "1:1",
+      "widths": [
+        600
+      ],
+      "width": 600,
+      "height": 600,
+      "stamp": "1|472644|1791399899510||Gemini_Generated_Image_shdb5xshdb5xshdb.jpg|c100 140 750"
+    }
+  ],
   "process": [
     {
       "name": "bookcase-carcass-in-progress",
