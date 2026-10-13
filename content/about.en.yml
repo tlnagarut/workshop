@@ -15,11 +15,11 @@ langName: English
 # What search engines show for each page: a title and a short description
 # saying what we do and where. Keep titles under ~60 characters.
 meta:
-  homeTitle: Custom Cabinets & Solid Wood Doors in Haifa | TLnagarut
+  homeTitle: Custom Kitchens, Wardrobes, Doors & Furniture in Haifa | TLnagarut
   homeDescription: >
-    Custom kitchens, cabinets, built-in furniture and solid wood doors from
-    TLnagarut in Haifa — designed, made, spray-finished and installed by our
-    own workshop.
+    Custom kitchens, wardrobes, solid wood doors and furniture from TLnagarut
+    in Haifa — designed, built, spray-finished and installed to your size by
+    our own workshop.
   workshopTitle: Cabinet Workshop & Spray Booth in Haifa | TLnagarut
   workshopDescription: >
     Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: SCM
@@ -48,10 +48,10 @@ nav:
 
 hero:
   tagline: Custom cabinetry · Haifa, Israel
-  title: Custom cabinets and solid wood doors, made in Haifa.
+  title: Custom kitchens, wardrobes, doors and furniture in Haifa
   subtitle: >
-    Kitchens, cabinets, built-in furniture and solid wood doors — designed,
-    cut, assembled, spray-finished and installed by our own workshop.
+    Send a photo or a drawing. We design, build, spray and install it to your
+    size.
   ctaWorkshop: See the workshop
   ctaContact: Get in touch
 
@@ -78,6 +78,17 @@ about:
 services:
   eyebrow: What we make
   title: Made to measure, made in-house.
+  # Short list of what we make, shown under the heading. One item per line.
+  makeList:
+    - Kitchens
+    - Wardrobes
+    - Tables
+    - Solid wood doors
+    - Bathroom vanity cabinets
+    - Wooden shower furniture
+    - TV walls
+    - Bars
+    - Libraries
   kitchensTitle: Kitchens & cabinets
   kitchensBody: >
     Custom kitchens and cabinets, made to measure. Panels are cut and
@@ -134,6 +145,12 @@ footer:
   rights: All rights reserved
   builtIn: Made in Haifa
   updated: Last updated
+
+# "Send a photo on WhatsApp" button (top of the home page and in Contact).
+# The number is the first one in content/contact.yml; message = pre-filled text.
+whatsapp:
+  cta: Send a photo on WhatsApp
+  message: Hi, I'd like to ask about a project. I'll send a photo.
 
 gallery:
   label: Photo viewer

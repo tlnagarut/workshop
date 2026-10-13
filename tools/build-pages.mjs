@@ -285,6 +285,23 @@ const BLOCKS = {
     return `<div class="portraits">\n${figures.join("\n")}\n</div>`;
   },
 
+  // "Send a photo on WhatsApp" (next to the phone numbers in Contact): wa.me
+  // link to the first (main) number in content/contact.yml, with a
+  // pre-filled message in the page's language.
+  "whatsapp-cta"() {
+    const number = contact.people[0].phoneHref.replace(/\D/g, "");
+    const href = `https://wa.me/${number}?text=${encodeURIComponent(t(LANG, "whatsapp.message"))}`;
+    return `<a class="btn btn-whatsapp" href="${esc(href)}" target="_blank" rel="noopener">` +
+      `<svg class="whatsapp-icon" width="22" height="22" aria-hidden="true" focusable="false"><use href="#ico-whatsapp"/></svg>` +
+      `<span>${tr("whatsapp.cta")}</span></a>`;
+  },
+
+  // "What we make": the short list under the Services heading.
+  "make-list"() {
+    const items = pairs("services.makeList").map(([en, he]) => `  <li>${both(en, he)}</li>`);
+    return items.length ? `<ul class="make-list">\n${items.join("\n")}\n</ul>` : "";
+  },
+
   "contact-list"() {
     const people = contact.people.map((p, i) => [
       `    <div class="contact-person">`,
@@ -304,8 +321,11 @@ const BLOCKS = {
       `<ul class="contact-list">`,
       `  <li>`,
       `    <span class="contact-label">${tr("contact.phoneLabel")}</span>`,
-      `    <div class="contact-people">`,
-      people.join("\n").replace(/^/gm, "  "),
+      `    <div class="contact-phones">`,
+      `      <div class="contact-people">`,
+      people.join("\n").replace(/^/gm, "    "),
+      `      </div>`,
+      `      ${BLOCKS["whatsapp-cta"]()}`,
       `    </div>`,
       `  </li>`,
       `  <li>`,
