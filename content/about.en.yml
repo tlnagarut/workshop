@@ -119,6 +119,8 @@ projects:
   body: >
     A selection of finished pieces, made in our workshop and installed by us.
     Tap a photo to see it larger.
+  # Button under each project's first 6 photos.
+  showAll: Show all photos
   moreBody: More of our work is posted on Instagram.
   instagramCta: More on Instagram
 
@@ -157,4 +159,3 @@ gallery:
   close: Close
   prev: Previous photo
   next: Next photo
-  showMore: Show {n} more photos

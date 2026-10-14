@@ -93,6 +93,15 @@ copy causes conflicts later.
 - `assets/css/styles.css`, `assets/js/main.js` — styles and the small script
   (mobile menu, photo viewer), loaded directly.
 - `assets/img/photos/` — **generated** web-ready photos + `manifest.json`.
+- `assets/projects/<slug>/` — one folder per project on the Projects page:
+  the owner's already web-ready photos (used as they are, not processed) and
+  a `project.md` with `order`, titles, description and per-photo alt
+  text (EN/HE). **Projects never show a town, city or place name** — not in
+  titles, descriptions, alt text, folder or file names (owner's rule). "Haifa"
+  stays where it describes the business itself. Photo 01 is the cover; 6 show, the rest behind "Show all
+  photos". `tiles/` inside each folder holds **generated** 800 px copies for
+  the small tiles (`tools/make-project-tiles.mjs`); tapping opens the full
+  photo. The Projects page shows only these folders.
 - `tools/*.mjs` — the build steps. `build.sh` runs them all. `preview.sh` opens
   the site in a browser.
 
@@ -117,9 +126,9 @@ edits to CSS or `assets/js/main.js`.
 
 The owner's **original photos live outside the site folder**, in
 `~/dev/tl-nagarut-photos/<group>/` (groups: `hero`, `workshop`, `spray`,
-`process` = the "In the workshop" page, `projects` = finished work on the
-Projects page, `people` = the owners' portraits in Contact: square, 600 px,
-under 100 KB), and
+`process` = the "In the workshop" page, `people` = the owners' portraits in
+Contact: square, 600 px, under 100 KB; the Projects page uses
+`assets/projects/` instead, see Layout), and
 are never modified. `content/photos.yml` lists which photos are used, with a
 descriptive file `name`, `alt_en`/`alt_he` and `caption_en`/`caption_he`.
 `./build.sh` runs `tools/process-photos.mjs` (needs libvips: `brew install
@@ -154,8 +163,9 @@ The deploy workflow does **not** call `build.sh`. It re-runs the build steps
 itself, so its list of `node tools/*.mjs` steps is a hand-kept copy of what
 `build.sh` runs. **Whenever you add, remove, or reorder a step in `build.sh`,
 mirror that change in `deploy.yml`** — otherwise the deployed site is built
-differently from local. (Exceptions: `generate-placeholders.mjs` and
-`process-photos.mjs` are local-only — their output is committed.) Keep
+differently from local. (Exceptions: `generate-placeholders.mjs`,
+`process-photos.mjs` and `make-project-tiles.mjs` are local-only — their
+output is committed.) Keep
 `stamp-versions.mjs` last so it hashes the freshly generated files.
 
 ## Preview

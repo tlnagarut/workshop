@@ -18,6 +18,7 @@
  *   content/workshop.en.yml, workshop.he.yml Workshop page (keys workshop.*)
  *   content/contact.yml                      phones, email, address, links
  *   content/photos.yml + assets/img/photos/manifest.json   photos
+ *   assets/projects/<slug>/project.md + photos   Projects page, one per project
  *
  * Template syntax (templates/*.html):
  *   <h1 data-i18n="hero.title"></h1>     → the text in the page's language
@@ -25,7 +26,7 @@
  *   <!-- @footer -->                     → a generated block (see BLOCKS)
  *   {{htmlAttrs}}                        → a generated value (see INLINE)
  * ========================================================================== */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseYaml, flatten } from "./yaml.mjs";
@@ -140,24 +141,97 @@ function picture(p, { sizes, eager = false, cls = "" }) {
 }
 
 // Equal 4:3 tiles; tapping one opens the photo viewer (main.js).
-// With `limit`, tiles after the first `limit` are hidden behind a
-// "show more" button (main.js); without scripts they all show.
-function photoGrid(group, list = photos(group), limit = 0) {
+function photoGrid(group, list = photos(group)) {
   if (!list.length) return "";
-  const extra = limit && list.length > limit ? list.length - limit : 0;
   const sizes = "(max-width: 860px) 50vw, 340px";
-  const items = list.map((p, i) =>
-    `  <li${extra && i >= limit ? ' class="photo-extra"' : ""}><button class="photo-tile" type="button" data-gallery="${group}" ` +
+  const items = list.map((p) =>
+    `  <li><button class="photo-tile" type="button" data-gallery="${group}" ` +
     `data-webp="${srcset(p, "webp")}" data-jpg="${srcset(p, "jpg")}" ` +
     `data-src="assets/img/photos/${p.group}/${p.name}-${p.widths[p.widths.length - 1]}.jpg" ` +
     `data-width="${p.width}" data-height="${p.height}" ` +
     `data-caption="${esc(pick(p.caption.en, p.caption.he))}">` +
     picture(p, { sizes }) + `</button></li>`);
+  return `<ul class="photo-grid">\n${items.join("\n")}\n</ul>`;
+}
+
+// Under a project's first photos; the rest are hidden until it is tapped
+// (main.js). Without scripts all photos show and the button stays hidden.
+const showMoreButton = (label) =>
+  `\n<button class="btn btn-outline photo-more" type="button" data-show-more>${esc(label)}</button>`;
+
+// ---------------------------------------------------------------- projects
+// One folder per project in assets/projects/<slug>/: the photos (already
+// web-ready, used as they are) and a project.md whose part between the ---
+// lines holds order, title_en/he, description_en/he (no place names) and the photo
+// list with alt_en/alt_he. Shown by `order`, then folders without one.
+const PROJECTS_DIR = "assets/projects";
+
+// Width and height of a JPEG, read from its header (no image tools needed,
+// so this also works in the deploy).
+function jpegSize(file) {
+  const b = readFileSync(file);
+  for (let i = 2; i + 9 < b.length; ) {
+    if (b[i] !== 0xff) { i++; continue; }
+    const marker = b[i + 1];
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+      return { height: b.readUInt16BE(i + 5), width: b.readUInt16BE(i + 7) };
+    }
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  throw new Error(`${file}: could not read the photo size`);
+}
+
+function projects() {
+  if (!existsSync(join(root, PROJECTS_DIR))) return [];
+  return readdirSync(join(root, PROJECTS_DIR), { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => {
+      const slug = d.name;
+      const dir = `${PROJECTS_DIR}/${slug}`;
+      if (!existsSync(join(root, dir, "project.md"))) { warn(`${dir} has no project.md — skipped`); return null; }
+      const front = read(`${dir}/project.md`).match(/^---\n([\s\S]*?)\n---/);
+      if (!front) { warn(`${dir}/project.md needs its details between --- lines`); return null; }
+      const cfg = parseYaml(front[1]);
+      if (!cfg.title_en || !cfg.title_he) warn(`${dir}/project.md needs title_en and title_he`);
+      const listed = Array.isArray(cfg.photos) ? cfg.photos : [];
+      const files = readdirSync(join(root, dir)).filter((f) => /\.jpe?g$/i.test(f));
+      files.filter((f) => !listed.some((p) => p.file === f))
+        .forEach((f) => warn(`${dir}/${f} is not listed in project.md — not shown`));
+      const photos = listed.map((p) => {
+        if (!files.includes(p.file)) { warn(`${dir}/${p.file} is listed but missing`); return null; }
+        if (!p.alt_en || !p.alt_he) warn(`${dir}/${p.file} needs alt_en and alt_he`);
+        // Small tile copy from tools/make-project-tiles.mjs, if made.
+        const tile = `${dir}/tiles/${p.file}`;
+        const hasTile = existsSync(join(root, tile));
+        if (!hasTile) warn(`${tile} is missing — run ./build.sh (the tile shows the full photo)`);
+        return { src: `${dir}/${p.file}`, ...jpegSize(join(root, dir, p.file)),
+          tile: hasTile ? { src: tile, ...jpegSize(join(root, tile)) } : null,
+          alt: { en: p.alt_en || "", he: p.alt_he || p.alt_en || "" } };
+      }).filter(Boolean);
+      const order = Number(cfg.order);
+      return { slug, order: Number.isFinite(order) && cfg.order !== undefined ? order : Infinity, cfg, photos };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.order - b.order || a.slug.localeCompare(b.slug));
+}
+
+// Equal 4:3 tiles like photoGrid, showing the small tile copy; tapping opens
+// the full photo. The first `limit` show; the rest wait behind "Show all
+// photos" (hidden, so not downloaded). `eager` tiles (top of the page) load
+// straight away.
+function projectGrid(project, limit, eager) {
+  const extra = project.photos.length > limit;
+  const items = project.photos.map((p, i) => {
+    const alt = pick(p.alt.en, p.alt.he);
+    const img = p.tile || p;
+    return `  <li${extra && i >= limit ? ' class="photo-extra"' : ""}><button class="photo-tile" type="button" ` +
+      `data-gallery="project-${project.slug}" data-webp="" data-jpg="" data-src="${p.src}" ` +
+      `data-width="${p.width}" data-height="${p.height}" data-caption="${esc(alt)}">` +
+      `<img src="${img.src}" width="${img.width}" height="${img.height}"${i < eager ? "" : ' loading="lazy"'} ` +
+      `decoding="async" alt="${esc(alt)}" /></button></li>`;
+  });
   const grid = `<ul class="photo-grid">\n${items.join("\n")}\n</ul>`;
-  if (!extra) return grid;
-  const label = (lang) => t(lang, "gallery.showMore").replace("{n}", extra);
-  return grid + `\n<button class="btn btn-outline photo-more" type="button" data-show-more>` +
-    `${esc(pick(label("en"), label("he")))}</button>`;
+  return extra ? grid + showMoreButton(t(LANG, "projects.showAll")) : grid;
 }
 
 // ---------------------------------------------------------------- blocks
@@ -381,10 +455,17 @@ const BLOCKS = {
     }).filter(Boolean).join("\n");
   },
 
-  "projects-photos"() {
-    return photoGrid("projects", photos("projects"), 30);
+  // One block per project folder (assets/projects/), first 6 photos each.
+  "project-list"() {
+    return projects().map((project, n) => {
+      const c = project.cfg;
+      const lines = [`<article class="project" id="${project.slug}">`,
+        `  <h2 class="project-title">${both(c.title_en, c.title_he)}</h2>`];
+      if (c.description_en) lines.push(`  <p class="project-text">${both(c.description_en, c.description_he || c.description_en)}</p>`);
+      lines.push(projectGrid(project, 6, n === 0 ? 3 : 0).replace(/^/gm, "  "), `</article>`);
+      return lines.join("\n");
+    }).join("\n");
   },
-
   "instagram-cta"() {
     return `<a class="btn btn-primary" href="${esc(contact.instagram)}" target="_blank" rel="noopener">${tr("projects.instagramCta")}</a>\n` +
       `<p class="instagram-handle"><a href="${esc(contact.instagram)}" target="_blank" rel="noopener" dir="ltr">${esc(contact.instagramHandle)}</a></p>`;

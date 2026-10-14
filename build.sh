@@ -2,8 +2,8 @@
 # Rebuild the whole site in one go.
 # Run: ./build.sh
 #
-# Steps 1–2 run on this computer only (they need the originals folder and
-# libvips); their output is committed, so the deploy skips them. Steps 3–4 are
+# Steps 1–3 run on this computer only (they need the originals folder and
+# libvips); their output is committed, so the deploy skips them. Steps 4–5 are
 # mirrored in .github/workflows/deploy.yml — keep the two in sync.
 
 set -e  # Exit on first error
@@ -16,6 +16,10 @@ node tools/generate-placeholders.mjs
 
 echo "▶ process-photos.mjs         (local only)"
 node tools/process-photos.mjs
+
+# 800 px copies of the project photos for the Projects page tiles
+echo "▶ make-project-tiles.mjs     (local only)"
+node tools/make-project-tiles.mjs
 
 # English pages in the root, Hebrew pages in he/, sitemap.xml and robots.txt
 echo "▶ build-pages.mjs"

@@ -223,6 +223,12 @@ html[dir="rtl"] .btn { font-family: var(--hebrew); }
 .instagram-handle { margin-top: 18px; }
 .projects-more { margin-top: 48px; }
 
+/* One block per project on the Projects page */
+.project { margin-top: 64px; }
+.project-title { font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 0.2em; }
+.project-text { margin: 0.4em 0 0; max-width: 60ch; }
+.project .photo-grid { margin-top: 24px; }
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
