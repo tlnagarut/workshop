@@ -2,41 +2,45 @@
 <html {{htmlAttrs}}>
   <head>
     <meta charset="UTF-8" />
-    <!-- Lets the stylesheet hide the extra gallery photos only when the
-         "show more" button (main.js) can bring them back. -->
+    <!-- Tells the stylesheet that scripts run, so things may start hidden and
+         appear as you scroll (main.js). Without scripts everything just shows. -->
     <script>document.documentElement.classList.add("js")</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <!-- @head -->
     <meta name="author" content="Tomas Janulionis" />
     <meta name="robots" content="index, follow" />
-
     <!-- Local SEO -->
     <meta name="geo.region" content="IL-HA" />
     <meta name="geo.placename" content="Haifa" />
 
     <link rel="icon" href="assets/img/og-image.svg" />
-
+    <!-- Fonts: serif logo (Latin), Heebo (Hebrew + Latin), Inter (Russian) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Heebo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/css/styles.css?v=0" />
   </head>
   <body>
+    <!-- @icons -->
     <!-- @header -->
 
-    <main>
+    <main id="top" class="page">
       <!-- ===================== Projects ===================== -->
       <!-- Finished work: one block per project folder in assets/projects/,
            then a link to Instagram for more. -->
-      <section class="section page-short" id="projects">
-        <div class="container">
-          <p class="eyebrow" data-i18n="projects.eyebrow"></p>
-          <h1 class="page-title" data-i18n="projects.title"></h1>
-          <p class="lede" data-i18n="projects.body"></p>
+      <section class="section" id="projects">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow" data-i18n="projects.eyebrow"></p>
+            <h1 class="page-title" data-i18n="projects.title"></h1>
+            <p data-i18n="projects.body"></p>
+            <div class="tape"></div>
+          </div>
           <!-- @project-list -->
+
           <p class="projects-more" data-i18n="projects.moreBody"></p>
           <!-- @instagram-cta -->
         </div>
@@ -44,9 +48,8 @@
     </main>
 
     <!-- @footer -->
-
+    <!-- @dock -->
     <!-- @gallery -->
-
     <script src="assets/js/main.js?v=0"></script>
   </body>
 </html>

@@ -6,56 +6,96 @@
     <loc>https://tlnagarut.co.il/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://tlnagarut.co.il/he/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://tlnagarut.co.il/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/" />
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://tlnagarut.co.il/workshop.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/workshop.html" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/workshop.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/workshop.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/workshop.html" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://tlnagarut.co.il/he/workshop.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/workshop.html" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/workshop.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/workshop.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/workshop.html" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://tlnagarut.co.il/ru/workshop.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/workshop.html" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/workshop.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/workshop.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/workshop.html" />
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://tlnagarut.co.il/in-the-workshop.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/in-the-workshop.html" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/in-the-workshop.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/in-the-workshop.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/in-the-workshop.html" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://tlnagarut.co.il/he/in-the-workshop.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/in-the-workshop.html" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/in-the-workshop.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/in-the-workshop.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/in-the-workshop.html" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://tlnagarut.co.il/ru/in-the-workshop.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/in-the-workshop.html" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/in-the-workshop.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/in-the-workshop.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/in-the-workshop.html" />
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://tlnagarut.co.il/projects.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/projects.html" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/projects.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/projects.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/projects.html" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
   </url>
   <url>
     <loc>https://tlnagarut.co.il/he/projects.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/projects.html" />
     <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/projects.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/projects.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/projects.html" />
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://tlnagarut.co.il/ru/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/projects.html" />
+    <xhtml:link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/projects.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/projects.html" />
+    <lastmod>2026-11-10</lastmod>
   </url>
 </urlset>

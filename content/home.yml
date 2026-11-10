@@ -1,0 +1,94 @@
+# ============================================================================
+# Home page photos — shared by all three languages. After editing, run:
+#   ./build.sh
+#
+# Every photo here comes from a project folder in assets/projects/<project>/
+# (hero, cards, gallery) or from the "process" group in content/photos.yml
+# (strip). The words that go with them live in about.en.yml / about.he.yml /
+# about.ru.yml under "home".
+#
+# cards:   the eight "What we make" photo cards, in the same order as
+#          home.cards in the text files. size: big / wide / tall / normal.
+# gallery: the tiles under "Recent work". type decides which filter button
+#          shows the tile: kitchens / closets / furniture / commercial.
+#          Tapping a tile opens that project on the Projects page.
+# strip:   the moving row of workshop photos (names from content/photos.yml).
+# ============================================================================
+
+hero:
+  project: house-2017
+  photo: 08-kitchen-island.jpg
+
+cards:
+  - project: house-2017
+    photo: 25-kitchen-island-tall-cabinets.jpg
+    size: big
+  - project: wardrobe-wall-2026
+    photo: 01-wardrobe-wall-tv-niche.jpg
+    size: wide
+  - project: tv-wall-unit-2024
+    photo: 02-lit-shelf-tower.jpg
+    size: normal
+  - project: house-2017
+    photo: 02-library-staircase-shelves.jpg
+    size: normal
+  - project: slatted-wall-2026
+    photo: 01-wood-slat-wall-cabinet.jpg
+    size: tall
+  - project: community-library-2026
+    photo: 18-oak-table-top.jpg
+    size: tall
+  - project: community-library-2026
+    photo: 07-oak-bar-counter.jpg
+    size: wide
+  - project: office-2026
+    photo: 03-office-glass-room.jpg
+    size: wide
+
+gallery:
+  - project: house-2017
+    photo: 08-kitchen-island.jpg
+    size: tall
+    type: kitchens
+  - project: house-2017
+    photo: 25-kitchen-island-tall-cabinets.jpg
+    size: wide
+    type: kitchens
+  - project: wardrobe-wall-2026
+    photo: 01-wardrobe-wall-tv-niche.jpg
+    size: normal
+    type: closets
+  - project: wardrobe-led-2024
+    photo: 01-wardrobe-led-lighting.jpg
+    size: normal
+    type: closets
+  - project: tv-wall-unit-2024
+    photo: 02-lit-shelf-tower.jpg
+    size: tall
+    type: furniture
+  - project: tv-wall-backlit-2024
+    photo: 01-tv-wall-backlit-panels.jpg
+    size: normal
+    type: furniture
+  - project: community-library-2026
+    photo: 07-oak-bar-counter.jpg
+    size: wide
+    type: commercial
+  - project: office-2026
+    photo: 03-office-glass-room.jpg
+    size: normal
+    type: commercial
+
+strip:
+  - table-in-front-of-minimax-si-400es
+  - cabinet-run-labelled-doors-panel-saw
+  - hands-at-work-on-worktop
+  - panel-glue-up-pipe-clamps
+  - sander-on-cabinet-curved-end
+  - fluted-cabinet-open-side
+  - rounded-cabinet-tape-measure
+  - curved-side-clamped
+  - tall-unit-protective-film
+  - cabinets-in-assembly-wide
+  - grey-top-table-fluted-legs
+  - long-cabinet-run-grooved-doors

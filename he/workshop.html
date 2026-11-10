@@ -4,18 +4,22 @@
 <html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tells the stylesheet that scripts run, so things may start hidden and
+         appear as you scroll (main.js). Without scripts everything just shows. -->
+    <script>document.documentElement.classList.add("js")</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>נגרייה ותא צביעה בחיפה | TL נגרות</title>
-    <meta name="description" content="הצצה לנגרייה של TL נגרות ברחוב אריה שנקר בחיפה: מכונת קנטים של SCM, פרזול Blum ותא צביעה בהתזה עם יניקה כלפי מטה." />
+    <meta name="description" content="הצצה לנגרייה של TL נגרות ברחוב אריה שנקר בחיפה: חיתוך CNC (Nesting), מכונת קנטים של SCM, פרזול Blum ותא צביעה בהתזה." />
     <link rel="canonical" href="https://tlnagarut.co.il/he/workshop.html" />
     <link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/workshop.html" />
     <link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/workshop.html" />
+    <link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/workshop.html" />
     <link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/workshop.html" />
 
     <!-- Open Graph / social sharing (WhatsApp, Facebook, …) -->
     <meta property="og:site_name" content="TL נגרות" />
     <meta property="og:title" content="נגרייה ותא צביעה בחיפה | TL נגרות" />
-    <meta property="og:description" content="הצצה לנגרייה של TL נגרות ברחוב אריה שנקר בחיפה: מכונת קנטים של SCM, פרזול Blum ותא צביעה בהתזה עם יניקה כלפי מטה." />
+    <meta property="og:description" content="הצצה לנגרייה של TL נגרות ברחוב אריה שנקר בחיפה: חיתוך CNC (Nesting), מכונת קנטים של SCM, פרזול Blum ותא צביעה בהתזה." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tlnagarut.co.il/he/workshop.html" />
     <meta property="og:image" content="https://tlnagarut.co.il/assets/img/tlnagarut-custom-cabinets-solid-wood-doors-haifa.jpg" />
@@ -25,36 +29,46 @@
     <meta property="og:image:alt" content="TL נגרות – ארונות ודלתות עץ מלא בהזמנה אישית בחיפה" />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ru_RU" />
 
     <!-- Twitter / X card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="נגרייה ותא צביעה בחיפה | TL נגרות" />
-    <meta name="twitter:description" content="הצצה לנגרייה של TL נגרות ברחוב אריה שנקר בחיפה: מכונת קנטים של SCM, פרזול Blum ותא צביעה בהתזה עם יניקה כלפי מטה." />
+    <meta name="twitter:description" content="הצצה לנגרייה של TL נגרות ברחוב אריה שנקר בחיפה: חיתוך CNC (Nesting), מכונת קנטים של SCM, פרזול Blum ותא צביעה בהתזה." />
     <meta name="twitter:image" content="https://tlnagarut.co.il/assets/img/tlnagarut-custom-cabinets-solid-wood-doors-haifa.jpg" />
     <meta name="twitter:image:alt" content="TL נגרות – ארונות ודלתות עץ מלא בהזמנה אישית בחיפה" />
     <meta name="author" content="Tomas Janulionis" />
     <meta name="robots" content="index, follow" />
-
     <!-- Local SEO -->
     <meta name="geo.region" content="IL-HA" />
     <meta name="geo.placename" content="Haifa" />
 
     <link rel="icon" href="../assets/img/og-image.svg" />
-
+    <!-- Fonts: serif logo (Latin), Heebo (Hebrew + Latin), Inter (Russian) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Heebo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
 
-    <link rel="stylesheet" href="../assets/css/styles.css?v=c71ce371" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=c63e00d0" />
   </head>
   <body>
-    <header class="site-header" id="top">
-      <div class="container nav">
-        <a class="brand" href="index.html">TL נגרות</a>
-
-        <nav class="nav-links" id="nav-links" aria-label="Primary">
+    <svg width="0" height="0" class="svg-defs" aria-hidden="true" focusable="false">
+      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5 4.5h3.2l1.6 4-2 1.3a11 11 0 0 0 6.4 6.4l1.3-2 4 1.6V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 6.1 1.5 1.5 0 0 1 5 4.5Z"/></symbol>
+      <symbol id="i-arrow-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m6-6-6 6 6 6"/></symbol>
+      <symbol id="i-arrow-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-chip-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M17 17 7 7m0 8V7h8"/></symbol>
+      <symbol id="i-chip-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7m-8 0h8v8"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 6.5h16v11H4zM4.5 7l7.5 6 7.5-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6.5-5.9-6.5-11a6.5 6.5 0 0 1 13 0c0 5.1-6.5 11-6.5 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4ZM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17.2 6.8h.01"/></symbol>
+    </svg>
+    <header class="hdr is-light" data-header>
+      <div class="hdr__bar wrap">
+        <a class="hdr__brand" href="index.html"><span class="logo" aria-hidden="true"><span class="logo__tl">TL</span><span class="logo__word"><span>nagarut</span><svg class="logo__frame" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="M0 50V0h100v100H50" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg></span></span><span class="sr-only">TL נגרות, לדף הבית</span></a>
+        <nav class="hdr__nav" aria-label="תפריט ראשי">
           <a href="index.html#about">אודות</a>
           <a href="index.html#services">שירותים</a>
           <a href="projects.html">פרויקטים</a>
@@ -62,80 +76,141 @@
           <a href="workshop.html" aria-current="page">הנגרייה</a>
           <a href="in-the-workshop.html">בנגרייה</a>
         </nav>
-
-        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false"
-          aria-controls="nav-links" aria-label="תפריט">
-          <span></span><span></span><span></span>
-        </button>
-
-        <a class="lang-toggle" href="../workshop.html" hreflang="en" lang="en"
-          aria-label="מעבר לאנגלית">English</a>
+        <div class="hdr__actions">
+          <div class="lang" role="group" aria-label="שפה"><a href="../workshop.html" hreflang="en" lang="en" aria-label="English">EN</a><a href="../he/workshop.html" hreflang="he" lang="he" aria-label="עברית" aria-current="true">עב</a><a href="../ru/workshop.html" hreflang="ru" lang="ru" aria-label="Русский">RU</a></div>
+          <a class="hdr__call" href="tel:+972523699346"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="hdr__call-txt">חייגו ללינה</span></a>
+          <a class="hdr__wa" href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+          <button class="hdr__menu" type="button" data-menu-btn aria-expanded="false" aria-controls="menu" aria-label="תפריט"><span></span><span></span></button>
+        </div>
+      </div>
+      <div class="menu on-dark" id="menu" data-menu inert>
+        <nav class="menu__nav wrap" aria-label="תפריט">
+          <a href="index.html#about" style="--i:0">אודות<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="index.html#services" style="--i:1">שירותים<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="projects.html" style="--i:2">פרויקטים<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="index.html#contact" style="--i:3">צור קשר<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="workshop.html" aria-current="page" style="--i:4">הנגרייה<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="in-the-workshop.html" style="--i:5">בנגרייה<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+        </nav>
+        <div class="menu__foot wrap">
+          <a class="btn btn--block" href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg> שלחו תמונה בוואטסאפ</a>
+          <p class="muted">תומאס (אנגלית/רוסית) <a class="num" href="tel:+972533822875">053-382-2875</a><br />לינה (עברית) <a class="num" href="tel:+972523699346">052-369-9346</a></p>
+        </div>
       </div>
     </header>
 
-    <main>
+    <main id="top" class="page">
       <!-- ===================== Workshop ===================== -->
       <section class="section" id="workshop">
-        <div class="container">
-          <p class="eyebrow">הנגרייה</p>
-          <h1 class="page-title">הנגרייה שלנו בחיפה</h1>
-          <p class="lede">הכול מיוצר כאן, בנגרייה שלנו ברחוב אריה שנקר בחיפה – תכנון, חיתוך, הרכבה וגימור בהתזה – ומותקן על ידינו.</p>
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">הנגרייה</p>
+            <h1 class="page-title">הנגרייה שלנו בחיפה</h1>
+            <p>הכול מיוצר כאן, בנגרייה שלנו ברחוב אריה שנקר בחיפה – תכנון, חיתוך, הרכבה וגימור בהתזה – ומותקן על ידינו.</p>
+            <div class="tape"></div>
+          </div>
 
           <h2 class="section-sub">ציוד</h2>
           <div class="cards">
-            <article class="card">
+            <article class="card" data-reveal>
+              <h3>מכונת CNC לחיתוך לוחות (Nesting) Busellato Jet Optima RT21A</h3>
+              <p>חותכת, מכרסמת וקודחת את לוחות הארונות ישר מהשרטוט.</p>
+            </article>
+            <article class="card" data-reveal>
               <h3>חדר מכונות</h3>
               <p>מסור פאנל, מקצועת עובי, מקצועה, מסור סרט ושולחן פרזה לעיבוד מדויק וחוזר של עץ מלא ולוחות.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>מכונת קנטים SCM Minimax</h3>
               <p>מדביקה קנטים ללוחות הארונות, כאן בנגרייה.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>מערכות פרזול Blum</h3>
               <p>מערכות מגירות ופרזול של Blum, המותקנות בארונות שלנו.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>מערכת התזה Fuji D6 HVLP</h3>
               <p>מערכת טורבינה HVLP בת שישה שלבים לגימור בהתזה.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>תא צביעה Raptor עם יניקה כלפי מטה</h3>
               <p>תא צביעה סגור עם זרימת אוויר מסוננת מהתקרה אל הרצפה.</p>
-            </article>
-            <article class="card">
-              <h3>מכונת CNC לחיתוך לוחות (Nesting) Busellato Jet Optima RT – בקרוב</h3>
-              <p>נרכשה לנגרייה ועדיין לא הותקנה.</p>
             </article>
           </div>
           <!-- (workshop-photos: nothing to show yet) -->
         </div>
       </section>
 
+      <!-- ===================== CNC cutting ===================== -->
+      <section class="section on-sand cnc" id="cnc" aria-labelledby="cnc-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">חיתוך CNC</p>
+            <h2 id="cnc-h" data-rise><span class="line">חיתוך CNC, בנגרייה שלנו</span></h2>
+            <p data-reveal>מכונת ה-CNC שלנו לחיתוך לוחות (Nesting), Busellato Jet Optima RT21A, חותכת, מכרסמת וקודחת לוחות ישר מהשרטוט – לרהיטים שלנו, וגם כשירות לנגרים, למעצבים ולקבלנים.</p>
+            <div class="tape"></div>
+          </div>
+          <div class="cards cnc__cards">
+            <article class="card" data-reveal style="--i:0"><h3>נסטינג</h3><p>כל חלקי הארון מסודרים על הלוח ונחתכים במהלך אחד, במדויק ועם מעט פחת.</p></article>
+            <article class="card" data-reveal style="--i:1"><h3>כרסום</h3><p>קשתות, פתחים, חריצים וחלקים בצורות מיוחדות – משרביות ולוחות מחורצים, חיפויי קיר ודלתות מחורצות.</p></article>
+            <article class="card" data-reveal style="--i:2"><h3>קידוח</h3><p>קידוחים לצירים, לנושאי מדפים ולפרזול, באותו מהלך – כך שהכול מתיישב במקום.</p></article>
+            <article class="card" data-reveal style="--i:3"><h3>מהשרטוט שלכם</h3><p>שלחו קובץ DXF או רשימת חיתוך. גם סקיצה או תמונה עם מידות מספיקה – אנחנו מכינים את השרטוט.</p></article>
+          </div>
+          <div class="cnc__trade" data-reveal>
+            <div><h3>לנגרים, למעצבים ולקבלנים</h3><p>שלחו לנו רשימת חיתוך או שרטוטים וקבלו חלקים חתוכים, קדוחים ומוכנים להרכבה. הדבקת קנטים וצביעה בהתזה נעשות באותה נגרייה, אם צריך. איסוף בחיפה, או משלוח בחיפה ובצפון.</p></div>
+            <div class="cnc__actions">
+              <a class="btn" href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%97%D7%99%D7%AA%D7%95%D7%9A%20CNC.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%A9%D7%A8%D7%98%D7%95%D7%98%20%D7%90%D7%95%20%D7%A8%D7%A9%D7%99%D7%9E%D7%AA%20%D7%97%D7%99%D7%AA%D7%95%D7%9A." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg> הצעת מחיר ל-CNC בוואטסאפ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ===================== Spray finishing ===================== -->
-      <section class="section section-alt" id="spray-finishing">
-        <div class="container">
-          <h2>גימור בהתזה</h2>
-          <p class="lede">צובעים אצלנו. מההתחלה ועד הסוף.</p>
+      <section class="section" id="spray-finishing">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>גימור בהתזה</h2>
+            <p>צובעים אצלנו. מההתחלה ועד הסוף.</p>
+            <div class="tape"></div>
+          </div>
           <ul class="fact-list">
             <li>תא צביעה Raptor עם יניקה כלפי מטה – דלתות זכוכית כפולות, רצפת סבכה ליניקה כלפי מטה, לוח בקרה דיגיטלי וזרימת אוויר מסוננת מהתקרה אל הרצפה.</li>
             <li>מערכת טורבינה Fuji D6 HVLP בת שישה שלבים.</li>
             <li>ציפויי פוליאוריתן דו-רכיביים (2K), המיושמים ומתייבשים בסביבה מבוקרת.</li>
           </ul>
-          <a class="btn btn-primary" href="index.html#contact">שאלו אותנו על גימורים</a>
+          <a class="btn btn--line" href="index.html#contact">שאלו אותנו על גימורים</a>
           <!-- (spray-photos: nothing to show yet) -->
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <span>TL נגרות · מיוצר בחיפה</span>
-        <span class="footer-build">עודכן לאחרונה 2026.10.14 12:02</span>
-        <span>© 2026 · כל הזכויות שמורות</span>
+    <footer class="ftr on-dark">
+      <div class="wrap ftr__grid">
+        <div class="ftr__brand"><p class="ftr__name"><span class="logo" aria-hidden="true"><span class="logo__tl">TL</span><span class="logo__word"><span>nagarut</span><svg class="logo__frame" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="M0 50V0h100v100H50" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg></span></span><span class="sr-only">TL נגרות</span></p><p class="muted">אנחנו מייצרים ארונות ומטבחים בהזמנה אישית, רהיטים בנויים ודלתות עץ מלא, ועושים גם עבודות מסחריות. הכול נעשה בנגרייה שלנו – תכנון, חיתוך, הרכבה וגימור בהתזה – ואנחנו מובילים ומתקינים בעצמנו, בחיפה ובצפון.</p></div>
+        <div><h2 class="ftr__h">יצירת קשר</h2><ul class="ftr__list">
+          <li><a href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>לינה (עברית) <span class="num">052-369-9346</span></span></a></li>
+          <li><a href="https://wa.me/972533822875?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>תומאס (אנגלית/רוסית) <span class="num">053-382-2875</span></span></a></li>
+          <li><a href="mailto:tlnagarut@outlook.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span class="num">tlnagarut@outlook.com</span></a></li>
+        </ul></div>
+        <div><h2 class="ftr__h">הנגרייה</h2><ul class="ftr__list">
+          <li class="muted"><address>רחוב אריה שנקר 35, חיפה, ישראל</address></li>
+          <li><a href="https://www.instagram.com/tlnagarut/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg><span class="num">@tlnagarut</span></a></li>
+        </ul></div>
+        <div><h2 class="ftr__h">באתר</h2><ul class="ftr__list">
+          <li><a href="index.html#about">אודות</a></li>
+          <li><a href="index.html#services">שירותים</a></li>
+          <li><a href="projects.html">פרויקטים</a></li>
+          <li><a href="workshop.html">הנגרייה</a></li>
+          <li><a href="in-the-workshop.html">בנגרייה</a></li>
+          <li><a href="index.html#contact">צור קשר</a></li>
+        </ul></div>
+      </div>
+      <div class="wrap ftr__base muted">
+        <span>© <span class="num">2026</span> TL נגרות · כל הזכויות שמורות · מיוצר בחיפה</span>
+        <span class="footer-build">עודכן לאחרונה <span class="num">2026.11.10 07:07</span></span>
       </div>
     </footer>
-
+    <div class="dock" data-fab><a class="dock__wa" href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>שלחו תמונה בוואטסאפ</span></a><a class="dock__call" href="tel:+972523699346"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="sr-only">חייגו ללינה, 052-369-9346</span></a></div>
     <div class="gallery" id="gallery" hidden role="dialog" aria-modal="true" aria-label="תצוגת תמונות">
       <button class="gallery-close" id="gallery-close" type="button" aria-label="סגירה">×</button>
       <button class="gallery-nav gallery-prev" id="gallery-prev" type="button" aria-label="התמונה הקודמת">‹</button>
@@ -145,7 +220,6 @@
       </figure>
       <button class="gallery-nav gallery-next" id="gallery-next" type="button" aria-label="התמונה הבאה">›</button>
     </div>
-
-    <script src="../assets/js/main.js?v=621e99b6"></script>
+    <script src="../assets/js/main.js?v=85b4a19a"></script>
   </body>
 </html>

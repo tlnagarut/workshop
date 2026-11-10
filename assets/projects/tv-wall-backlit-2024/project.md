@@ -5,8 +5,10 @@
 order: 4
 title_en: "TV wall"
 title_he: "קיר טלוויזיה"
+title_ru: "ТВ-стена"
 description_en: "TV wall with backlit panels and a floating TV unit."
 description_he: "קיר טלוויזיה עם פאנלים מוארים מאחור ומזנון צף."
+description_ru: "ТВ-стена с подсвеченными панелями и подвесной тумбой."
 photos:
   - file: 01-tv-wall-backlit-panels.jpg
     alt_en: TV wall with backlit panels and a floating TV unit

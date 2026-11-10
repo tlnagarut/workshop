@@ -4,15 +4,16 @@
 <html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <!-- Lets the stylesheet hide the extra gallery photos only when the
-         "show more" button (main.js) can bring them back. -->
+    <!-- Tells the stylesheet that scripts run, so things may start hidden and
+         appear as you scroll (main.js). Without scripts everything just shows. -->
     <script>document.documentElement.classList.add("js")</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>עבודות אחרונות – ארונות בהזמנה בחיפה | TL נגרות</title>
     <meta name="description" content="תמונות של עבודות גמורות של TL נגרות בחיפה: מדפים בנויים, ארונות, ספריות ויחידת קיר לטלוויזיה. עוד באינסטגרם שלנו, @tlnagarut." />
     <link rel="canonical" href="https://tlnagarut.co.il/he/projects.html" />
     <link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/projects.html" />
     <link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/projects.html" />
+    <link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/projects.html" />
     <link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/projects.html" />
 
     <!-- Open Graph / social sharing (WhatsApp, Facebook, …) -->
@@ -28,6 +29,7 @@
     <meta property="og:image:alt" content="TL נגרות – ארונות ודלתות עץ מלא בהזמנה אישית בחיפה" />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ru_RU" />
 
     <!-- Twitter / X card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -37,27 +39,36 @@
     <meta name="twitter:image:alt" content="TL נגרות – ארונות ודלתות עץ מלא בהזמנה אישית בחיפה" />
     <meta name="author" content="Tomas Janulionis" />
     <meta name="robots" content="index, follow" />
-
     <!-- Local SEO -->
     <meta name="geo.region" content="IL-HA" />
     <meta name="geo.placename" content="Haifa" />
 
     <link rel="icon" href="../assets/img/og-image.svg" />
-
+    <!-- Fonts: serif logo (Latin), Heebo (Hebrew + Latin), Inter (Russian) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Heebo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
 
-    <link rel="stylesheet" href="../assets/css/styles.css?v=c71ce371" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=c63e00d0" />
   </head>
   <body>
-    <header class="site-header" id="top">
-      <div class="container nav">
-        <a class="brand" href="index.html">TL נגרות</a>
-
-        <nav class="nav-links" id="nav-links" aria-label="Primary">
+    <svg width="0" height="0" class="svg-defs" aria-hidden="true" focusable="false">
+      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5 4.5h3.2l1.6 4-2 1.3a11 11 0 0 0 6.4 6.4l1.3-2 4 1.6V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 6.1 1.5 1.5 0 0 1 5 4.5Z"/></symbol>
+      <symbol id="i-arrow-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m6-6-6 6 6 6"/></symbol>
+      <symbol id="i-arrow-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-chip-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M17 17 7 7m0 8V7h8"/></symbol>
+      <symbol id="i-chip-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7m-8 0h8v8"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 6.5h16v11H4zM4.5 7l7.5 6 7.5-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6.5-5.9-6.5-11a6.5 6.5 0 0 1 13 0c0 5.1-6.5 11-6.5 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4ZM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17.2 6.8h.01"/></symbol>
+    </svg>
+    <header class="hdr is-light" data-header>
+      <div class="hdr__bar wrap">
+        <a class="hdr__brand" href="index.html"><span class="logo" aria-hidden="true"><span class="logo__tl">TL</span><span class="logo__word"><span>nagarut</span><svg class="logo__frame" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="M0 50V0h100v100H50" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg></span></span><span class="sr-only">TL נגרות, לדף הבית</span></a>
+        <nav class="hdr__nav" aria-label="תפריט ראשי">
           <a href="index.html#about">אודות</a>
           <a href="index.html#services">שירותים</a>
           <a href="projects.html" aria-current="page">פרויקטים</a>
@@ -65,36 +76,51 @@
           <a href="workshop.html">הנגרייה</a>
           <a href="in-the-workshop.html">בנגרייה</a>
         </nav>
-
-        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false"
-          aria-controls="nav-links" aria-label="תפריט">
-          <span></span><span></span><span></span>
-        </button>
-
-        <a class="lang-toggle" href="../projects.html" hreflang="en" lang="en"
-          aria-label="מעבר לאנגלית">English</a>
+        <div class="hdr__actions">
+          <div class="lang" role="group" aria-label="שפה"><a href="../projects.html" hreflang="en" lang="en" aria-label="English">EN</a><a href="../he/projects.html" hreflang="he" lang="he" aria-label="עברית" aria-current="true">עב</a><a href="../ru/projects.html" hreflang="ru" lang="ru" aria-label="Русский">RU</a></div>
+          <a class="hdr__call" href="tel:+972523699346"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="hdr__call-txt">חייגו ללינה</span></a>
+          <a class="hdr__wa" href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+          <button class="hdr__menu" type="button" data-menu-btn aria-expanded="false" aria-controls="menu" aria-label="תפריט"><span></span><span></span></button>
+        </div>
+      </div>
+      <div class="menu on-dark" id="menu" data-menu inert>
+        <nav class="menu__nav wrap" aria-label="תפריט">
+          <a href="index.html#about" style="--i:0">אודות<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="index.html#services" style="--i:1">שירותים<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="projects.html" aria-current="page" style="--i:2">פרויקטים<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="index.html#contact" style="--i:3">צור קשר<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="workshop.html" style="--i:4">הנגרייה<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+          <a href="in-the-workshop.html" style="--i:5">בנגרייה<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-l"/></svg></a>
+        </nav>
+        <div class="menu__foot wrap">
+          <a class="btn btn--block" href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg> שלחו תמונה בוואטסאפ</a>
+          <p class="muted">תומאס (אנגלית/רוסית) <a class="num" href="tel:+972533822875">053-382-2875</a><br />לינה (עברית) <a class="num" href="tel:+972523699346">052-369-9346</a></p>
+        </div>
       </div>
     </header>
 
-    <main>
+    <main id="top" class="page">
       <!-- ===================== Projects ===================== -->
       <!-- Finished work: one block per project folder in ../assets/projects/,
            then a link to Instagram for more. -->
-      <section class="section page-short" id="projects">
-        <div class="container">
-          <p class="eyebrow">העבודות שלנו</p>
-          <h1 class="page-title">עבודות אחרונות</h1>
-          <p class="lede">מבחר עבודות גמורות, שיוצרו בנגרייה שלנו והותקנו על ידינו. הקישו על תמונה כדי לראות אותה בגדול.</p>
+      <section class="section" id="projects">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">העבודות שלנו</p>
+            <h1 class="page-title">עבודות אחרונות</h1>
+            <p>מבחר עבודות גמורות, שיוצרו בנגרייה שלנו והותקנו על ידינו. הקישו על תמונה כדי לראות אותה בגדול.</p>
+            <div class="tape"></div>
+          </div>
           <article class="project" id="house-2017">
             <h2 class="project-title">פרויקט בית, 2017</h2>
             <p class="project-text">כל עבודות הנגרות בבית: המטבח, מדפי הספרייה לאורך המדרגות, קיר הטלוויזיה, פינת עבודה וארונות מובנים.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/01-tv-wall-floating-media-unit.jpg" data-width="2000" data-height="1873" data-caption="קיר טלוויזיה עם חיפוי כהה ויחידת מדיה צפה ארוכה, ליד דלתות פתוחות לגינה"><img src="../assets/projects/house-2017/tiles/01-tv-wall-floating-media-unit.jpg" width="800" height="749" decoding="async" alt="קיר טלוויזיה עם חיפוי כהה ויחידת מדיה צפה ארוכה, ליד דלתות פתוחות לגינה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/02-library-staircase-shelves.jpg" data-width="1869" data-height="2000" data-caption="קיר מדפי ספרים מוארים לצד מדרגות עם מעקה זכוכית"><img src="../assets/projects/house-2017/tiles/02-library-staircase-shelves.jpg" width="800" height="856" decoding="async" alt="קיר מדפי ספרים מוארים לצד מדרגות עם מעקה זכוכית" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/03-library-shelves-led.jpg" data-width="1346" data-height="2000" data-caption="מדפי ספרים עם פס לד מתחת לכל מדף"><img src="../assets/projects/house-2017/tiles/03-library-shelves-led.jpg" width="800" height="1189" decoding="async" alt="מדפי ספרים עם פס לד מתחת לכל מדף" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/04-staircase-lit-shelving-niche.jpg" data-width="1407" data-height="2000" data-caption="מדרגות צפות ליד נישה גבוהה עם מדפים מוארים"><img src="../assets/projects/house-2017/tiles/04-staircase-lit-shelving-niche.jpg" width="800" height="1137" loading="lazy" decoding="async" alt="מדרגות צפות ליד נישה גבוהה עם מדפים מוארים" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/05-built-in-shelving-niche.jpg" data-width="2000" data-height="1568" data-caption="נישת מדפים פתוחה ומובנית בין ארונות גבוהים, ליד המדרגות"><img src="../assets/projects/house-2017/tiles/05-built-in-shelving-niche.jpg" width="800" height="627" loading="lazy" decoding="async" alt="נישת מדפים פתוחה ומובנית בין ארונות גבוהים, ליד המדרגות" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/06-alcove-shelves-floating-unit.jpg" data-width="1451" data-height="2000" data-caption="מדפי ספרים בגומחה וארון צף ליד אח"><img src="../assets/projects/house-2017/tiles/06-alcove-shelves-floating-unit.jpg" width="800" height="1103" loading="lazy" decoding="async" alt="מדפי ספרים בגומחה וארון צף ליד אח" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/01-tv-wall-floating-media-unit.jpg" data-width="2000" data-height="1873" data-caption="קיר טלוויזיה עם חיפוי כהה ויחידת מדיה צפה ארוכה, ליד דלתות פתוחות לגינה"><img src="../assets/projects/house-2017/tiles/01-tv-wall-floating-media-unit.jpg" width="800" height="749" decoding="async" alt="קיר טלוויזיה עם חיפוי כהה ויחידת מדיה צפה ארוכה, ליד דלתות פתוחות לגינה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/02-library-staircase-shelves.jpg" data-width="1869" data-height="2000" data-caption="קיר מדפי ספרים מוארים לצד מדרגות עם מעקה זכוכית"><img src="../assets/projects/house-2017/tiles/02-library-staircase-shelves.jpg" width="800" height="856" decoding="async" alt="קיר מדפי ספרים מוארים לצד מדרגות עם מעקה זכוכית" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/03-library-shelves-led.jpg" data-width="1346" data-height="2000" data-caption="מדפי ספרים עם פס לד מתחת לכל מדף"><img src="../assets/projects/house-2017/tiles/03-library-shelves-led.jpg" width="800" height="1189" decoding="async" alt="מדפי ספרים עם פס לד מתחת לכל מדף" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/04-staircase-lit-shelving-niche.jpg" data-width="1407" data-height="2000" data-caption="מדרגות צפות ליד נישה גבוהה עם מדפים מוארים"><img src="../assets/projects/house-2017/tiles/04-staircase-lit-shelving-niche.jpg" width="800" height="1137" loading="lazy" decoding="async" alt="מדרגות צפות ליד נישה גבוהה עם מדפים מוארים" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/05-built-in-shelving-niche.jpg" data-width="2000" data-height="1568" data-caption="נישת מדפים פתוחה ומובנית בין ארונות גבוהים, ליד המדרגות"><img src="../assets/projects/house-2017/tiles/05-built-in-shelving-niche.jpg" width="800" height="627" loading="lazy" decoding="async" alt="נישת מדפים פתוחה ומובנית בין ארונות גבוהים, ליד המדרגות" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/06-alcove-shelves-floating-unit.jpg" data-width="1451" data-height="2000" data-caption="מדפי ספרים בגומחה וארון צף ליד אח"><img src="../assets/projects/house-2017/tiles/06-alcove-shelves-floating-unit.jpg" width="800" height="1103" loading="lazy" decoding="async" alt="מדפי ספרים בגומחה וארון צף ליד אח" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/07-kitchen-island-dining.jpg" data-width="2000" data-height="1685" data-caption="אי מטבח עם כיסאות בר וארונות גבוהים, פינת אוכל ברקע"><img src="../assets/projects/house-2017/tiles/07-kitchen-island-dining.jpg" width="800" height="674" loading="lazy" decoding="async" alt="אי מטבח עם כיסאות בר וארונות גבוהים, פינת אוכל ברקע" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/08-kitchen-island.jpg" data-width="2000" data-height="1807" data-caption="אי מטבח עם כיור, ויחידות קיר עם חיפוי כהה מאחור"><img src="../assets/projects/house-2017/tiles/08-kitchen-island.jpg" width="800" height="723" loading="lazy" decoding="async" alt="אי מטבח עם כיור, ויחידות קיר עם חיפוי כהה מאחור" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/09-desk-and-wine-cooler-unit.jpg" data-width="1937" data-height="2000" data-caption="שולחן עבודה מובנה עם יחידת מקרר יין וקיר בחיפוי כהה"><img src="../assets/projects/house-2017/tiles/09-desk-and-wine-cooler-unit.jpg" width="800" height="826" loading="lazy" decoding="async" alt="שולחן עבודה מובנה עם יחידת מקרר יין וקיר בחיפוי כהה" /></button></li>
@@ -118,18 +144,18 @@
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/27-rear-view-evening.jpg" data-width="1200" data-height="1800" data-caption="חזית הבית האחורית בערב, מדפי הספרים המוארים נראים מבעד לחלונות"><img src="../assets/projects/house-2017/tiles/27-rear-view-evening.jpg" width="800" height="1200" loading="lazy" decoding="async" alt="חזית הבית האחורית בערב, מדפי הספרים המוארים נראים מבעד לחלונות" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-house-2017" data-webp="" data-jpg="" data-src="../assets/projects/house-2017/28-library-window-evening.jpg" data-width="1288" data-height="1800" data-caption="מדפי ספרים מוארים מבעד לחלון גבוה, בערב"><img src="../assets/projects/house-2017/tiles/28-library-window-evening.jpg" width="800" height="1118" loading="lazy" decoding="async" alt="מדפי ספרים מוארים מבעד לחלון גבוה, בערב" /></button></li>
             </ul>
-            <button class="btn btn-outline photo-more" type="button" data-show-more>הצג את כל התמונות</button>
+            <button class="btn btn--line photo-more" type="button" data-show-more>הצג את כל התמונות</button>
           </article>
           <article class="project" id="community-library-2026">
             <h2 class="project-title">ספרייה קהילתית</h2>
             <p class="project-text">כונניות ספרים, דלפק בר עם משטח עץ, ארונות ומטבחון לספרייה קהילתית.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/01-library-main-wall.jpg" data-width="1600" data-height="1200" data-caption="אולם הספרייה עם קיר כונניות, ספות ושולחנות קריאה"><img src="../assets/projects/community-library-2026/tiles/01-library-main-wall.jpg" width="800" height="600" loading="lazy" decoding="async" alt="אולם הספרייה עם קיר כונניות, ספות ושולחנות קריאה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/02-reading-corner-bookshelves.jpg" data-width="1600" data-height="1200" data-caption="פינת קריאה לילדים עם מדפי ספרים נמוכים"><img src="../assets/projects/community-library-2026/tiles/02-reading-corner-bookshelves.jpg" width="800" height="600" loading="lazy" decoding="async" alt="פינת קריאה לילדים עם מדפי ספרים נמוכים" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/03-bookcase-arch.jpg" data-width="1600" data-height="1200" data-caption="כונניות ספרים היוצרות מעבר"><img src="../assets/projects/community-library-2026/tiles/03-bookcase-arch.jpg" width="800" height="600" loading="lazy" decoding="async" alt="כונניות ספרים היוצרות מעבר" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/04-bookcases-by-windows.jpg" data-width="1800" data-height="1350" data-caption="כונניות גבוהות בין החלונות"><img src="../assets/projects/community-library-2026/tiles/04-bookcases-by-windows.jpg" width="800" height="600" loading="lazy" decoding="async" alt="כונניות גבוהות בין החלונות" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/05-bookcase-aisle.jpg" data-width="1500" data-height="2000" data-caption="צד של כוננית גבוהה, ושולחנות ברקע"><img src="../assets/projects/community-library-2026/tiles/05-bookcase-aisle.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="צד של כוננית גבוהה, ושולחנות ברקע" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/06-library-hall.jpg" data-width="1600" data-height="1200" data-caption="אולם הספרייה עם כונניות לאורך הקירות ושולחנות"><img src="../assets/projects/community-library-2026/tiles/06-library-hall.jpg" width="800" height="600" loading="lazy" decoding="async" alt="אולם הספרייה עם כונניות לאורך הקירות ושולחנות" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/01-library-main-wall.jpg" data-width="1600" data-height="1200" data-caption="אולם הספרייה עם קיר כונניות, ספות ושולחנות קריאה"><img src="../assets/projects/community-library-2026/tiles/01-library-main-wall.jpg" width="800" height="600" loading="lazy" decoding="async" alt="אולם הספרייה עם קיר כונניות, ספות ושולחנות קריאה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/02-reading-corner-bookshelves.jpg" data-width="1600" data-height="1200" data-caption="פינת קריאה לילדים עם מדפי ספרים נמוכים"><img src="../assets/projects/community-library-2026/tiles/02-reading-corner-bookshelves.jpg" width="800" height="600" loading="lazy" decoding="async" alt="פינת קריאה לילדים עם מדפי ספרים נמוכים" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/03-bookcase-arch.jpg" data-width="1600" data-height="1200" data-caption="כונניות ספרים היוצרות מעבר"><img src="../assets/projects/community-library-2026/tiles/03-bookcase-arch.jpg" width="800" height="600" loading="lazy" decoding="async" alt="כונניות ספרים היוצרות מעבר" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/04-bookcases-by-windows.jpg" data-width="1800" data-height="1350" data-caption="כונניות גבוהות בין החלונות"><img src="../assets/projects/community-library-2026/tiles/04-bookcases-by-windows.jpg" width="800" height="600" loading="lazy" decoding="async" alt="כונניות גבוהות בין החלונות" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/05-bookcase-aisle.jpg" data-width="1500" data-height="2000" data-caption="צד של כוננית גבוהה, ושולחנות ברקע"><img src="../assets/projects/community-library-2026/tiles/05-bookcase-aisle.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="צד של כוננית גבוהה, ושולחנות ברקע" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/06-library-hall.jpg" data-width="1600" data-height="1200" data-caption="אולם הספרייה עם כונניות לאורך הקירות ושולחנות"><img src="../assets/projects/community-library-2026/tiles/06-library-hall.jpg" width="800" height="600" loading="lazy" decoding="async" alt="אולם הספרייה עם כונניות לאורך הקירות ושולחנות" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/07-oak-bar-counter.jpg" data-width="2000" data-height="1500" data-caption="דלפק בר עם משטח עץ וכיסאות בר"><img src="../assets/projects/community-library-2026/tiles/07-oak-bar-counter.jpg" width="800" height="600" loading="lazy" decoding="async" alt="דלפק בר עם משטח עץ וכיסאות בר" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/08-oak-counter-drawers.jpg" data-width="1600" data-height="1200" data-caption="משטח עץ עם מגירות מתחתיו"><img src="../assets/projects/community-library-2026/tiles/08-oak-counter-drawers.jpg" width="800" height="600" loading="lazy" decoding="async" alt="משטח עץ עם מגירות מתחתיו" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/09-display-shelves-cabinets.jpg" data-width="1500" data-height="2000" data-caption="מדפי תצוגה מעל ארונות נמוכים"><img src="../assets/projects/community-library-2026/tiles/09-display-shelves-cabinets.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מדפי תצוגה מעל ארונות נמוכים" /></button></li>
@@ -169,105 +195,125 @@
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/43-oak-table-kitchenette-door.jpg" data-width="2000" data-height="1500" data-caption="משטח עץ, מדפי תצוגה והדלת למטבחון"><img src="../assets/projects/community-library-2026/tiles/43-oak-table-kitchenette-door.jpg" width="800" height="600" loading="lazy" decoding="async" alt="משטח עץ, מדפי תצוגה והדלת למטבחון" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-community-library-2026" data-webp="" data-jpg="" data-src="../assets/projects/community-library-2026/44-storage-room-shelves.jpg" data-width="1500" data-height="2000" data-caption="חדר אחסון עם יחידות מדפים וארון נמוך"><img src="../assets/projects/community-library-2026/tiles/44-storage-room-shelves.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="חדר אחסון עם יחידות מדפים וארון נמוך" /></button></li>
             </ul>
-            <button class="btn btn-outline photo-more" type="button" data-show-more>הצג את כל התמונות</button>
+            <button class="btn btn--line photo-more" type="button" data-show-more>הצג את כל התמונות</button>
           </article>
           <article class="project" id="tv-wall-unit-2024">
             <h2 class="project-title">מזנון טלוויזיה</h2>
             <p class="project-text">מזנון צף עם מגדל מדפים מואר.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/01-tv-unit-lit-shelves.jpg" data-width="2000" data-height="1500" data-caption="מזנון צף עם דלתות שחורות ומגדל מדפים מואר"><img src="../assets/projects/tv-wall-unit-2024/tiles/01-tv-unit-lit-shelves.jpg" width="800" height="600" loading="lazy" decoding="async" alt="מזנון צף עם דלתות שחורות ומגדל מדפים מואר" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/02-lit-shelf-tower.jpg" data-width="1500" data-height="2000" data-caption="מגדל מדפים מואר ליד ארון שחור גבוה"><img src="../assets/projects/tv-wall-unit-2024/tiles/02-lit-shelf-tower.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מגדל מדפים מואר ליד ארון שחור גבוה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/03-tv-unit-room.jpg" data-width="1500" data-height="2000" data-caption="המזנון ומגדל המדפים בחדר הריק"><img src="../assets/projects/tv-wall-unit-2024/tiles/03-tv-unit-room.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="המזנון ומגדל המדפים בחדר הריק" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/04-tv-unit-drawer.jpg" data-width="1500" data-height="2000" data-caption="המזנון עם מגירה פתוחה"><img src="../assets/projects/tv-wall-unit-2024/tiles/04-tv-unit-drawer.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="המזנון עם מגירה פתוחה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/05-tv-unit-floating.jpg" data-width="2000" data-height="1125" data-caption="מזנון צף עם תאורה מתחתיו"><img src="../assets/projects/tv-wall-unit-2024/tiles/05-tv-unit-floating.jpg" width="800" height="450" loading="lazy" decoding="async" alt="מזנון צף עם תאורה מתחתיו" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/06-tv-unit-wall.jpg" data-width="2000" data-height="1500" data-caption="המזנון לאורך הקיר עם מגדל המדפים"><img src="../assets/projects/tv-wall-unit-2024/tiles/06-tv-unit-wall.jpg" width="800" height="600" loading="lazy" decoding="async" alt="המזנון לאורך הקיר עם מגדל המדפים" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/01-tv-unit-lit-shelves.jpg" data-width="2000" data-height="1500" data-caption="מזנון צף עם דלתות שחורות ומגדל מדפים מואר"><img src="../assets/projects/tv-wall-unit-2024/tiles/01-tv-unit-lit-shelves.jpg" width="800" height="600" loading="lazy" decoding="async" alt="מזנון צף עם דלתות שחורות ומגדל מדפים מואר" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/02-lit-shelf-tower.jpg" data-width="1500" data-height="2000" data-caption="מגדל מדפים מואר ליד ארון שחור גבוה"><img src="../assets/projects/tv-wall-unit-2024/tiles/02-lit-shelf-tower.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מגדל מדפים מואר ליד ארון שחור גבוה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/03-tv-unit-room.jpg" data-width="1500" data-height="2000" data-caption="המזנון ומגדל המדפים בחדר הריק"><img src="../assets/projects/tv-wall-unit-2024/tiles/03-tv-unit-room.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="המזנון ומגדל המדפים בחדר הריק" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/04-tv-unit-drawer.jpg" data-width="1500" data-height="2000" data-caption="המזנון עם מגירה פתוחה"><img src="../assets/projects/tv-wall-unit-2024/tiles/04-tv-unit-drawer.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="המזנון עם מגירה פתוחה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/05-tv-unit-floating.jpg" data-width="2000" data-height="1125" data-caption="מזנון צף עם תאורה מתחתיו"><img src="../assets/projects/tv-wall-unit-2024/tiles/05-tv-unit-floating.jpg" width="800" height="450" loading="lazy" decoding="async" alt="מזנון צף עם תאורה מתחתיו" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/06-tv-unit-wall.jpg" data-width="2000" data-height="1500" data-caption="המזנון לאורך הקיר עם מגדל המדפים"><img src="../assets/projects/tv-wall-unit-2024/tiles/06-tv-unit-wall.jpg" width="800" height="600" loading="lazy" decoding="async" alt="המזנון לאורך הקיר עם מגדל המדפים" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/07-lit-shelves-close.jpg" data-width="1500" data-height="2000" data-caption="מדפים מוארים, מקרוב"><img src="../assets/projects/tv-wall-unit-2024/tiles/07-lit-shelves-close.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מדפים מוארים, מקרוב" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/08-lit-shelf-tower-front.jpg" data-width="1500" data-height="2000" data-caption="מגדל המדפים המואר, מלפנים"><img src="../assets/projects/tv-wall-unit-2024/tiles/08-lit-shelf-tower-front.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מגדל המדפים המואר, מלפנים" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/09-tv-unit-shelf-detail.jpg" data-width="2000" data-height="1500" data-caption="המזנון ובסיס מגדל המדפים, מהצד"><img src="../assets/projects/tv-wall-unit-2024/tiles/09-tv-unit-shelf-detail.jpg" width="800" height="600" loading="lazy" decoding="async" alt="המזנון ובסיס מגדל המדפים, מהצד" /></button></li>
               <li class="photo-extra"><button class="photo-tile" type="button" data-gallery="project-tv-wall-unit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-unit-2024/10-floating-tv-unit-led.jpg" data-width="2000" data-height="1500" data-caption="מזנון צף עם תאורת לד מתחתיו ומדף פתוח בקצה"><img src="../assets/projects/tv-wall-unit-2024/tiles/10-floating-tv-unit-led.jpg" width="800" height="600" loading="lazy" decoding="async" alt="מזנון צף עם תאורת לד מתחתיו ומדף פתוח בקצה" /></button></li>
             </ul>
-            <button class="btn btn-outline photo-more" type="button" data-show-more>הצג את כל התמונות</button>
+            <button class="btn btn--line photo-more" type="button" data-show-more>הצג את כל התמונות</button>
           </article>
           <article class="project" id="tv-wall-backlit-2024">
             <h2 class="project-title">קיר טלוויזיה</h2>
             <p class="project-text">קיר טלוויזיה עם פאנלים מוארים מאחור ומזנון צף.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/01-tv-wall-backlit-panels.jpg" data-width="2000" data-height="1500" data-caption="קיר טלוויזיה עם פאנלים מוארים מאחור ומזנון צף"><img src="../assets/projects/tv-wall-backlit-2024/tiles/01-tv-wall-backlit-panels.jpg" width="800" height="600" loading="lazy" decoding="async" alt="קיר טלוויזיה עם פאנלים מוארים מאחור ומזנון צף" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/02-tv-wall-living-room.jpg" data-width="2000" data-height="1500" data-caption="קיר הטלוויזיה בסלון"><img src="../assets/projects/tv-wall-backlit-2024/tiles/02-tv-wall-living-room.jpg" width="800" height="600" loading="lazy" decoding="async" alt="קיר הטלוויזיה בסלון" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/03-tv-wall-detail.jpg" data-width="1500" data-height="2000" data-caption="שולי קיר הפאנלים המואר סביב הטלוויזיה"><img src="../assets/projects/tv-wall-backlit-2024/tiles/03-tv-wall-detail.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שולי קיר הפאנלים המואר סביב הטלוויזיה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/04-tv-wall-side-detail.jpg" data-width="1500" data-height="2000" data-caption="מבט מהצד על הפאנלים והמזנון הצף"><img src="../assets/projects/tv-wall-backlit-2024/tiles/04-tv-wall-side-detail.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מבט מהצד על הפאנלים והמזנון הצף" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/01-tv-wall-backlit-panels.jpg" data-width="2000" data-height="1500" data-caption="קיר טלוויזיה עם פאנלים מוארים מאחור ומזנון צף"><img src="../assets/projects/tv-wall-backlit-2024/tiles/01-tv-wall-backlit-panels.jpg" width="800" height="600" loading="lazy" decoding="async" alt="קיר טלוויזיה עם פאנלים מוארים מאחור ומזנון צף" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/02-tv-wall-living-room.jpg" data-width="2000" data-height="1500" data-caption="קיר הטלוויזיה בסלון"><img src="../assets/projects/tv-wall-backlit-2024/tiles/02-tv-wall-living-room.jpg" width="800" height="600" loading="lazy" decoding="async" alt="קיר הטלוויזיה בסלון" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/03-tv-wall-detail.jpg" data-width="1500" data-height="2000" data-caption="שולי קיר הפאנלים המואר סביב הטלוויזיה"><img src="../assets/projects/tv-wall-backlit-2024/tiles/03-tv-wall-detail.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שולי קיר הפאנלים המואר סביב הטלוויזיה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-tv-wall-backlit-2024" data-webp="" data-jpg="" data-src="../assets/projects/tv-wall-backlit-2024/04-tv-wall-side-detail.jpg" data-width="1500" data-height="2000" data-caption="מבט מהצד על הפאנלים והמזנון הצף"><img src="../assets/projects/tv-wall-backlit-2024/tiles/04-tv-wall-side-detail.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מבט מהצד על הפאנלים והמזנון הצף" /></button></li>
             </ul>
           </article>
           <article class="project" id="office-2026">
             <h2 class="project-title">משרד</h2>
             <p class="project-text">שולחנות עבודה וארונות אחסון נמוכים למשרדים עם קירות זכוכית.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/01-office-desk-cabinets.jpg" data-width="2000" data-height="1500" data-caption="שולחן עבודה וארונות אחסון נמוכים לאורך הקירות"><img src="../assets/projects/office-2026/tiles/01-office-desk-cabinets.jpg" width="800" height="600" loading="lazy" decoding="async" alt="שולחן עבודה וארונות אחסון נמוכים לאורך הקירות" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/02-office-desk.jpg" data-width="1500" data-height="2000" data-caption="שולחן עבודה עם ארונות ומגירות נמוכים מאחוריו"><img src="../assets/projects/office-2026/tiles/02-office-desk.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שולחן עבודה עם ארונות ומגירות נמוכים מאחוריו" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/03-office-glass-room.jpg" data-width="2000" data-height="1500" data-caption="משרד עם קירות זכוכית, שולחן עבודה וארונות נמוכים"><img src="../assets/projects/office-2026/tiles/03-office-glass-room.jpg" width="800" height="600" loading="lazy" decoding="async" alt="משרד עם קירות זכוכית, שולחן עבודה וארונות נמוכים" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/04-office-desk-glass.jpg" data-width="2000" data-height="1500" data-caption="שולחן העבודה והארונות מבעד לדלת הזכוכית"><img src="../assets/projects/office-2026/tiles/04-office-desk-glass.jpg" width="800" height="600" loading="lazy" decoding="async" alt="שולחן העבודה והארונות מבעד לדלת הזכוכית" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/01-office-desk-cabinets.jpg" data-width="2000" data-height="1500" data-caption="שולחן עבודה וארונות אחסון נמוכים לאורך הקירות"><img src="../assets/projects/office-2026/tiles/01-office-desk-cabinets.jpg" width="800" height="600" loading="lazy" decoding="async" alt="שולחן עבודה וארונות אחסון נמוכים לאורך הקירות" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/02-office-desk.jpg" data-width="1500" data-height="2000" data-caption="שולחן עבודה עם ארונות ומגירות נמוכים מאחוריו"><img src="../assets/projects/office-2026/tiles/02-office-desk.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שולחן עבודה עם ארונות ומגירות נמוכים מאחוריו" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/03-office-glass-room.jpg" data-width="2000" data-height="1500" data-caption="משרד עם קירות זכוכית, שולחן עבודה וארונות נמוכים"><img src="../assets/projects/office-2026/tiles/03-office-glass-room.jpg" width="800" height="600" loading="lazy" decoding="async" alt="משרד עם קירות זכוכית, שולחן עבודה וארונות נמוכים" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-office-2026" data-webp="" data-jpg="" data-src="../assets/projects/office-2026/04-office-desk-glass.jpg" data-width="2000" data-height="1500" data-caption="שולחן העבודה והארונות מבעד לדלת הזכוכית"><img src="../assets/projects/office-2026/tiles/04-office-desk-glass.jpg" width="800" height="600" loading="lazy" decoding="async" alt="שולחן העבודה והארונות מבעד לדלת הזכוכית" /></button></li>
             </ul>
           </article>
           <article class="project" id="wardrobes-hallway-2026">
             <h2 class="project-title">ארונות</h2>
             <p class="project-text">ארונות ללא ידיות לאורך מסדרון.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobes-hallway-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobes-hallway-2026/01-handleless-wardrobes-hallway.jpg" data-width="1500" data-height="2000" data-caption="ארונות ללא ידיות לאורך מסדרון"><img src="../assets/projects/wardrobes-hallway-2026/tiles/01-handleless-wardrobes-hallway.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארונות ללא ידיות לאורך מסדרון" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobes-hallway-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobes-hallway-2026/02-handleless-wardrobes-lit-hallway.jpg" data-width="1500" data-height="2000" data-caption="ארונות ללא ידיות והמסדרון המואר שמעבר להם"><img src="../assets/projects/wardrobes-hallway-2026/tiles/02-handleless-wardrobes-lit-hallway.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארונות ללא ידיות והמסדרון המואר שמעבר להם" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobes-hallway-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobes-hallway-2026/01-handleless-wardrobes-hallway.jpg" data-width="1500" data-height="2000" data-caption="ארונות ללא ידיות לאורך מסדרון"><img src="../assets/projects/wardrobes-hallway-2026/tiles/01-handleless-wardrobes-hallway.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארונות ללא ידיות לאורך מסדרון" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobes-hallway-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobes-hallway-2026/02-handleless-wardrobes-lit-hallway.jpg" data-width="1500" data-height="2000" data-caption="ארונות ללא ידיות והמסדרון המואר שמעבר להם"><img src="../assets/projects/wardrobes-hallway-2026/tiles/02-handleless-wardrobes-lit-hallway.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארונות ללא ידיות והמסדרון המואר שמעבר להם" /></button></li>
             </ul>
           </article>
           <article class="project" id="slatted-wall-2026">
             <h2 class="project-title">חיפוי קיר בפסים</h2>
             <p class="project-text">חיפוי קיר בפסים עם ארון מובנה.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-slatted-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/slatted-wall-2026/01-wood-slat-wall-cabinet.jpg" data-width="1500" data-height="2000" data-caption="חיפוי קיר בפסים עם ארון מובנה לצידו"><img src="../assets/projects/slatted-wall-2026/tiles/01-wood-slat-wall-cabinet.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="חיפוי קיר בפסים עם ארון מובנה לצידו" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-slatted-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/slatted-wall-2026/02-wood-slat-wall-hallway.jpg" data-width="1500" data-height="2000" data-caption="חיפוי קיר בפסים וארון במסדרון"><img src="../assets/projects/slatted-wall-2026/tiles/02-wood-slat-wall-hallway.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="חיפוי קיר בפסים וארון במסדרון" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-slatted-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/slatted-wall-2026/01-wood-slat-wall-cabinet.jpg" data-width="1500" data-height="2000" data-caption="חיפוי קיר בפסים עם ארון מובנה לצידו"><img src="../assets/projects/slatted-wall-2026/tiles/01-wood-slat-wall-cabinet.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="חיפוי קיר בפסים עם ארון מובנה לצידו" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-slatted-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/slatted-wall-2026/02-wood-slat-wall-hallway.jpg" data-width="1500" data-height="2000" data-caption="חיפוי קיר בפסים וארון במסדרון"><img src="../assets/projects/slatted-wall-2026/tiles/02-wood-slat-wall-hallway.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="חיפוי קיר בפסים וארון במסדרון" /></button></li>
             </ul>
           </article>
           <article class="project" id="wardrobe-wall-2026">
             <h2 class="project-title">קיר ארונות</h2>
             <p class="project-text">ארונות מהרצפה עד התקרה עם נישה פתוחה לטלוויזיה, וארון גבוה לחדר כביסה.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/01-wardrobe-wall-tv-niche.jpg" data-width="1500" data-height="2000" data-caption="ארונות מהרצפה עד התקרה עם נישה פתוחה לטלוויזיה"><img src="../assets/projects/wardrobe-wall-2026/tiles/01-wardrobe-wall-tv-niche.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארונות מהרצפה עד התקרה עם נישה פתוחה לטלוויזיה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/02-wardrobe-wall-tv-niche-room.jpg" data-width="2000" data-height="1500" data-caption="קיר הארונות עם נישת הטלוויזיה, וארונות נוספים בחדר"><img src="../assets/projects/wardrobe-wall-2026/tiles/02-wardrobe-wall-tv-niche-room.jpg" width="800" height="600" loading="lazy" decoding="async" alt="קיר הארונות עם נישת הטלוויזיה, וארונות נוספים בחדר" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/03-laundry-cabinet.jpg" data-width="1500" data-height="2000" data-caption="ארון גבוה בחדר הכביסה ליד מכונת כביסה ומייבש"><img src="../assets/projects/wardrobe-wall-2026/tiles/03-laundry-cabinet.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארון גבוה בחדר הכביסה ליד מכונת כביסה ומייבש" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/04-wardrobe-interior.jpg" data-width="1500" data-height="2000" data-caption="פנים הארון, עם מדפים ומקום לתלייה"><img src="../assets/projects/wardrobe-wall-2026/tiles/04-wardrobe-interior.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="פנים הארון, עם מדפים ומקום לתלייה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/01-wardrobe-wall-tv-niche.jpg" data-width="1500" data-height="2000" data-caption="ארונות מהרצפה עד התקרה עם נישה פתוחה לטלוויזיה"><img src="../assets/projects/wardrobe-wall-2026/tiles/01-wardrobe-wall-tv-niche.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארונות מהרצפה עד התקרה עם נישה פתוחה לטלוויזיה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/02-wardrobe-wall-tv-niche-room.jpg" data-width="2000" data-height="1500" data-caption="קיר הארונות עם נישת הטלוויזיה, וארונות נוספים בחדר"><img src="../assets/projects/wardrobe-wall-2026/tiles/02-wardrobe-wall-tv-niche-room.jpg" width="800" height="600" loading="lazy" decoding="async" alt="קיר הארונות עם נישת הטלוויזיה, וארונות נוספים בחדר" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/03-laundry-cabinet.jpg" data-width="1500" data-height="2000" data-caption="ארון גבוה בחדר הכביסה ליד מכונת כביסה ומייבש"><img src="../assets/projects/wardrobe-wall-2026/tiles/03-laundry-cabinet.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארון גבוה בחדר הכביסה ליד מכונת כביסה ומייבש" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-wall-2026" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-wall-2026/04-wardrobe-interior.jpg" data-width="1500" data-height="2000" data-caption="פנים הארון, עם מדפים ומקום לתלייה"><img src="../assets/projects/wardrobe-wall-2026/tiles/04-wardrobe-interior.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="פנים הארון, עם מדפים ומקום לתלייה" /></button></li>
             </ul>
           </article>
           <article class="project" id="wardrobe-led-2024">
             <h2 class="project-title">ארון בגדים</h2>
             <p class="project-text">ארון בגדים עם תאורת לד, מדפים ומגירות בפנים.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/01-wardrobe-led-lighting.jpg" data-width="1500" data-height="2000" data-caption="ארון בגדים עם תאורת לד, דלת אחת פתוחה"><img src="../assets/projects/wardrobe-led-2024/tiles/01-wardrobe-led-lighting.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארון בגדים עם תאורת לד, דלת אחת פתוחה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/02-wardrobe-oak-interior.jpg" data-width="1500" data-height="2000" data-caption="פנים הארון, עם מדפים מוארים ומגירות"><img src="../assets/projects/wardrobe-led-2024/tiles/02-wardrobe-oak-interior.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="פנים הארון, עם מדפים מוארים ומגירות" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/03-wardrobe-open.jpg" data-width="1500" data-height="2000" data-caption="ארון פתוח עם מדפים, מגירות ומוט תלייה"><img src="../assets/projects/wardrobe-led-2024/tiles/03-wardrobe-open.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארון פתוח עם מדפים, מגירות ומוט תלייה" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/04-wardrobe-shelves.jpg" data-width="1500" data-height="2000" data-caption="מדפים ומגירות בארון"><img src="../assets/projects/wardrobe-led-2024/tiles/04-wardrobe-shelves.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מדפים ומגירות בארון" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/05-wardrobe-drawers.jpg" data-width="1500" data-height="2000" data-caption="מגירות הארון בין שתי דלתות סגורות"><img src="../assets/projects/wardrobe-led-2024/tiles/05-wardrobe-drawers.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מגירות הארון בין שתי דלתות סגורות" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/01-wardrobe-led-lighting.jpg" data-width="1500" data-height="2000" data-caption="ארון בגדים עם תאורת לד, דלת אחת פתוחה"><img src="../assets/projects/wardrobe-led-2024/tiles/01-wardrobe-led-lighting.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארון בגדים עם תאורת לד, דלת אחת פתוחה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/02-wardrobe-oak-interior.jpg" data-width="1500" data-height="2000" data-caption="פנים הארון, עם מדפים מוארים ומגירות"><img src="../assets/projects/wardrobe-led-2024/tiles/02-wardrobe-oak-interior.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="פנים הארון, עם מדפים מוארים ומגירות" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/03-wardrobe-open.jpg" data-width="1500" data-height="2000" data-caption="ארון פתוח עם מדפים, מגירות ומוט תלייה"><img src="../assets/projects/wardrobe-led-2024/tiles/03-wardrobe-open.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="ארון פתוח עם מדפים, מגירות ומוט תלייה" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/04-wardrobe-shelves.jpg" data-width="1500" data-height="2000" data-caption="מדפים ומגירות בארון"><img src="../assets/projects/wardrobe-led-2024/tiles/04-wardrobe-shelves.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מדפים ומגירות בארון" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-wardrobe-led-2024" data-webp="" data-jpg="" data-src="../assets/projects/wardrobe-led-2024/05-wardrobe-drawers.jpg" data-width="1500" data-height="2000" data-caption="מגירות הארון בין שתי דלתות סגורות"><img src="../assets/projects/wardrobe-led-2024/tiles/05-wardrobe-drawers.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="מגירות הארון בין שתי דלתות סגורות" /></button></li>
             </ul>
           </article>
           <article class="project" id="chest-of-drawers-2026">
             <h2 class="project-title">שידת מגירות</h2>
             <p class="project-text">שידת מגירות וארונות קיר סביב חלון.</p>
             <ul class="photo-grid">
-              <li><button class="photo-tile" type="button" data-gallery="project-chest-of-drawers-2026" data-webp="" data-jpg="" data-src="../assets/projects/chest-of-drawers-2026/01-chest-of-drawers-wall-cabinets.jpg" data-width="1500" data-height="2000" data-caption="שידת מגירות מתחת לחלון, עם ארונות קיר משני הצדדים"><img src="../assets/projects/chest-of-drawers-2026/tiles/01-chest-of-drawers-wall-cabinets.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שידת מגירות מתחת לחלון, עם ארונות קיר משני הצדדים" /></button></li>
-              <li><button class="photo-tile" type="button" data-gallery="project-chest-of-drawers-2026" data-webp="" data-jpg="" data-src="../assets/projects/chest-of-drawers-2026/02-chest-of-drawers-stairs.jpg" data-width="1500" data-height="2000" data-caption="שידת המגירות וארונות הקיר בראש המדרגות"><img src="../assets/projects/chest-of-drawers-2026/tiles/02-chest-of-drawers-stairs.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שידת המגירות וארונות הקיר בראש המדרגות" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-chest-of-drawers-2026" data-webp="" data-jpg="" data-src="../assets/projects/chest-of-drawers-2026/01-chest-of-drawers-wall-cabinets.jpg" data-width="1500" data-height="2000" data-caption="שידת מגירות מתחת לחלון, עם ארונות קיר משני הצדדים"><img src="../assets/projects/chest-of-drawers-2026/tiles/01-chest-of-drawers-wall-cabinets.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שידת מגירות מתחת לחלון, עם ארונות קיר משני הצדדים" /></button></li>
+              <li data-reveal><button class="photo-tile" type="button" data-gallery="project-chest-of-drawers-2026" data-webp="" data-jpg="" data-src="../assets/projects/chest-of-drawers-2026/02-chest-of-drawers-stairs.jpg" data-width="1500" data-height="2000" data-caption="שידת המגירות וארונות הקיר בראש המדרגות"><img src="../assets/projects/chest-of-drawers-2026/tiles/02-chest-of-drawers-stairs.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="שידת המגירות וארונות הקיר בראש המדרגות" /></button></li>
             </ul>
           </article>
+
           <p class="projects-more">עוד מהעבודות שלנו מתפרסמות באינסטגרם.</p>
-          <a class="btn btn-primary" href="https://www.instagram.com/tlnagarut/" target="_blank" rel="noopener">עוד באינסטגרם</a>
+          <a class="btn" href="https://www.instagram.com/tlnagarut/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg> עוד באינסטגרם</a>
           <p class="instagram-handle"><a href="https://www.instagram.com/tlnagarut/" target="_blank" rel="noopener" dir="ltr">@tlnagarut</a></p>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <span>TL נגרות · מיוצר בחיפה</span>
-        <span class="footer-build">עודכן לאחרונה 2026.10.14 12:02</span>
-        <span>© 2026 · כל הזכויות שמורות</span>
+    <footer class="ftr on-dark">
+      <div class="wrap ftr__grid">
+        <div class="ftr__brand"><p class="ftr__name"><span class="logo" aria-hidden="true"><span class="logo__tl">TL</span><span class="logo__word"><span>nagarut</span><svg class="logo__frame" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="M0 50V0h100v100H50" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg></span></span><span class="sr-only">TL נגרות</span></p><p class="muted">אנחנו מייצרים ארונות ומטבחים בהזמנה אישית, רהיטים בנויים ודלתות עץ מלא, ועושים גם עבודות מסחריות. הכול נעשה בנגרייה שלנו – תכנון, חיתוך, הרכבה וגימור בהתזה – ואנחנו מובילים ומתקינים בעצמנו, בחיפה ובצפון.</p></div>
+        <div><h2 class="ftr__h">יצירת קשר</h2><ul class="ftr__list">
+          <li><a href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>לינה (עברית) <span class="num">052-369-9346</span></span></a></li>
+          <li><a href="https://wa.me/972533822875?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>תומאס (אנגלית/רוסית) <span class="num">053-382-2875</span></span></a></li>
+          <li><a href="mailto:tlnagarut@outlook.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span class="num">tlnagarut@outlook.com</span></a></li>
+        </ul></div>
+        <div><h2 class="ftr__h">הנגרייה</h2><ul class="ftr__list">
+          <li class="muted"><address>רחוב אריה שנקר 35, חיפה, ישראל</address></li>
+          <li><a href="https://www.instagram.com/tlnagarut/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg><span class="num">@tlnagarut</span></a></li>
+        </ul></div>
+        <div><h2 class="ftr__h">באתר</h2><ul class="ftr__list">
+          <li><a href="index.html#about">אודות</a></li>
+          <li><a href="index.html#services">שירותים</a></li>
+          <li><a href="projects.html">פרויקטים</a></li>
+          <li><a href="workshop.html">הנגרייה</a></li>
+          <li><a href="in-the-workshop.html">בנגרייה</a></li>
+          <li><a href="index.html#contact">צור קשר</a></li>
+        </ul></div>
+      </div>
+      <div class="wrap ftr__base muted">
+        <span>© <span class="num">2026</span> TL נגרות · כל הזכויות שמורות · מיוצר בחיפה</span>
+        <span class="footer-build">עודכן לאחרונה <span class="num">2026.11.10 07:07</span></span>
       </div>
     </footer>
-
+    <div class="dock" data-fab><a class="dock__wa" href="https://wa.me/972523699346?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%90%D7%95%D7%9C%20%D7%A2%D7%9C%20%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98.%20%D7%90%D7%A9%D7%9C%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%94." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>שלחו תמונה בוואטסאפ</span></a><a class="dock__call" href="tel:+972523699346"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="sr-only">חייגו ללינה, 052-369-9346</span></a></div>
     <div class="gallery" id="gallery" hidden role="dialog" aria-modal="true" aria-label="תצוגת תמונות">
       <button class="gallery-close" id="gallery-close" type="button" aria-label="סגירה">×</button>
       <button class="gallery-nav gallery-prev" id="gallery-prev" type="button" aria-label="התמונה הקודמת">‹</button>
@@ -277,7 +323,6 @@
       </figure>
       <button class="gallery-nav gallery-next" id="gallery-next" type="button" aria-label="התמונה הבאה">›</button>
     </div>
-
-    <script src="../assets/js/main.js?v=621e99b6"></script>
+    <script src="../assets/js/main.js?v=85b4a19a"></script>
   </body>
 </html>

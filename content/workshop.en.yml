@@ -17,6 +17,9 @@ intro: >
 
 equipmentTitle: Equipment
 equipment:
+  - title: Busellato Jet Optima RT21A CNC nesting machine
+    description: >
+      Cuts, routes and drills cabinet panels straight from the drawing.
   - title: Machine room
     description: >
       Panel saw, thicknesser, planer, bandsaw and router table for accurate,
@@ -33,9 +36,6 @@ equipment:
   - title: Raptor downdraft spray booth
     description: >
       An enclosed spray booth with filtered airflow from ceiling to floor.
-  - title: Busellato Jet Optima RT CNC nesting machine — arriving soon
-    description: >
-      Purchased for the workshop and not yet installed.
 
 spray:
   title: Spray finishing
@@ -45,3 +45,31 @@ spray:
     - Fuji D6 6-stage HVLP turbine system.
     - 2K polyurethane coatings, applied and cured in a controlled environment.
   cta: Ask us about finishes
+
+# CNC section (Workshop page and a band on the home page).
+# points: the capability cards. message: the WhatsApp text of the quote button.
+cnc:
+  eyebrow: CNC cutting
+  title: CNC cutting, in our own workshop
+  lede: >
+    Our Busellato Jet Optima RT21A CNC nesting machine cuts, routes and drills
+    panels straight from a drawing — for our own furniture, and as a service
+    for carpenters, designers and contractors.
+  points:
+    - title: Nesting
+      text: All the parts of a cabinet are laid out on the sheet and cut in one run, accurately and with little waste.
+    - title: Routing
+      text: Curves, cut-outs, grooves and shaped parts — slatted and fluted panels, wall cladding, grooved doors.
+    - title: Drilling
+      text: Holes for hinges, shelf supports and fittings, drilled in the same run so everything lines up.
+    - title: From your drawing
+      text: Send a DXF file or a cutting list. A sketch or a photo with sizes works too — we prepare the drawing.
+  tradeTitle: For carpenters, designers and contractors
+  tradeBody: >
+    Send us your cutting list or drawings and get your parts back cut, drilled
+    and ready to assemble. Edge banding and spray finishing are done in the
+    same workshop if you need them. Pick-up in Haifa, or delivery across Haifa
+    and the north.
+  cta: Get a CNC quote on WhatsApp
+  message: Hi, I'd like a quote for CNC cutting. I'll send a drawing or a cutting list.
+  more: More about our CNC

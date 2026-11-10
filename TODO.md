@@ -31,3 +31,9 @@ Use the same business name (**TLnagarut / TL נגרות**), **phone**, and **add
 (Arye Shenkar Street 35, Haifa)** as the `LocalBusiness` structured data in `index.html`. Matching
 name/address/phone (NAP consistency) across the site and the profile helps
 ranking.
+
+## New design (November 2026) — to check before or after going live
+- Russian text was translated from the English by Claude: have a Russian reader check it (`content/about.ru.yml`, `content/workshop.ru.yml`, `content/photos.ru.yml`).
+- Russian pages caption each project photo with the project's title; add `alt_ru` per photo in `assets/projects/*/project.md` for fuller descriptions.
+- After going live: add the Russian pages to Google Search Console (the sitemap already lists them).
+

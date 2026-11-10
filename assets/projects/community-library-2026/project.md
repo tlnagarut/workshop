@@ -5,8 +5,10 @@
 order: 2
 title_en: "Community library"
 title_he: "ספרייה קהילתית"
+title_ru: "Общественная библиотека"
 description_en: "Bookcases, a bar counter with a wooden top, cabinets and a small kitchen for a community library."
 description_he: "כונניות ספרים, דלפק בר עם משטח עץ, ארונות ומטבחון לספרייה קהילתית."
+description_ru: "Книжные стеллажи, барная стойка с деревянной столешницей, шкафы и небольшая кухня для общественной библиотеки."
 photos:
   - file: 01-library-main-wall.jpg
     alt_en: Library hall with a wall of bookcases, sofas and reading tables

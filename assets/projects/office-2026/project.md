@@ -5,8 +5,10 @@
 order: 5
 title_en: "Office"
 title_he: "משרד"
+title_ru: "Офис"
 description_en: "Desks and low storage cabinets for glass-walled offices."
 description_he: "שולחנות עבודה וארונות אחסון נמוכים למשרדים עם קירות זכוכית."
+description_ru: "Рабочие столы и низкие шкафы для офисов со стеклянными стенами."
 photos:
   - file: 01-office-desk-cabinets.jpg
     alt_en: Office desk and low storage cabinets along the walls

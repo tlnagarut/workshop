@@ -4,18 +4,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tells the stylesheet that scripts run, so things may start hidden and
+         appear as you scroll (main.js). Without scripts everything just shows. -->
+    <script>document.documentElement.classList.add("js")</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Cabinet Workshop &amp; Spray Booth in Haifa | TLnagarut</title>
-    <meta name="description" content="Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: SCM edgebanding, Blum hardware and an in-house downdraft spray booth." />
+    <meta name="description" content="Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: CNC nesting and cutting, SCM edgebanding, Blum hardware and an in-house spray booth." />
     <link rel="canonical" href="https://tlnagarut.co.il/workshop.html" />
     <link rel="alternate" hreflang="en" href="https://tlnagarut.co.il/workshop.html" />
     <link rel="alternate" hreflang="he" href="https://tlnagarut.co.il/he/workshop.html" />
+    <link rel="alternate" hreflang="ru" href="https://tlnagarut.co.il/ru/workshop.html" />
     <link rel="alternate" hreflang="x-default" href="https://tlnagarut.co.il/workshop.html" />
 
     <!-- Open Graph / social sharing (WhatsApp, Facebook, …) -->
     <meta property="og:site_name" content="TLnagarut" />
     <meta property="og:title" content="Cabinet Workshop &amp; Spray Booth in Haifa | TLnagarut" />
-    <meta property="og:description" content="Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: SCM edgebanding, Blum hardware and an in-house downdraft spray booth." />
+    <meta property="og:description" content="Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: CNC nesting and cutting, SCM edgebanding, Blum hardware and an in-house spray booth." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tlnagarut.co.il/workshop.html" />
     <meta property="og:image" content="https://tlnagarut.co.il/assets/img/tlnagarut-custom-cabinets-solid-wood-doors-haifa.jpg" />
@@ -25,36 +29,46 @@
     <meta property="og:image:alt" content="TLnagarut — custom cabinets and solid wood doors in Haifa" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="he_IL" />
+    <meta property="og:locale:alternate" content="ru_RU" />
 
     <!-- Twitter / X card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Cabinet Workshop &amp; Spray Booth in Haifa | TLnagarut" />
-    <meta name="twitter:description" content="Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: SCM edgebanding, Blum hardware and an in-house downdraft spray booth." />
+    <meta name="twitter:description" content="Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: CNC nesting and cutting, SCM edgebanding, Blum hardware and an in-house spray booth." />
     <meta name="twitter:image" content="https://tlnagarut.co.il/assets/img/tlnagarut-custom-cabinets-solid-wood-doors-haifa.jpg" />
     <meta name="twitter:image:alt" content="TLnagarut — custom cabinets and solid wood doors in Haifa" />
     <meta name="author" content="Tomas Janulionis" />
     <meta name="robots" content="index, follow" />
-
     <!-- Local SEO -->
     <meta name="geo.region" content="IL-HA" />
     <meta name="geo.placename" content="Haifa" />
 
     <link rel="icon" href="assets/img/og-image.svg" />
-
+    <!-- Fonts: serif logo (Latin), Heebo (Hebrew + Latin), Inter (Russian) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Heebo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
 
-    <link rel="stylesheet" href="assets/css/styles.css?v=c71ce371" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=c63e00d0" />
   </head>
   <body>
-    <header class="site-header" id="top">
-      <div class="container nav">
-        <a class="brand" href="index.html">TLnagarut</a>
-
-        <nav class="nav-links" id="nav-links" aria-label="Primary">
+    <svg width="0" height="0" class="svg-defs" aria-hidden="true" focusable="false">
+      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5 4.5h3.2l1.6 4-2 1.3a11 11 0 0 0 6.4 6.4l1.3-2 4 1.6V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 6.1 1.5 1.5 0 0 1 5 4.5Z"/></symbol>
+      <symbol id="i-arrow-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m6-6-6 6 6 6"/></symbol>
+      <symbol id="i-arrow-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-chip-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M17 17 7 7m0 8V7h8"/></symbol>
+      <symbol id="i-chip-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7m-8 0h8v8"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 6.5h16v11H4zM4.5 7l7.5 6 7.5-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6.5-5.9-6.5-11a6.5 6.5 0 0 1 13 0c0 5.1-6.5 11-6.5 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4ZM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17.2 6.8h.01"/></symbol>
+    </svg>
+    <header class="hdr is-light" data-header>
+      <div class="hdr__bar wrap">
+        <a class="hdr__brand" href="index.html"><span class="logo" aria-hidden="true"><span class="logo__tl">TL</span><span class="logo__word"><span>nagarut</span><svg class="logo__frame" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="M0 50V0h100v100H50" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg></span></span><span class="sr-only">TLnagarut, home page</span></a>
+        <nav class="hdr__nav" aria-label="Main menu">
           <a href="index.html#about">About</a>
           <a href="index.html#services">Services</a>
           <a href="projects.html">Projects</a>
@@ -62,80 +76,141 @@
           <a href="workshop.html" aria-current="page">Workshop</a>
           <a href="in-the-workshop.html">In the workshop</a>
         </nav>
-
-        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false"
-          aria-controls="nav-links" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-
-        <a class="lang-toggle" href="he/workshop.html" hreflang="he" lang="he"
-          aria-label="Switch to Hebrew">עברית</a>
+        <div class="hdr__actions">
+          <div class="lang" role="group" aria-label="Language"><a href="workshop.html" hreflang="en" lang="en" aria-label="English" aria-current="true">EN</a><a href="he/workshop.html" hreflang="he" lang="he" aria-label="עברית">עב</a><a href="ru/workshop.html" hreflang="ru" lang="ru" aria-label="Русский">RU</a></div>
+          <a class="hdr__call" href="tel:+972533822875"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="hdr__call-txt">Call Tomas</span></a>
+          <a class="hdr__wa" href="https://wa.me/972533822875?text=Hi%2C%20I'd%20like%20to%20ask%20about%20a%20project.%20I'll%20send%20a%20photo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+          <button class="hdr__menu" type="button" data-menu-btn aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
+        </div>
+      </div>
+      <div class="menu on-dark" id="menu" data-menu inert>
+        <nav class="menu__nav wrap" aria-label="Menu">
+          <a href="index.html#about" style="--i:0">About<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-r"/></svg></a>
+          <a href="index.html#services" style="--i:1">Services<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-r"/></svg></a>
+          <a href="projects.html" style="--i:2">Projects<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-r"/></svg></a>
+          <a href="index.html#contact" style="--i:3">Contact<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-r"/></svg></a>
+          <a href="workshop.html" aria-current="page" style="--i:4">Workshop<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-r"/></svg></a>
+          <a href="in-the-workshop.html" style="--i:5">In the workshop<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-r"/></svg></a>
+        </nav>
+        <div class="menu__foot wrap">
+          <a class="btn btn--block" href="https://wa.me/972533822875?text=Hi%2C%20I'd%20like%20to%20ask%20about%20a%20project.%20I'll%20send%20a%20photo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg> Send a photo on WhatsApp</a>
+          <p class="muted">Tomas (English/Russian) <a class="num" href="tel:+972533822875">053-382-2875</a><br />Lina (Hebrew) <a class="num" href="tel:+972523699346">052-369-9346</a></p>
+        </div>
       </div>
     </header>
 
-    <main>
+    <main id="top" class="page">
       <!-- ===================== Workshop ===================== -->
       <section class="section" id="workshop">
-        <div class="container">
-          <p class="eyebrow">The workshop</p>
-          <h1 class="page-title">Our workshop in Haifa</h1>
-          <p class="lede">Everything is made here, in our workshop on Arye Shenkar Street in Haifa — design, cutting, assembly and spray finishing — and then installed by us.</p>
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">The workshop</p>
+            <h1 class="page-title">Our workshop in Haifa</h1>
+            <p>Everything is made here, in our workshop on Arye Shenkar Street in Haifa — design, cutting, assembly and spray finishing — and then installed by us.</p>
+            <div class="tape"></div>
+          </div>
 
           <h2 class="section-sub">Equipment</h2>
           <div class="cards">
-            <article class="card">
+            <article class="card" data-reveal>
+              <h3>Busellato Jet Optima RT21A CNC nesting machine</h3>
+              <p>Cuts, routes and drills cabinet panels straight from the drawing.</p>
+            </article>
+            <article class="card" data-reveal>
               <h3>Machine room</h3>
               <p>Panel saw, thicknesser, planer, bandsaw and router table for accurate, repeatable milling of solid timber and sheet goods.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>SCM Minimax edgebander</h3>
               <p>Applies edge banding to cabinet panels, here in the workshop.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>Blum hardware systems</h3>
               <p>Blum drawer systems and fittings, fitted to our cabinets.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>Fuji D6 HVLP spray system</h3>
               <p>A six-stage HVLP turbine system for spray finishing.</p>
             </article>
-            <article class="card">
+            <article class="card" data-reveal>
               <h3>Raptor downdraft spray booth</h3>
               <p>An enclosed spray booth with filtered airflow from ceiling to floor.</p>
-            </article>
-            <article class="card">
-              <h3>Busellato Jet Optima RT CNC nesting machine — arriving soon</h3>
-              <p>Purchased for the workshop and not yet installed.</p>
             </article>
           </div>
           <!-- (workshop-photos: nothing to show yet) -->
         </div>
       </section>
 
+      <!-- ===================== CNC cutting ===================== -->
+      <section class="section on-sand cnc" id="cnc" aria-labelledby="cnc-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow">CNC cutting</p>
+            <h2 id="cnc-h" data-rise><span class="line">CNC cutting, in our own workshop</span></h2>
+            <p data-reveal>Our Busellato Jet Optima RT21A CNC nesting machine cuts, routes and drills panels straight from a drawing — for our own furniture, and as a service for carpenters, designers and contractors.</p>
+            <div class="tape"></div>
+          </div>
+          <div class="cards cnc__cards">
+            <article class="card" data-reveal style="--i:0"><h3>Nesting</h3><p>All the parts of a cabinet are laid out on the sheet and cut in one run, accurately and with little waste.</p></article>
+            <article class="card" data-reveal style="--i:1"><h3>Routing</h3><p>Curves, cut-outs, grooves and shaped parts — slatted and fluted panels, wall cladding, grooved doors.</p></article>
+            <article class="card" data-reveal style="--i:2"><h3>Drilling</h3><p>Holes for hinges, shelf supports and fittings, drilled in the same run so everything lines up.</p></article>
+            <article class="card" data-reveal style="--i:3"><h3>From your drawing</h3><p>Send a DXF file or a cutting list. A sketch or a photo with sizes works too — we prepare the drawing.</p></article>
+          </div>
+          <div class="cnc__trade" data-reveal>
+            <div><h3>For carpenters, designers and contractors</h3><p>Send us your cutting list or drawings and get your parts back cut, drilled and ready to assemble. Edge banding and spray finishing are done in the same workshop if you need them. Pick-up in Haifa, or delivery across Haifa and the north.</p></div>
+            <div class="cnc__actions">
+              <a class="btn" href="https://wa.me/972533822875?text=Hi%2C%20I'd%20like%20a%20quote%20for%20CNC%20cutting.%20I'll%20send%20a%20drawing%20or%20a%20cutting%20list." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg> Get a CNC quote on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ===================== Spray finishing ===================== -->
-      <section class="section section-alt" id="spray-finishing">
-        <div class="container">
-          <h2>Spray finishing</h2>
-          <p class="lede">Sprayed in-house. Start to finish.</p>
+      <section class="section" id="spray-finishing">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Spray finishing</h2>
+            <p>Sprayed in-house. Start to finish.</p>
+            <div class="tape"></div>
+          </div>
           <ul class="fact-list">
             <li>Raptor downdraft spray booth with glass double doors, a downdraft grated floor, a digital control panel and filtered airflow from ceiling to floor.</li>
             <li>Fuji D6 6-stage HVLP turbine system.</li>
             <li>2K polyurethane coatings, applied and cured in a controlled environment.</li>
           </ul>
-          <a class="btn btn-primary" href="index.html#contact">Ask us about finishes</a>
+          <a class="btn btn--line" href="index.html#contact">Ask us about finishes</a>
           <!-- (spray-photos: nothing to show yet) -->
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <span>TLnagarut · Made in Haifa</span>
-        <span class="footer-build">Last updated 2026.10.14 12:02</span>
-        <span>© 2026 · All rights reserved</span>
+    <footer class="ftr on-dark">
+      <div class="wrap ftr__grid">
+        <div class="ftr__brand"><p class="ftr__name"><span class="logo" aria-hidden="true"><span class="logo__tl">TL</span><span class="logo__word"><span>nagarut</span><svg class="logo__frame" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="M0 50V0h100v100H50" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg></span></span><span class="sr-only">TLnagarut</span></p><p class="muted">We make custom cabinets and kitchens, built-in furniture and solid wood doors, and we also do commercial work. Everything is made in our own workshop — design, cutting, assembly and spray finishing — and we deliver and install it ourselves, across Haifa and the north.</p></div>
+        <div><h2 class="ftr__h">Get in touch</h2><ul class="ftr__list">
+          <li><a href="https://wa.me/972533822875?text=Hi%2C%20I'd%20like%20to%20ask%20about%20a%20project.%20I'll%20send%20a%20photo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>Tomas (English/Russian) <span class="num">053-382-2875</span></span></a></li>
+          <li><a href="https://wa.me/972523699346?text=Hi%2C%20I'd%20like%20to%20ask%20about%20a%20project.%20I'll%20send%20a%20photo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>Lina (Hebrew) <span class="num">052-369-9346</span></span></a></li>
+          <li><a href="mailto:tlnagarut@outlook.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span class="num">tlnagarut@outlook.com</span></a></li>
+        </ul></div>
+        <div><h2 class="ftr__h">The workshop</h2><ul class="ftr__list">
+          <li class="muted"><address>Arye Shenkar Street 35, Haifa, Israel</address></li>
+          <li><a href="https://www.instagram.com/tlnagarut/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg><span class="num">@tlnagarut</span></a></li>
+        </ul></div>
+        <div><h2 class="ftr__h">On this site</h2><ul class="ftr__list">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="workshop.html">Workshop</a></li>
+          <li><a href="in-the-workshop.html">In the workshop</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul></div>
+      </div>
+      <div class="wrap ftr__base muted">
+        <span>© <span class="num">2026</span> TLnagarut · All rights reserved · Made in Haifa</span>
+        <span class="footer-build">Last updated <span class="num">2026.11.10 07:07</span></span>
       </div>
     </footer>
-
+    <div class="dock" data-fab><a class="dock__wa" href="https://wa.me/972533822875?text=Hi%2C%20I'd%20like%20to%20ask%20about%20a%20project.%20I'll%20send%20a%20photo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>Send a photo on WhatsApp</span></a><a class="dock__call" href="tel:+972533822875"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="sr-only">Call Tomas, 053-382-2875</span></a></div>
     <div class="gallery" id="gallery" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
       <button class="gallery-close" id="gallery-close" type="button" aria-label="Close">×</button>
       <button class="gallery-nav gallery-prev" id="gallery-prev" type="button" aria-label="Previous photo">‹</button>
@@ -145,7 +220,6 @@
       </figure>
       <button class="gallery-nav gallery-next" id="gallery-next" type="button" aria-label="Next photo">›</button>
     </div>
-
-    <script src="assets/js/main.js?v=621e99b6"></script>
+    <script src="assets/js/main.js?v=85b4a19a"></script>
   </body>
 </html>

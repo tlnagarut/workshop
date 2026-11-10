@@ -16,19 +16,30 @@ people:
   - phoneDisplay: "052-369-9346"
     phoneHref: "+972523699346"
 
+# Who answers visitors in each language: 1 = the first person above (Tomas),
+# 2 = the second (Lina). The WhatsApp and call buttons on each language's
+# pages go to that person.
+answers:
+  en: 1
+  he: 2
+  ru: 1
+
 email: "tlnagarut@outlook.com"
 
 # Owner's name, given to Google as the business founder.
 founder: Tomas Janulionis
 
-# Workshop address, in English and Hebrew.
+# Workshop address, in English, Hebrew and Russian.
 address:
   streetEn: Arye Shenkar Street 35
   streetHe: רחוב אריה שנקר 35
+  streetRu: ул. Арье Шенкар, 35
   cityEn: Haifa
   cityHe: חיפה
+  cityRu: Хайфа
   countryEn: Israel
   countryHe: ישראל
+  countryRu: Израиль
   countryCode: IL
 
 instagram: "https://www.instagram.com/tlnagarut/"

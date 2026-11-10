@@ -5,8 +5,10 @@
 order: 10
 title_en: "Chest of drawers"
 title_he: "שידת מגירות"
+title_ru: "Комод"
 description_en: "Chest of drawers with wall cabinets around a window."
 description_he: "שידת מגירות וארונות קיר סביב חלון."
+description_ru: "Комод и навесные шкафы вокруг окна."
 photos:
   - file: 01-chest-of-drawers-wall-cabinets.jpg
     alt_en: Chest of drawers under a window, with wall cabinets on both sides

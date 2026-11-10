@@ -5,8 +5,10 @@
 order: 3
 title_en: "TV wall unit"
 title_he: "מזנון טלוויזיה"
+title_ru: "ТВ-тумба"
 description_en: "Floating TV unit with a lit shelf tower."
 description_he: "מזנון צף עם מגדל מדפים מואר."
+description_ru: "Подвесная ТВ-тумба и стеллаж с подсветкой."
 photos:
   - file: 01-tv-unit-lit-shelves.jpg
     alt_en: Floating TV unit with black doors and a lit shelf tower

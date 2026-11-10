@@ -1,11 +1,12 @@
 # CLAUDE.md
 
-TLnagarut (TL נגרות) — a small, fast, bilingual (English / Hebrew) showcase site for
+TLnagarut (TL נגרות) — a small, fast showcase site in three languages (English / Hebrew / Russian) for
 Tomas Janulionis' custom woodworking and cabinetry workshop in Haifa, Israel.
 Plain HTML/CSS/JS, **no build framework**, hosted on GitHub Pages.
 
-Live address: **https://tlnagarut.co.il/** (English) and
-**https://tlnagarut.co.il/he/** (Hebrew). The old address
+Live address: **https://tlnagarut.co.il/** (English),
+**https://tlnagarut.co.il/he/** (Hebrew) and **https://tlnagarut.co.il/ru/**
+(Russian). The old address
 https://tlnagarut.github.io/workshop/ redirects there. The address is set once,
 as `siteUrl` in `content/contact.yml`; the build writes it into every page,
 `sitemap.xml` and `robots.txt`.
@@ -34,8 +35,12 @@ owner asks.
   installation.
 - Equipment worth showing: SCM Minimax edgebander, Blum hardware systems,
   Fuji HVLP spray finishing.
-- Busellato Jet Optima RT CNC nesting machine: purchased, not yet installed.
-  Show as 'arriving soon' until the owner says it is installed.
+- Busellato Jet Optima RT21A CNC nesting machine: installed and working (owner,
+  November 2026). Shown first in the equipment list and in the "CNC cutting"
+  section (text: `cnc:` in `content/workshop.*.yml`), which also offers CNC
+  cutting as a service to carpenters, designers and contractors. Do not add
+  machine figures (sheet size, spindle power, speeds) unless the owner gives
+  them.
 - Phone, email, Instagram and any other contact details live in
   `content/contact.yml`. That file is the **single source of truth**.
 
@@ -85,11 +90,24 @@ copy causes conflicts later.
   `projects.html` — the four pages' structure. **Edit these, not the generated
   HTML files.**
 - `index.html`, `workshop.html`, `in-the-workshop.html`, `projects.html` (repo
-  root, English), the same four in `he/` (Hebrew), `sitemap.xml` and
+  root, English), the same four in `he/` (Hebrew) and `ru/` (Russian), `sitemap.xml` and
   `robots.txt` —
   **generated** by `tools/build-pages.mjs` from the templates + `content/`.
   Never edit by hand.
-- `content/*.yml` — all text (EN/HE), contact details, and the photo list.
+- `content/*.yml` — all text (`about.en.yml` / `about.he.yml` / `about.ru.yml`,
+  `workshop.*.yml`), contact details, and the photo list. `content/home.yml`
+  chooses the home page's photos (top photo, "What we make" cards, "Recent
+  work" tiles, the moving workshop row). `content/photos.ru.yml` holds the
+  Russian photo captions. In `contact.yml`, `answers:` says who answers each
+  language (Lina for Hebrew, Tomas for English and Russian); the WhatsApp and
+  call buttons on that language's pages go to that person.
+- **Design:** the layout and motion are Ethan's design (dark photo-led top,
+  things that appear as you scroll, floating top bar, WhatsApp bar on phones);
+  the colours, the "TLnagarut" / "TL נגרות" logo and the wording are the
+  owner's. Colours are set once at the top of `assets/css/styles.css`.
+- **Russian** is translated from the English text. A missing Russian line
+  falls back to English (the build prints a warning). Russian project photos
+  use the project's `title_ru` as their caption unless a photo has `alt_ru`.
 - `assets/css/styles.css`, `assets/js/main.js` — styles and the small script
   (mobile menu, photo viewer), loaded directly.
 - `assets/img/photos/` — **generated** web-ready photos + `manifest.json`.
@@ -107,11 +125,11 @@ copy causes conflicts later.
 
 ## How pages are built
 
-Each template is built twice: an English page in the repo root and a Hebrew
-page (right-to-left) at the same name in `he/` — e.g. `workshop.html` and
+Each template is built three times: an English page in the repo root, a Hebrew
+page (right-to-left) at the same name in `he/` and a Russian page in `ru/` — e.g. `workshop.html` and
 `he/workshop.html`. Each has its own address, title and description in its
-language, `hreflang` links to its twin, and is listed in `sitemap.xml`. The
-language button is a plain link to the twin page. All text is written into the
+language, `hreflang` links to its twins, and is listed in `sitemap.xml`. The
+language buttons (EN / עב / RU) are plain links to the twin pages. All text is written into the
 HTML at build time, so search engines see full pages without running scripts.
 In a template, `<h1 data-i18n="hero.title"></h1>` becomes that text in the
 page's language; `data-i18n-aria="key"` gives a translated `aria-label`. `<!-- @name -->`

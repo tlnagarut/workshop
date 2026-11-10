@@ -5,8 +5,10 @@
 order: 1
 title_en: "House project, 2017"
 title_he: "פרויקט בית, 2017"
+title_ru: "Проект дома, 2017"
 description_en: "All the woodwork in this house: the kitchen, library shelving along the staircase, the TV wall, a desk unit and built-in storage."
 description_he: "כל עבודות הנגרות בבית: המטבח, מדפי הספרייה לאורך המדרגות, קיר הטלוויזיה, פינת עבודה וארונות מובנים."
+description_ru: "Вся столярная работа в этом доме: кухня, книжные полки вдоль лестницы, ТВ-стена, рабочий уголок и встроенные шкафы."
 photos:
   - file: 01-tv-wall-floating-media-unit.jpg
     alt_en: TV wall with dark panelling and a long floating media unit, garden doors open beside it

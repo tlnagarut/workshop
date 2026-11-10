@@ -1,6 +1,6 @@
 # ============================================================================
 # English site text. Each group below maps to a section of the site.
-# Keep the same keys in about.he.yml (Hebrew). After editing, run:
+# Keep the same keys in about.he.yml (Hebrew) and about.ru.yml (Russian). After editing, run:
 #   ./build.sh
 #
 # Tips:
@@ -22,8 +22,8 @@ meta:
     our own workshop.
   workshopTitle: Cabinet Workshop & Spray Booth in Haifa | TLnagarut
   workshopDescription: >
-    Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: SCM
-    edgebanding, Blum hardware and an in-house downdraft spray booth.
+    Inside the TLnagarut workshop on Arye Shenkar Street, Haifa: CNC nesting
+    and cutting, SCM edgebanding, Blum hardware and an in-house spray booth.
   projectsTitle: Recent Work — Custom Cabinets in Haifa | TLnagarut
   projectsDescription: >
     Photos of finished work by TLnagarut in Haifa: built-in shelving,
@@ -42,8 +42,6 @@ nav:
   inWorkshop: In the workshop
   projects: Projects
   contact: Contact
-  langToggle: עברית
-  langToggleAria: Switch to Hebrew
   menuAria: Menu
 
 hero:
@@ -159,3 +157,81 @@ gallery:
   close: Close
   prev: Previous photo
   next: Next photo
+
+# ---- New home page ----
+# heroLines: the big headline, split over three lines (the last is tinted).
+# trust: the five small cards under the top photo. cards: the "What we make"
+# photo cards (their photos are chosen in content/home.yml, same order).
+# starterMsg…: the WhatsApp message the "Start your project" box writes;
+# {name}, {item} and {stage} are filled in automatically.
+home:
+  heroLines:
+    - Custom kitchens, wardrobes,
+    - doors and furniture
+    - in Haifa
+  answeredBy: Answered by
+  call1: Call Tomas
+  call2: Call Lina
+  navAria: Main menu
+  langAria: Language
+  homeAria: home page
+  trustAria: Why TLnagarut
+  trust:
+    - title: 25 years in the trade
+      text: Tomas trained on demanding residential and commercial projects in the UK.
+    - title: Made to order
+      text: Custom kitchens and cabinets, made to measure.
+    - title: Blum hardware systems
+      text: Blum drawer systems and fittings, fitted to our cabinets.
+    - title: Spray finishing
+      text: Sprayed in-house. Start to finish.
+    - title: Haifa
+      text: Our own workshop, from design to installation.
+  railAria: Services, scroll sideways
+  cards:
+    - title: Kitchens & cabinets
+      text: Custom kitchens and cabinets, made to measure. Panels are cut and edge-banded in our workshop and fitted with Blum drawer systems and hardware.
+    - title: Wardrobes
+      text: Floor-to-ceiling wardrobes with an open TV niche, and a tall laundry cabinet.
+    - title: TV walls
+      text: Floating TV unit with a lit shelf tower.
+    - title: Libraries
+      text: Wall of lit bookshelves beside a staircase with a glass balustrade.
+    - title: Built-in furniture
+      text: Built-in furniture and storage, designed around your space and installed by us.
+    - title: Tables
+      text: Long wooden table top.
+    - title: Bars
+      text: Bar counter with a wooden top and bar stools.
+    - title: Commercial work
+      text: Desks and low storage cabinets for glass-walled offices.
+  also: Also
+  alsoList:
+    - Solid wood doors
+    - Bathroom vanity cabinets
+    - Wooden shower furniture
+    - Repair & restoration
+  filterAria: Filter by type of work
+  filterAll: All
+  filterKitchens: Kitchens
+  filterClosets: Wardrobes
+  filterFurniture: Furniture
+  filterCommercial: Commercial
+  allProjects: All projects and photos
+  teamRole1: 25 years in the trade · English/Russian
+  teamRole2: Hebrew
+  starterTitle: Start your project
+  starterNote: WhatsApp opens with this message. Add your photo there and send.
+  starterQ1: What are you making?
+  starterQ2: How far along are you?
+  starterQ3: Who should answer you?
+  starterOther: Something else
+  starterStages:
+    - Just an idea
+    - I have measurements
+    - I have a drawing or plan
+  starterSpeaks: Speaks your language
+  starterMsgLabel: Your message
+  starterMsgItem: "Hi {name}, I'd like to ask about a project: {item}.{stage} I'll send a photo."
+  starterMsgPlain: "Hi {name}, I'd like to ask about a project.{stage} I'll send a photo."
+  footerSite: On this site

@@ -5,8 +5,10 @@
 order: 7
 title_en: "Slatted wall panel"
 title_he: "חיפוי קיר בפסים"
+title_ru: "Реечная стеновая панель"
 description_en: "Slatted wall panel with a built-in cabinet."
 description_he: "חיפוי קיר בפסים עם ארון מובנה."
+description_ru: "Реечная панель на стене со встроенным шкафом."
 photos:
   - file: 01-wood-slat-wall-cabinet.jpg
     alt_en: Slatted wall panel with a built-in cabinet beside it

@@ -1,6 +1,6 @@
 // Stamp cache-busting ?v=<hash> query strings on versioned CSS/JS references.
 //
-// For every *.html in the repo root and in he/ (Hebrew pages), finds asset references that already carry
+// For every *.html in the repo root, in he/ (Hebrew pages) and in ru/ (Russian pages), finds asset references that already carry
 // a ?v= query (e.g. styles.css?v=9) and rewrites the value to a short content
 // hash of the referenced file. Each asset is versioned independently, so a
 // visitor's cache only busts for files that actually changed.
@@ -32,7 +32,7 @@ function hashOf(assetPath) {
   return h;
 }
 
-const htmlFiles = ["", "he/"].flatMap((dir) =>
+const htmlFiles = ["", "he/", "ru/"].flatMap((dir) =>
   existsSync(join(root, dir))
     ? readdirSync(join(root, dir)).filter((f) => f.endsWith(".html")).map((f) => dir + f)
     : []);

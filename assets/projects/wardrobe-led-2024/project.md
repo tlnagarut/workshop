@@ -5,8 +5,10 @@
 order: 9
 title_en: "Wardrobe"
 title_he: "ארון בגדים"
+title_ru: "Платяной шкаф"
 description_en: "Wardrobe with LED lighting, shelves and drawers inside."
 description_he: "ארון בגדים עם תאורת לד, מדפים ומגירות בפנים."
+description_ru: "Шкаф с LED-подсветкой, полками и ящиками внутри."
 photos:
   - file: 01-wardrobe-led-lighting.jpg
     alt_en: Wardrobe with LED lighting, one door open
