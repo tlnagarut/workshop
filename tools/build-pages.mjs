@@ -148,6 +148,13 @@ const logo = () =>
 // ---------------------------------------------------------------- icons
 const icon = (id, cls = "") =>
   `<svg${cls ? ` class="${cls}"` : ""} viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#${id}"/></svg>`;
+
+// The "Google reviews" link: opens the business's Google profile, where the
+// reviews are (content/contact.yml "googleProfile"). cls = extra classes for
+// the link, e.g. to make it a button. Empty when there is no profile link.
+const reviewsLink = (cls = "", more = "") => !contact.googleProfile ? "" :
+  `<a${cls ? ` class="${cls}"` : ""} href="${esc(contact.googleProfile)}" target="_blank" rel="noopener"${more}>` +
+  `${icon("i-star")}<span>${esc(t(LANG, "reviews.cta"))}</span></a>`;
 // Arrows point the reading direction: right in English/Russian, left in Hebrew.
 const rtl = () => LANGS[LANG].dir === "rtl";
 const arrow = () => icon(rtl() ? "i-arrow-l" : "i-arrow-r");
@@ -343,7 +350,9 @@ const BLOCKS = {
     ].join("\n");
   },
 
-  // Google "local business" data, built from content/contact.yml.
+  // Google "local business" data, built from content/contact.yml. The
+  // description is in the page's own language; googleMaps ties the website
+  // to the business's profile on Google Maps.
   jsonld() {
     const a = contact.address;
     const data = {
@@ -352,7 +361,7 @@ const BLOCKS = {
       "@id": SITE + "#business",
       name: t("en", "nav.brand"),
       alternateName: t("he", "nav.brand"),
-      description: t("en", "meta.homeDescription"),
+      description: t(LANG, "meta.homeDescription"),
       url: SITE,
       image: SITE + SOCIAL_IMAGE,
       telephone: contact.people[0].phoneHref,
@@ -364,7 +373,8 @@ const BLOCKS = {
         addressCountry: a.countryCode,
       },
       ...(contact.founder ? { founder: { "@type": "Person", name: contact.founder } } : {}),
-      sameAs: [contact.instagram],
+      ...(contact.googleMaps ? { hasMap: contact.googleMaps } : {}),
+      sameAs: [contact.instagram, contact.googleMaps].filter(Boolean),
     };
     const json = JSON.stringify(data, null, 2).replace(/</g, "\\u003c");
     return `<script type="application/ld+json">\n${json}\n</script>`;
@@ -385,6 +395,7 @@ const BLOCKS = {
       sym("i-mail", line("M4 6.5h16v11H4zM4.5 7l7.5 6 7.5-6")),
       sym("i-pin", line("M12 21s-6.5-5.9-6.5-11a6.5 6.5 0 0 1 13 0c0 5.1-6.5 11-6.5 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z")),
       sym("i-ig", line("M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4ZM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17.2 6.8h.01")),
+      sym("i-star", line("m12 3.8 2.5 5.2 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8Z")),
       `</svg>`,
     ].join("\n");
   },
@@ -646,6 +657,8 @@ const BLOCKS = {
       `    <div class="team__grid">`,
       ...cards,
       `    </div>`,
+      // The "Google reviews" button, under the two portraits.
+      ...(contact.googleProfile ? [`    ${reviewsLink("btn btn--line team__reviews", " data-reveal")}`] : []),
       `  </div>`,
       `</section>`,
     ].join("\n");
@@ -674,6 +687,7 @@ const BLOCKS = {
       `        <li><a href="mailto:${esc(contact.email)}">${icon("i-mail")}<span class="num">${esc(contact.email)}</span></a></li>`,
       `        <li><span class="row">${icon("i-pin")}<address>${esc(address(LANG, false))}</address></span></li>`,
       `        <li><a href="${esc(contact.instagram)}" target="_blank" rel="noopener">${icon("i-ig")}<span class="num">${esc(contact.instagramHandle)}</span></a></li>`,
+      ...(contact.googleProfile ? [`        <li>${reviewsLink()}</li>`] : []),
       `      </ul>`,
       `    </div>`,
       `    <div class="cta__card" data-reveal style="--i:1">`,
@@ -796,6 +810,7 @@ const BLOCKS = {
       `    <div><h2 class="ftr__h">${tr("workshop.eyebrow")}</h2><ul class="ftr__list">`,
       `      <li class="muted"><address>${esc(address(LANG))}</address></li>`,
       `      <li><a href="${esc(contact.instagram)}" target="_blank" rel="noopener">${icon("i-ig")}<span class="num">${esc(contact.instagramHandle)}</span></a></li>`,
+      ...(contact.googleProfile ? [`      <li>${reviewsLink()}</li>`] : []),
       `    </ul></div>`,
       `    <div><h2 class="ftr__h">${tr("home.footerSite")}</h2><ul class="ftr__list">`,
       ...links.map(([href, key]) => `      <li><a href="${href}">${tr(key)}</a></li>`),
