@@ -146,6 +146,11 @@ footer:
   builtIn: Made in Haifa
   updated: Last updated
 
+# The "Google reviews" button and links (they open our Google profile; the
+# link itself is googleProfile in contact.yml).
+reviews:
+  cta: Google reviews
+
 # "Send a photo on WhatsApp" button (top of the home page and in Contact).
 # The number is the first one in content/contact.yml; message = pre-filled text.
 whatsapp:

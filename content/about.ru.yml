@@ -140,6 +140,10 @@ footer:
   builtIn: Сделано в Хайфе
   updated: Обновлено
 
+# Кнопка и ссылки «Отзывы в Google» (сама ссылка: googleProfile в contact.yml).
+reviews:
+  cta: Отзывы в Google
+
 whatsapp:
   cta: Отправить фото в WhatsApp
   message: Здравствуйте! Хочу спросить о проекте. Пришлю фото.

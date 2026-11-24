@@ -45,6 +45,16 @@ address:
 instagram: "https://www.instagram.com/tlnagarut/"
 instagramHandle: "@tlnagarut"
 
+# The business on Google (Google Business Profile, name "TLnagarut").
+# googleProfile = the short link that opens the profile with its reviews; the
+#                 "Google reviews" buttons on the site go here.
+# googleMaps    = the profile's permanent Google Maps address. It is given to
+#                 Google in the business data, so Google connects this website
+#                 with the profile. Do not change it unless the profile is
+#                 replaced by a new one.
+googleProfile: "https://g.page/r/CcYkyeoM5P81EBE"
+googleMaps: "https://www.google.com/maps?cid=3891079347201189062"
+
 # The site's public web address (used for links shared on social media, for
 # Google, sitemap.xml and robots.txt). Keep the slash at the end.
 siteUrl: "https://tlnagarut.co.il/"
