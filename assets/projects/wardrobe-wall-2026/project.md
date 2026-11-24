@@ -4,10 +4,10 @@
 # Photo 01 is the cover. Photos show in the order listed here.
 order: 8
 title_en: "Wardrobe wall"
-title_he: "קיר ארונות"
+title_he: "ארונות קיר"
 title_ru: "Стена шкафов"
 description_en: "Floor-to-ceiling wardrobes with an open TV niche, and a tall laundry cabinet."
-description_he: "ארונות מהרצפה עד התקרה עם נישה פתוחה לטלוויזיה, וארון גבוה לחדר כביסה."
+description_he: "ארונות קיר בהתאמה אישית, מהרצפה עד התקרה, עם נישה פתוחה לטלוויזיה, וארון גבוה לחדר כביסה."
 description_ru: "Шкафы от пола до потолка с открытой нишей под телевизор и высокий шкаф для прачечной."
 photos:
   - file: 01-wardrobe-wall-tv-niche.jpg
