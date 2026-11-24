@@ -17,6 +17,9 @@ BUY = "https://tomasx.gumroad.com/l/cutter?wanted=true"
 YT_ID = "1RCNCUdKIyM"
 YT_WATCH = "https://youtu.be/1RCNCUdKIyM"
 YT_EMBED = "https://www.youtube-nocookie.com/embed/1RCNCUdKIyM"
+# Second video: Shapr3D STEP import (1:30)
+S3_WATCH = "https://youtu.be/rVqf9k2geHI"
+S3_EMBED = "https://www.youtube-nocookie.com/embed/rVqf9k2geHI"
 WORKSHOP = "https://tlnagarut.co.il/"
 BASE = "https://tlnagarut.co.il/cutter/"
 OG_IMG = BASE + "img/cutter-video-poster.jpg"
@@ -56,6 +59,12 @@ EN = {
     "video_iframe_title": "Cutter video",
     "video_meta": "1 min 27 s, English narration.",
     "video_yt": "Watch on YouTube",
+    "s3_h": "From a Shapr3D model to a cutting list",
+    "s3_p": "Design in Shapr3D? Export the model as a STEP file and drop it into Cutter. Every flat board up to 40 mm thick comes across with its size and thickness, and hardware is skipped. After a design change, export again and Cutter offers to replace the old parts.",
+    "s3_play": "Watch the video (1:30)",
+    "s3_alt": "Still from the Shapr3D video: a TV wall model on the left, an arrow, and a Cutter sheet layout on the right",
+    "s3_iframe_title": "Cutter video: Shapr3D cut list",
+    "s3_meta": "1:30. A real TV wall, from the Shapr3D model to the sheet layouts.",
     "how_h": "How it goes",
     "steps": [
         ("Download the PDF from Blum",
@@ -107,9 +116,9 @@ EN = {
         ("How many computers can I install it on?",
          "One licence is for one business at one address. You may install Cutter on the computers of that workshop."),
         ("Is Cutter made by Blum?",
-         "No. Cutter is an independent tool. It is not affiliated with or endorsed by Blum. Blum is a trademark of Julius Blum GmbH."),
+         "No. Cutter is an independent tool. It is not affiliated with or endorsed by Shapr3D or Blum. Blum is a trademark of Julius Blum GmbH."),
     ],
-    "disclaimer": "Cutter is an independent tool. It is not affiliated with or endorsed by Blum. Blum is a trademark of Julius Blum GmbH.",
+    "disclaimer": "Cutter is an independent tool. It is not affiliated with or endorsed by Shapr3D or Blum. Blum is a trademark of Julius Blum GmbH.",
     "contact": "Questions before you buy?",
     "made_by": "Cutter is made by <a href=\"{workshop}\">TLnagarut</a>.",
     "ld_desc": "Turns the parts list from Blum's Cabinet Configurator into a panel-saw cutting plan, with the boards to order and the material cost.",
@@ -143,6 +152,12 @@ PL = {
     "video_iframe_title": "Film o Cutterze",
     "video_meta": "1 min 27 s, narracja po angielsku.",
     "video_yt": "Obejrzyj na YouTube",
+    "s3_h": "Z modelu w Shapr3D do listy formatek",
+    "s3_p": "Projektujesz w Shapr3D? Wyeksportuj model jako plik STEP i przeciągnij go do Cuttera. Każdy płaski element o grubości do 40 mm trafia do programu z wymiarami i grubością, a okucia są pomijane. Po zmianie projektu wyeksportuj model jeszcze raz, a Cutter zaproponuje zastąpienie starych formatek nowymi.",
+    "s3_play": "Obejrzyj film (1:30)",
+    "s3_alt": "Kadr z filmu o Shapr3D: po lewej model ściany TV, strzałka, po prawej rozkrój płyty w Cutterze",
+    "s3_iframe_title": "Film o Cutterze: lista formatek z Shapr3D",
+    "s3_meta": "1:30. Prawdziwa ściana TV, od modelu w Shapr3D do rozkroju płyt. Film jest po angielsku.",
     "how_h": "Jak to działa",
     "steps": [
         ("Pobierz PDF z Blum",
@@ -195,9 +210,9 @@ PL = {
         ("Na ilu komputerach mogę go zainstalować?",
          "Jedna licencja obejmuje jedną firmę pod jednym adresem. Możesz zainstalować Cuttera na komputerach tego warsztatu."),
         ("Czy Cutter jest produktem firmy Blum?",
-         "Nie. Cutter jest niezależnym narzędziem. Nie jest powiązany z firmą Blum ani przez nią autoryzowany. Blum jest znakiem towarowym Julius Blum GmbH."),
+         "Nie. Cutter jest niezależnym narzędziem. Nie jest powiązany z firmami Shapr3D i Blum ani przez nie autoryzowany. Blum jest znakiem towarowym Julius Blum GmbH."),
     ],
-    "disclaimer": "Cutter jest niezależnym narzędziem. Nie jest powiązany z firmą Blum ani przez nią autoryzowany. Blum jest znakiem towarowym Julius Blum GmbH.",
+    "disclaimer": "Cutter jest niezależnym narzędziem. Nie jest powiązany z firmami Shapr3D i Blum ani przez nie autoryzowany. Blum jest znakiem towarowym Julius Blum GmbH.",
     "contact": "Pytania przed zakupem?",
     "made_by": "Cuttera tworzy <a href=\"{workshop}\">TLnagarut</a>.",
     "ld_desc": "Zamienia listę formatek z Konfiguratora korpusów Blum w plan rozkroju pod piłę formatową, z liczbą płyt do zamówienia i kosztem materiału.",
@@ -322,7 +337,7 @@ footer .wrap{max-width:76rem}
 footer p{max-width:70ch}
 """
 
-SCRIPT = """document.querySelector('.player button').addEventListener('click',function(){var f=document.createElement('iframe');f.src='%s?autoplay=1&rel=0';f.title=this.dataset.t;f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';this.parentNode.replaceChild(f,this);f.focus()});""" % YT_EMBED
+SCRIPT = """document.querySelectorAll('.player button').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src=(this.dataset.src||'%s')+'?autoplay=1&rel=0';f.title=this.dataset.t;f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';this.parentNode.replaceChild(f,this);f.focus()})});""" % YT_EMBED
 
 
 def diagram(t):
@@ -512,6 +527,15 @@ def page(t):
 <section aria-labelledby="noblum-h"><h2 id="noblum-h">{t['noblum_h']}</h2><ul class="plain">{ul(t['noblum'])}</ul></section>
 <section aria-labelledby="good-h"><h2 id="good-h">{t['good_h']}</h2><ul class="plain">{ul(t['good'])}</ul></section>
 </div>
+
+<section id="shapr3d" class="wrap" aria-labelledby="s3-h">
+<h2 id="s3-h" class="sec-h">{t['s3_h']}</h2>
+<p class="lead">{t['s3_p']}</p>
+<div class="video">
+<div class="player"><button type="button" data-src="{S3_EMBED}" data-t="{escape(t['s3_iframe_title'])}" aria-label="{escape(t['s3_play'])}"><img src="{img}cutter-shapr3d-video-poster.jpg" width="1280" height="720" alt="{escape(t['s3_alt'])}" loading="lazy" decoding="async"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z"/></svg></span></button></div>
+<p class="vmeta"><span>{t['s3_meta']}</span><a href="{S3_WATCH}">{t['s3_play']}</a></p>
+</div>
+</section>
 
 <section class="band" aria-labelledby="who-h">
 <div class="wrap">
