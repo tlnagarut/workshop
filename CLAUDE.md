@@ -43,6 +43,16 @@ owner asks.
   them.
 - Phone, email, Instagram and any other contact details live in
   `content/contact.yml`. That file is the **single source of truth**.
+- Google Business Profile: exists and is verified (name "TLnagarut"). Its two
+  links are in `content/contact.yml`: `googleProfile` (the profile with its
+  reviews — the "Google reviews" button and links go there) and `googleMaps`
+  (given to Google in the home page's business data). Do not show a star
+  rating or a number of reviews on the site: they change, and the site would
+  go out of date.
+- Hebrew wording: the Hebrew pages are written for what people type into
+  Google — "נגר בחיפה", "מטבחים בהתאמה אישית", "ארונות קיר בהתאמה אישית".
+  In Hebrew text say "בהתאמה אישית" (not "בהזמנה אישית") and "ארונות קיר"
+  for built-in wardrobes, and keep those words in the Hebrew titles.
 
 **Never invent** a phone number, email, price, client name, years in business,
 award, certificate or business registration number. If something is missing,

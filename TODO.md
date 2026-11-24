@@ -1,36 +1,15 @@
 # TODO
 
-## Set up a Google Business Profile
+## Google Business Profile — done (October 2026)
 
-### Why
-This is the single biggest lever for getting found by local customers in Haifa.
-A Business Profile is what puts the business on **Google Maps** and in the local
-**"3-pack"** (the map + three businesses shown above normal search results).
-For a local trade, most customers search in Hebrew ("נגר בחיפה" / "נגרייה
-בחיפה") and click those map results far more than plain web links. The SEO tags
-already added to the site help web search; this is the part that wins local
-search. It cannot be done in code — it is an account/verification task on
-Google's side.
+The profile exists and is verified: name **TLnagarut**, main category Cabinet
+maker, set up as a service-area business (the address is not shown on Google).
+Its links are in `content/contact.yml` (`googleProfile`, `googleMaps`); the
+"Google reviews" buttons and the Google business data on the home page use
+them.
 
-### How
-1. Go to **google.com/business** → **Manage now** → sign in with the business
-   Google account. Search for the business name; if it doesn't exist, **create it**.
-2. **Category:** "Furniture maker" / "Woodworker" / "Carpenter" (נגר).
-3. **Address decision** ⚠️ — Google asks for a location:
-   - If there's a **public workshop** customers visit → enter the address.
-   - If working from home / address should stay private → choose
-     **"I deliver goods and services to my customers"** (service-area business)
-     and set the area to **Haifa** + nearby towns. The address stays hidden.
-4. **Phone:** use `053-382-2875` (must match the site's structured data).
-5. **Verification:** Google sends a code by phone / video / postcard — follow
-   whatever method they offer. Can take a few days.
-6. Add **photos** (project shots), **opening hours**, and a short description.
-
-### Keep it consistent with the site
-Use the same business name (**TLnagarut / TL נגרות**), **phone**, and **address
-(Arye Shenkar Street 35, Haifa)** as the `LocalBusiness` structured data in `index.html`. Matching
-name/address/phone (NAP consistency) across the site and the profile helps
-ranking.
+Keep the name, the phone (`053-382-2875`) and the address on the site the same
+as on the profile.
 
 ## New design (November 2026) — to check before or after going live
 - Russian text was translated from the English by Claude: have a Russian reader check it (`content/about.ru.yml`, `content/workshop.ru.yml`, `content/photos.ru.yml`).
