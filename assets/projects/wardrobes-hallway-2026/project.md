@@ -4,10 +4,10 @@
 # Photo 01 is the cover. Photos show in the order listed here.
 order: 6
 title_en: "Wardrobes"
-title_he: "ארונות"
+title_he: "ארונות קיר במסדרון"
 title_ru: "Шкафы"
 description_en: "Handleless wardrobes along a hallway."
-description_he: "ארונות ללא ידיות לאורך מסדרון."
+description_he: "ארונות קיר ללא ידיות לאורך מסדרון."
 description_ru: "Шкафы без ручек вдоль коридора."
 photos:
   - file: 01-handleless-wardrobes-hallway.jpg
