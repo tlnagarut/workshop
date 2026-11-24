@@ -81,6 +81,15 @@
 <section aria-labelledby="good-h"><h2 id="good-h">Good to know</h2><ul class="plain"><li>Millimetres or inches.</li><li>Runs on your own Windows or Mac computer. No internet needed after installing, and your jobs stay on your computer.</li><li>One-time price. No subscription.</li><li>Updates for version 1 are free.</li><li>14-day money-back guarantee.</li></ul></section>
 </div>
 
+<section id="shapr3d" class="wrap" aria-labelledby="s3-h">
+<h2 id="s3-h" class="sec-h">From a Shapr3D model to a cutting list</h2>
+<p class="lead">Design in Shapr3D? Export the model as a STEP file and drop it into Cutter. Every flat board up to 40 mm thick comes across with its size and thickness, and hardware is skipped. After a design change, export again and Cutter offers to replace the old parts.</p>
+<div class="video">
+<div class="player"><button type="button" data-src="https://www.youtube-nocookie.com/embed/rVqf9k2geHI" data-t="Cutter video: Shapr3D cut list" aria-label="Watch the video (1:30)"><img src="img/cutter-shapr3d-video-poster.jpg" width="1280" height="720" alt="Still from the Shapr3D video: a TV wall model on the left, an arrow, and a Cutter sheet layout on the right" loading="lazy" decoding="async"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z"/></svg></span></button></div>
+<p class="vmeta"><span>1:30. A real TV wall, from the Shapr3D model to the sheet layouts.</span><a href="https://youtu.be/rVqf9k2geHI">Watch the video (1:30)</a></p>
+</div>
+</section>
+
 <section class="band" aria-labelledby="who-h">
 <div class="wrap">
 <h2 id="who-h">Who made it</h2>
@@ -107,16 +116,16 @@
 
 <section class="wrap" aria-labelledby="faq-h">
 <h2 id="faq-h">Questions</h2>
-<div class="faq"><details><summary>Which computers does Cutter run on?</summary><p>Windows 10 or 11, or a Mac with an Apple chip (M1 or newer). A normal office computer is enough.</p></details><details><summary>Why does my computer show a warning when I install it?</summary><p>Cutter is not signed with a paid developer certificate yet, so Windows and macOS show a warning the first time. On Windows, click “More info”, then “Run anyway”. On a Mac, go to System Settings, Privacy &amp; Security, and click “Open Anyway”. The steps are also on the download page.</p></details><details><summary>Do I need Blum's Cabinet Configurator?</summary><p>No. You can paste a parts list from Excel, type the parts in, or drop a STEP file from Shapr3D.</p></details><details><summary>Is my data sent anywhere?</summary><p>No. Cutter runs on your own computer and needs no internet after installing. Your jobs, customers and materials stay on that computer. Make your own backups.</p></details><details><summary>Can I get my money back?</summary><p>Yes. If Cutter does not work for you, write to <a href="mailto:tlnagarut@outlook.com">tlnagarut@outlook.com</a> within 14 days of buying and you get your money back.</p></details><details><summary>How many computers can I install it on?</summary><p>One licence is for one business at one address. You may install Cutter on the computers of that workshop.</p></details><details><summary>Is Cutter made by Blum?</summary><p>No. Cutter is an independent tool. It is not affiliated with or endorsed by Blum. Blum is a trademark of Julius Blum GmbH.</p></details></div>
+<div class="faq"><details><summary>Which computers does Cutter run on?</summary><p>Windows 10 or 11, or a Mac with an Apple chip (M1 or newer). A normal office computer is enough.</p></details><details><summary>Why does my computer show a warning when I install it?</summary><p>Cutter is not signed with a paid developer certificate yet, so Windows and macOS show a warning the first time. On Windows, click “More info”, then “Run anyway”. On a Mac, go to System Settings, Privacy &amp; Security, and click “Open Anyway”. The steps are also on the download page.</p></details><details><summary>Do I need Blum's Cabinet Configurator?</summary><p>No. You can paste a parts list from Excel, type the parts in, or drop a STEP file from Shapr3D.</p></details><details><summary>Is my data sent anywhere?</summary><p>No. Cutter runs on your own computer and needs no internet after installing. Your jobs, customers and materials stay on that computer. Make your own backups.</p></details><details><summary>Can I get my money back?</summary><p>Yes. If Cutter does not work for you, write to <a href="mailto:tlnagarut@outlook.com">tlnagarut@outlook.com</a> within 14 days of buying and you get your money back.</p></details><details><summary>How many computers can I install it on?</summary><p>One licence is for one business at one address. You may install Cutter on the computers of that workshop.</p></details><details><summary>Is Cutter made by Blum?</summary><p>No. Cutter is an independent tool. It is not affiliated with or endorsed by Shapr3D or Blum. Blum is a trademark of Julius Blum GmbH.</p></details></div>
 </section>
 </main>
 <footer>
 <div class="wrap">
-<p>Cutter is an independent tool. It is not affiliated with or endorsed by Blum. Blum is a trademark of Julius Blum GmbH.</p>
+<p>Cutter is an independent tool. It is not affiliated with or endorsed by Shapr3D or Blum. Blum is a trademark of Julius Blum GmbH.</p>
 <p>Questions before you buy? <a href="mailto:tlnagarut@outlook.com">tlnagarut@outlook.com</a></p>
 <p>Cutter is made by <a href="https://tlnagarut.co.il/">TLnagarut</a>.</p>
 </div>
 </footer>
-<script>document.querySelector('.player button').addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/1RCNCUdKIyM?autoplay=1&rel=0';f.title=this.dataset.t;f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';this.parentNode.replaceChild(f,this);f.focus()});</script>
+<script>document.querySelectorAll('.player button').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src=(this.dataset.src||'https://www.youtube-nocookie.com/embed/1RCNCUdKIyM')+'?autoplay=1&rel=0';f.title=this.dataset.t;f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';this.parentNode.replaceChild(f,this);f.focus()})});</script>
 </body>
 </html>
